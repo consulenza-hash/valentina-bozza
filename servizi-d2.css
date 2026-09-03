@@ -46,7 +46,7 @@
 .d2 .sv-meta-2 .prezzo small{display:block;font:600 11.5px Outfit,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muto);font-style:normal;margin-bottom:4px}
 .d2 .sv-libretto .azioni{margin-top:24px}
 .d2 .sv-business{--dom:#0C4A56;--dom-2:#083640;--tint:#E9F3F6;--acc-ink:#0A98B1;background:linear-gradient(180deg,#E9F3F6,#F2F8FA);border-color:#CFE1E7}
-.d2 .sv-business .etich{color:#0A98B1}
+.d2 .sv-business .etich{color:#0B6F80}
 .d2 .sv-business .sv-card{border:1px solid #D6E6EB}
 .d2 .sv-business .btn-1{background:linear-gradient(180deg,#127F94,#0C4A56);box-shadow:0 10px 24px -8px rgba(12,74,86,.5),inset 0 1px 0 rgba(255,255,255,.25)}
 .d2 .sv-business .btn-1:hover{box-shadow:0 16px 30px -10px rgba(12,74,86,.55),inset 0 1px 0 rgba(255,255,255,.3)}

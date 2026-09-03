@@ -11,6 +11,13 @@ body.d2.pg-libretto{background:var(--fondo)}
 .d2 .bp-btn-hero-outline:hover,.d2 .bp-btn-outline:hover,.d2 .bp-btn-outline-ess:hover,.d2 .bp-btn-outline-lg:hover{background:var(--tint)!important}
 .d2 .bp-pricing-card,.d2 .bp-tier-panel,.d2 .bp-profile,.d2 .bp-step,.d2 .bp-faq-item{border-radius:12px!important}
 .d2 .bp-eyebrow{letter-spacing:.14em!important}
+/* blocchi scuri (card Avanzato, pannello Avanzato, copertina): testo sempre bianco, etichette in giallo di accento, mai vino su vino */
+.d2 .bp-pricing-card--comp :is(p,h3,h4,li,span,div,small,strong,em):not(.bp-btn-primary):not(.bp-btn-primary *){color:#fff!important}
+.d2 [class*="bp-tier-panel--comp"] :is(p,h3,h4,li,span,div,small,strong,em){color:#fff!important}
+.d2 .bp-hero__cover :is(p,h2,h3,span,div,small,em){color:#fff!important}
+.d2 .bp-pricing-card--comp .bp-pricing-card__title,.d2 [class*="bp-tier-panel--comp"] .bp-tier-panel__title,.d2 .bp-hero__cover .bp-hero__cover-brand,.d2 .bp-pricing-card--comp .bp-price-label,.d2 [class*="bp-tier-panel--comp"] .bp-tier-panel__count{color:#FDBC5A!important}
+.d2 .bp-pricing-card--comp li.extra,.d2 [class*="bp-tier-panel--comp"] li.extra,.d2 .bp-pricing-card--comp .bp-feature-extra{color:rgba(255,255,255,.92)!important}
+.d2 .bp-pricing-card--comp li::before,.d2 [class*="bp-tier-panel--comp"] li::before{color:#FDBC5A!important}
 /* voci extra della card scura piu' leggibili */
 .d2 .bp-pricing-card--comp li,.d2 .bp-pricing-card--comp li.extra,.d2 .bp-tier-panel--comp li.extra{color:rgba(255,255,255,.88)!important}
 /* nella card scura il bottone principale passa al giallo di accento, come nelle chiusure d2 */

@@ -37,7 +37,8 @@ body.d2.pg-calcolo{background:radial-gradient(900px 520px at 78% 0%,rgba(207,143
 .d2 #carta-calculator .cf-field input,.d2 #carta-calculator .cf-field select,.d2 #carta-calculator input[type="date"],.d2 #carta-calculator input[type="time"],.d2 .cf-field input,.d2 .cf-field select{border:1px solid var(--linea);background:var(--fondo);color:var(--ink);border-radius:10px;font-family:Outfit,sans-serif}
 .d2 #carta-calculator .cf-field input:focus,.d2 #carta-calculator .cf-field select:focus,.d2 #carta-calculator input[type="date"]:focus,.d2 #carta-calculator input[type="time"]:focus{border-color:var(--dom);background:#fff;box-shadow:0 0 0 3px rgba(122,79,94,.14)}
 .d2 #carta-calculator .cf-hint{color:var(--muto)}
-.d2 #carta-calculator .cf-dt-ph{color:#9C918B}
+.d2 #carta-calculator .cf-dt-ph{color:#6B625D}
+.d2 .seo-calc-block span[style*="color"],.d2 .seo-calc-block small{color:var(--muto)!important}
 .d2 #carta-calculator .cf-autocomplete-list{border-color:var(--linea);box-shadow:var(--ombra)}
 .d2 #carta-calculator .cf-autocomplete-list li{color:var(--ink);border-color:var(--linea)}
 .d2 #carta-calculator .cf-autocomplete-list li:hover{background:var(--tint)}
