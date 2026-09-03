@@ -1,5 +1,7 @@
 
 /* Workshop - direzione 2 */
+#ws-success{display:none}
+.d2 #ws-success{margin-top:24px;background:var(--carta);border-radius:12px;box-shadow:var(--ombra);padding:28px;text-align:center}
 .d2 .ws .container{max-width:var(--maxw);margin:0 auto;padding:0 28px}
 .d2 .ws section{padding:72px 0}
 .d2 .ws .text-uppercase{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--dom);margin:0 0 18px}
