@@ -55,8 +55,8 @@
 .d2 .bg5-col-bg5{border:1px solid var(--dom)}
 .d2 .bg5-col-bg5 .bg5-et{color:var(--dom)}
 .d2 .bg5-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
-.d2 .bg5-col li{display:grid;grid-template-columns:124px 1fr;gap:14px;align-items:baseline;font-size:15.5px;line-height:1.5}
-.d2 .bg5-k{font:600 11.5px Outfit,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--muto);white-space:nowrap}
+.d2 .bg5-col li{display:grid;grid-template-columns:152px 1fr;gap:14px;align-items:baseline;font-size:15.5px;line-height:1.5}
+.d2 .bg5-k{font:600 11.5px Outfit,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--muto);line-height:1.35}
 .d2 .bg5-v{color:var(--ink)}
 .d2 .bg5-vs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:var(--carta);border:1px solid var(--linea);display:flex;align-items:center;justify-content:center;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:19px;color:var(--dom);box-shadow:var(--ombra)}
 .d2 .bg5-chiusa{max-width:70ch;margin:38px auto 0;text-align:center;font-size:17.5px;line-height:1.65;color:var(--ink)}
