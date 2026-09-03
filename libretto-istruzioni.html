@@ -3,24 +3,24 @@
 <link rel="icon" href="img/e18c9bb45946.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Outfit:wght@400;500;600&family=Fraunces:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="dir.css?v=1788467587"><link rel="stylesheet" href="home-d2.css?v=1788467587">
+<link rel="stylesheet" href="dir.css?v=1788467738"><link rel="stylesheet" href="home-d2.css?v=1788467738">
 <style>
 /* ── BG5 Blueprint Landing — Token extra ── */
 :root {
-  --bp-gold:          #7A4F5E;
-  --bp-navy-deep:     #4A2C38;
-  --bp-rosa-wash:     #F6EAEE;
-  --bp-teal-wash:     #E9F3F6;
-  --bp-gold-glow:     rgba(122,79,94,.30);
-  --bp-rosa-glow:     rgba(207,143,169,.12);
-  --bp-navy-glow:     rgba(58,53,50,.35);
-  --bp-parchment:     #FBF7F5;
-  --bp-soft-parchment:#E8DDD9;
-  --bp-rosa:          #CF8FA9;
-  --bp-teal:          #0A98B1;
-  --bp-navy:          #5E3A47;
-  --bp-text:          #3A3532;
-  --bp-text-muted:    #6B625D;
+  --bp-gold:          #C48A3A;
+  --bp-navy-deep:     #0F1A29;
+  --bp-rosa-wash:     #F5ECF0;
+  --bp-teal-wash:     #E8F4F4;
+  --bp-gold-glow:     rgba(196,138,58,.30);
+  --bp-rosa-glow:     rgba(201,118,138,.12);
+  --bp-navy-glow:     rgba(15,26,41,.35);
+  --bp-parchment:     #FAF7F5;
+  --bp-soft-parchment:#EAE5E1;
+  --bp-rosa:          #C9768A;
+  --bp-teal:          #4A8C8C;
+  --bp-navy:          #1A2332;
+  --bp-text:          #2D2926;
+  --bp-text-muted:    #6B6560;
   --bp-white:         #FFFFFF;
 }
 
@@ -84,24 +84,24 @@
   background: linear-gradient(165deg, #FFFFFF 0%, #FBF8F6 40%, #F5EFF4 100%);
 }
 .bp-section--parchment {
-  background: linear-gradient(150deg, #FBF7F5 0%, #F8F0F3 40%, #F6EAEE 100%);
+  background: linear-gradient(150deg, #FAF7F5 0%, #F4EDF3 40%, #EBEBf8 100%);
 }
 .bp-section--soft {
-  background: linear-gradient(140deg, #E8DDD9 0%, #EEDDE3 45%, #E4EEF0 100%);
+  background: linear-gradient(140deg, #EAE5E1 0%, #E2DAE8 45%, #D5E3E3 100%);
 }
 /* "Come funziona" — teal profondo */
 .bp-section--deep {
-  background: linear-gradient(148deg, #3E2430 0%, #4A2C38 40%, #5E3A47 100%);
+  background: linear-gradient(148deg, #0D2B2B 0%, #142E38 40%, #1A2040 100%);
 }
 /* --deep mantenuto per uso futuro */
-.bp-section--deep .bp-section-title { color: #E9F3F6; }
+.bp-section--deep .bp-section-title { color: #E8F4F4; }
 .bp-section--deep .bp-section-sub   { color: rgba(232,244,244,.65); }
 .bp-section--deep .bp-eyebrow       { color: var(--bp-gold); }
 .bp-section--deep .bp-eyebrow::before,
 .bp-section--deep .bp-eyebrow::after { background: var(--bp-gold); }
 
 .bp-section--dark {
-  background: linear-gradient(150deg, #4A2C38 0%, #4A2C38 50%, #2E1A24 100%);
+  background: linear-gradient(150deg, #0F1A29 0%, #1A1230 50%, #0A0F1E 100%);
 }
 /* Sezione chi è Valentina */
 .bp-bio__grid {
@@ -132,7 +132,7 @@
   position: absolute;
   inset: -14px;
   border-radius: 50%;
-  background: radial-gradient(ellipse at 30% 30%, rgba(122,79,94,.18) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 30% 30%, rgba(196,138,58,.18) 0%, transparent 60%);
   pointer-events: none;
 }
 .bp-bio__text h3 {
@@ -164,36 +164,36 @@
 
 /* "Inizia ora" — chiaro elegante, respira dopo il dark pricing */
 .bp-section--amber {
-  background: linear-gradient(155deg, #FBF7F5 0%, #F8F0F3 45%, #F6EAEE 100%);
+  background: linear-gradient(155deg, #FAF7F5 0%, #F5EEF3 45%, #EFF0FA 100%);
 }
 /* Pricing — dark dramatico */
 .bp-section--gradient {
-  background: linear-gradient(150deg, #5E3A47 0%, #4A2C38 45%, #3E2430 100%);
+  background: linear-gradient(150deg, #1A2332 0%, #1D1232 45%, #0E1220 100%);
 }
 /* Variante "flat-top": il top è solido navy così combacia col fade superiore.
    Il bottom transition→wave è gestito dalla .bp-wave--seamless che eredita
    lo stesso gradient + noise del pricing. */
 .bp-section--gradient-flat {
   background:
-    linear-gradient(180deg, #5E3A47 0%, #5E3A47 60px, transparent 60px),
-    linear-gradient(150deg, #5E3A47 0%, #4A2C38 45%, #3E2430 100%);
+    linear-gradient(180deg, #1A2332 0%, #1A2332 60px, transparent 60px),
+    linear-gradient(150deg, #1A2332 0%, #1D1232 45%, #0E1220 100%);
   box-shadow: none;
 }
 
 /* Fade fluido tra "Come funziona" (parchment) e "Pricing" (navy).
    Niente SVG wave: la wave creava una banda nera al seam perché il fill
-   solido #5E3A47 incontrava il gradient parchment-end (#F6EAEE).
+   solido #1A2332 incontrava il gradient parchment-end (#EBEBf8).
    Qui partiamo dal colore esatto di chiusura della parchment a destra,
    passiamo per un mid-tone neutro e atterriamo sul navy puro del pricing. */
 .bp-fade-to-navy {
   height: 110px;
   background: linear-gradient(
     180deg,
-    #F6EAEE 0%,
-    #E8DDD9 32%,
-    #8B5E70 62%,
-    #6A4252 85%,
-    #5E3A47 100%
+    #EBEBf8 0%,
+    #B5B8D4 32%,
+    #5C6488 62%,
+    #2A334A 85%,
+    #1A2332 100%
   );
   position: relative;
   margin: 0;
@@ -264,7 +264,7 @@
   padding: 0;
   overflow: hidden;
   isolation: isolate;
-  background: #F6EAEE;
+  background: #FAF6EE;
 }
 
 /* Sfondo: gradient parchment con due radial accent (oro top-right, navy soft top-left)
@@ -274,10 +274,10 @@
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 30% 50%, rgba(122,79,94,.06) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 50% at 80% 20%, rgba(122,79,94,.04) 0%, transparent 65%),
-    radial-gradient(ellipse 70% 60% at 10% 90%, rgba(58,53,50,.04) 0%, transparent 70%),
-    linear-gradient(135deg, #F6EAEE 0%, #F8F0F3 60%, #EEDDE3 100%);
+    radial-gradient(ellipse 60% 50% at 30% 50%, rgba(196,138,58,.06) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 80% 20%, rgba(196,138,58,.04) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 60% at 10% 90%, rgba(15,26,41,.04) 0%, transparent 70%),
+    linear-gradient(135deg, #FAF6EE 0%, #F2EBDC 60%, #E8DCC0 100%);
 }
 /* Grain texture per matericità di carta antica */
 .bp-hero__noise {
@@ -324,13 +324,13 @@
   aspect-ratio: 595 / 842;
   border-radius: 4px;
   overflow: hidden;
-  background: #4A2C38;
+  background: #0F1A29;
   transform: rotate(2deg);
   box-shadow:
     0 2px 4px rgba(0,0,0,.20),
     0 32px 64px -8px rgba(0,0,0,.65),
-    0 18px 32px -10px rgba(122,79,94,.25),
-    inset 0 0 0 1px rgba(122,79,94,.45);
+    0 18px 32px -10px rgba(196,138,58,.25),
+    inset 0 0 0 1px rgba(196,138,58,.45);
   transition: transform .6s cubic-bezier(.2,.8,.2,1);
   animation: bp-cover-breath 8s ease-in-out infinite alternate;
   isolation: isolate;
@@ -359,7 +359,7 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(58,53,50,.78) 0%, rgba(58,53,50,.30) 38%, rgba(58,53,50,.30) 65%, rgba(58,53,50,.85) 100%);
+    linear-gradient(180deg, rgba(15,26,41,.78) 0%, rgba(15,26,41,.30) 38%, rgba(15,26,41,.30) 65%, rgba(15,26,41,.85) 100%);
 }
 
 /* Cornice dorata interna + contenuto */
@@ -372,12 +372,12 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: #F6EAEE;
-  border: 1px solid rgba(122,79,94,.55);
+  color: #F5EFE3;
+  border: 1px solid rgba(196,138,58,.55);
   margin: 18px;
   height: calc(100% - 36px);
   border-radius: 2px;
-  box-shadow: inset 0 0 0 1px rgba(122,79,94,.18);
+  box-shadow: inset 0 0 0 1px rgba(196,138,58,.18);
 }
 
 /* Ornamenti agli angoli — quadrati dorati con cerchio centrale */
@@ -418,7 +418,7 @@
   font-family: 'Playfair Display', serif;
   margin: 0;
   line-height: 1;
-  color: #F6EAEE;
+  color: #F5EFE3;
 }
 .bp-hero__cover-title span {
   display: block;
@@ -432,9 +432,9 @@
   font-size: clamp(2rem, 3.6vw, 2.85rem);
   font-style: italic;
   font-weight: 700;
-  color: #F6EAEE;
+  color: #F5EFE3;
   letter-spacing: -.01em;
-  text-shadow: 0 2px 18px rgba(122,79,94,.35);
+  text-shadow: 0 2px 18px rgba(196,138,58,.35);
 }
 .bp-hero__cover-subtitle {
   font-family: 'Playfair Display', serif;
@@ -464,7 +464,7 @@
   font-style: italic;
   font-size: clamp(.9rem, 1.25vw, 1.05rem);
   font-weight: 400;
-  color: #F6EAEE;
+  color: #F5EFE3;
   margin: 0 0 .35rem;
   letter-spacing: .01em;
 }
@@ -484,7 +484,7 @@
   font-family: 'Outfit', sans-serif;
   font-size: .8125rem;
   text-align: center;
-  color: rgba(58,53,50,.55);
+  color: rgba(15,26,41,.55);
   letter-spacing: .05em;
   line-height: 1.6;
 }
@@ -498,7 +498,7 @@
 }
 .bp-hero__cover-caption em {
   font-style: italic;
-  color: rgba(122,79,94,.85);
+  color: rgba(196,138,58,.85);
 }
 
 /* Colonna testo */
@@ -560,7 +560,7 @@
   font-family: 'Outfit', sans-serif;
   font-size: clamp(1rem, 1.3vw, 1.15rem);
   line-height: 1.7;
-  color: rgba(58,53,50,.70);
+  color: rgba(15,26,41,.70);
   max-width: 560px;
   margin: 0 0 2.25rem;
   font-weight: 400;
@@ -593,38 +593,38 @@
   color: var(--bp-navy-deep);
   font-weight: 700;
   border: 1px solid var(--bp-gold);
-  box-shadow: 0 8px 28px rgba(122,79,94,.35), 0 0 0 1px rgba(122,79,94,.2);
+  box-shadow: 0 8px 28px rgba(196,138,58,.35), 0 0 0 1px rgba(196,138,58,.2);
 }
 /* Pulsante "arancione/dorato": al hover il testo diventa BIANCO */
 .bp-btn-hero-primary:hover,
 .bp-btn-hero-primary:focus-visible {
-  background: #5E3A47;
+  background: #B07730;
   color: #FFFFFF;
-  border-color: #5E3A47;
+  border-color: #B07730;
   transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(122,79,94,.55);
+  box-shadow: 0 14px 36px rgba(196,138,58,.55);
 }
 .bp-btn-hero-outline {
-  background: #FFFFFF;
+  background: #FFFDF8;
   color: var(--bp-gold);
   font-weight: 700;
-  border: 1px solid rgba(122,79,94,.4);
+  border: 1px solid rgba(196,138,58,.4);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.6),
-    0 1px 2px rgba(58,53,50,.06),
-    0 4px 8px rgba(58,53,50,.06);
+    0 1px 2px rgba(15,26,41,.06),
+    0 4px 8px rgba(15,26,41,.06);
 }
 /* Pulsante "bianco/outline": al hover testo e bordo diventano DORATI scuri */
 .bp-btn-hero-outline:hover,
 .bp-btn-hero-outline:focus-visible {
-  background: #FFFFFF;
-  color: #5E3A47;
+  background: #FFFDF8;
+  color: #B07730;
   border-color: var(--bp-gold);
   transform: translateY(-2px);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.6),
-    0 4px 8px rgba(58,53,50,.08),
-    0 12px 24px rgba(58,53,50,.10);
+    0 4px 8px rgba(15,26,41,.08),
+    0 12px 24px rgba(15,26,41,.10);
 }
 .bp-btn-hero-outline:hover strong { border-color: currentColor; }
 .bp-btn-hero-primary span,
@@ -651,7 +651,7 @@
   gap: .85rem;
   font-family: 'Outfit', sans-serif;
   font-size: .8125rem;
-  color: rgba(58,53,50,.55);
+  color: rgba(15,26,41,.55);
   letter-spacing: .04em;
   font-weight: 500;
   white-space: nowrap;
@@ -664,7 +664,7 @@
 }
 .bp-hero__meta li + li::before {
   content: '·';
-  color: rgba(122,79,94,.6);
+  color: rgba(196,138,58,.6);
   font-weight: 700;
 }
 /* Bullet rimossi — il punto medio fa già da separatore */
@@ -688,11 +688,11 @@
 }
 .bp-btn-primary:hover,
 .bp-btn-primary:focus-visible {
-  background: #5E3A47;
+  background: #B07730;
   color: #FFFFFF;
-  border-color: #5E3A47;
+  border-color: #B07730;
   transform: translateY(-1px);
-  box-shadow: 0 10px 28px rgba(122,79,94,.40);
+  box-shadow: 0 10px 28px rgba(196,138,58,.40);
 }
 
 /* Pulsante "bianco/outline" (era rosa, ora gold). Hover → testo/bordo dorato intensificato. */
@@ -712,9 +712,9 @@
 }
 .bp-btn-outline:hover,
 .bp-btn-outline:focus-visible {
-  background: rgba(122,79,94,.08);
-  color: #5E3A47;
-  border-color: #5E3A47;
+  background: rgba(196,138,58,.08);
+  color: #B07730;
+  border-color: #B07730;
   transform: translateY(-1px);
 }
 
@@ -722,7 +722,7 @@
 .bp-btn-primary--lg {
   padding: 1.25rem 2.75rem;
   font-size: 1.125rem;
-  box-shadow: 0 8px 28px rgba(122,79,94,.30);
+  box-shadow: 0 8px 28px rgba(196,138,58,.30);
 }
 .bp-btn-primary--lg strong {
   font-family: 'Playfair Display', serif;
@@ -745,7 +745,7 @@
   flex-direction: column;
   align-items: center;
   gap: .35rem;
-  color: rgba(58,53,50,.45);
+  color: rgba(15,26,41,.45);
   text-decoration: none;
   font-family: 'Outfit', sans-serif;
   font-size: .7rem;
@@ -831,8 +831,8 @@
   padding: 2.5rem 2rem;
 }
 .bp-tier-panel--essenziale {
-  background: var(--bp-rosa-wash, #F6EAEE);
-  border: 1.5px solid rgba(207,143,169,.3);
+  background: var(--bp-rosa-wash, #F5ECF0);
+  border: 1.5px solid rgba(201,118,138,.3);
 }
 .bp-tier-panel--completo {
   background: var(--bp-navy);
@@ -847,7 +847,7 @@
   margin-bottom: .5rem;
 }
 .bp-tier-panel--essenziale .bp-tier-panel__title { color: var(--bp-rosa); }
-.bp-tier-panel--completo .bp-tier-panel__title { color: var(--bp-gold, #7A4F5E); }
+.bp-tier-panel--completo .bp-tier-panel__title { color: var(--bp-gold, #C48A3A); }
 
 .bp-tier-panel__heading {
   font-size: 1.5rem;
@@ -879,7 +879,7 @@
   font-size: .9rem;
   line-height: 1.5;
 }
-.bp-tier-panel--essenziale .bp-section-list li { border-color: rgba(207,143,169,.15); color: var(--bp-text); }
+.bp-tier-panel--essenziale .bp-section-list li { border-color: rgba(201,118,138,.15); color: var(--bp-text); }
 .bp-tier-panel--completo .bp-section-list li { border-color: rgba(245,236,240,.1); color: rgba(245,236,240,.85); }
 .bp-tier-panel--completo .bp-section-list li:last-child { border-bottom: none; }
 .bp-tier-panel--essenziale .bp-section-list li:last-child { border-bottom: none; }
@@ -892,12 +892,12 @@
   flex-shrink: 0;
 }
 .bp-tier-panel--essenziale .bp-section-num { color: var(--bp-rosa); }
-.bp-tier-panel--completo .bp-section-num { color: var(--bp-gold, #7A4F5E); }
+.bp-tier-panel--completo .bp-section-num { color: var(--bp-gold, #C48A3A); }
 
 .bp-section-list li.extra {
   font-style: italic;
 }
-.bp-tier-panel--completo .bp-section-list li.extra { color: #7A4F5E; }
+.bp-tier-panel--completo .bp-section-list li.extra { color: #C48A3A; }
 
 
 /* ══════════════════════════════════════════
@@ -932,11 +932,11 @@
   aspect-ratio: 595 / 842;
   border-radius: 4px;
   overflow: hidden;
-  background: #F6EAEE;
+  background: #FAF6EE;
   box-shadow:
     0 2px 4px rgba(0,0,0,.08),
-    0 24px 48px rgba(58,53,50,.18),
-    inset 0 0 0 1px rgba(122,79,94,.12);
+    0 24px 48px rgba(15,26,41,.18),
+    inset 0 0 0 1px rgba(196,138,58,.12);
   transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease, z-index 0s linear .5s;
   cursor: zoom-in;
   flex-shrink: 0;
@@ -965,8 +965,8 @@
 .bp-preview-page--1 { transform: translateX(60px) rotate(-8deg) translateY(20px); z-index: 1; }
 .bp-preview-page--2 { transform: translateX(30px) rotate(-3deg) translateY(8px);  z-index: 2; }
 .bp-preview-page--3 { transform: scale(1.18) translateY(-12px);                   z-index: 5;
-                      box-shadow: 0 4px 8px rgba(0,0,0,.10), 0 36px 72px rgba(58,53,50,.30),
-                                  inset 0 0 0 1px rgba(122,79,94,.25); }
+                      box-shadow: 0 4px 8px rgba(0,0,0,.10), 0 36px 72px rgba(15,26,41,.30),
+                                  inset 0 0 0 1px rgba(196,138,58,.25); }
 .bp-preview-page--4 { transform: translateX(-30px) rotate(3deg) translateY(8px);  z-index: 2; }
 .bp-preview-page--5 { transform: translateX(-60px) rotate(8deg) translateY(20px); z-index: 1; }
 
@@ -977,8 +977,8 @@
   transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, z-index 0s;
   box-shadow:
     0 6px 12px rgba(0,0,0,.12),
-    0 48px 96px rgba(58,53,50,.40),
-    inset 0 0 0 1px rgba(122,79,94,.35);
+    0 48px 96px rgba(15,26,41,.40),
+    inset 0 0 0 1px rgba(196,138,58,.35);
 }
 
 .bp-preview-footnote {
@@ -1010,7 +1010,7 @@
     transform: none;
     width: clamp(140px, 42vw, 200px);
     z-index: 1;
-    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 16px 32px rgba(58,53,50,.18);
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 16px 32px rgba(15,26,41,.18);
   }
   .bp-preview-page:hover {
     transform: scale(1.05) translateY(-4px);
@@ -1063,13 +1063,13 @@
   width: 10px; height: 10px;
   border-radius: 50%;
   background: var(--bp-gold);
-  box-shadow: 0 0 0 5px rgba(122,79,94,.15);
+  box-shadow: 0 0 0 5px rgba(196,138,58,.15);
   flex-shrink: 0;
 }
 .bp-forchi-connector__line {
   width: 1.5px;
   flex: 1;
-  background: linear-gradient(180deg, var(--bp-gold) 0%, rgba(122,79,94,.15) 100%);
+  background: linear-gradient(180deg, var(--bp-gold) 0%, rgba(196,138,58,.15) 100%);
 }
 
 .bp-forchi__grid {
@@ -1082,7 +1082,7 @@
 .bp-forchi__grid--linked .bp-profile-card {
   position: relative;
   background: var(--bp-white);
-  border: 1px solid rgba(122,79,94,.18);
+  border: 1px solid rgba(196,138,58,.18);
   border-top: 3px solid var(--bp-gold);
   padding: 2.25rem 1.75rem 1.75rem;
   border-radius: 6px;
@@ -1102,7 +1102,7 @@
 }
 .bp-forchi__grid--linked .bp-profile-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 18px 44px rgba(58,53,50,.12);
+  box-shadow: 0 18px 44px rgba(15,26,41,.12);
   border-color: var(--bp-gold);
 }
 .bp-profile-num {
@@ -1118,13 +1118,13 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #F8F0F3 0%, #EEDDE3 100%);
+  background: linear-gradient(135deg, #F2EAD8 0%, #E8DBC0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.25rem;
   color: var(--bp-gold);
-  border: 1px solid rgba(122,79,94,.25);
+  border: 1px solid rgba(196,138,58,.25);
 }
 .bp-profile-card h3 {
   font-family: 'Outfit', sans-serif;
@@ -1192,7 +1192,7 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: var(--bp-teal-wash, #E9F3F6);
+  background: var(--bp-teal-wash, #E8F4F4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1259,7 +1259,7 @@
 .bp-pricing-card--comp {
   background: var(--bp-navy-deep);
   padding: 3.5rem 2rem;
-  box-shadow: 0 12px 48px var(--bp-navy-glow), 0 0 0 1px rgba(122,79,94,.3);
+  box-shadow: 0 12px 48px var(--bp-navy-glow), 0 0 0 1px rgba(196,138,58,.3);
 }
 .bp-pricing-badge {
   display: block;
@@ -1284,7 +1284,7 @@
   font-size: 3.5rem;
   font-weight: 700;
   font-style: italic;
-  color: var(--bp-rosa-wash, #F6EAEE);
+  color: var(--bp-rosa-wash, #F5ECF0);
   line-height: 1;
 }
 .bp-pricing-card--comp .bp-price-label {
@@ -1381,9 +1381,9 @@
 }
 .bp-btn-outline-ess:hover,
 .bp-btn-outline-ess:focus-visible {
-  background: rgba(122,79,94,.08);
-  color: #5E3A47;
-  border-color: #5E3A47;
+  background: rgba(196,138,58,.08);
+  color: #B07730;
+  border-color: #B07730;
   transform: translateY(-1px);
 }
 
@@ -1395,7 +1395,7 @@
   max-width: 600px;
   margin: 0 auto;
 }
-.bp-section--dark .bp-section-title { color: var(--bp-rosa-wash, #F6EAEE); }
+.bp-section--dark .bp-section-title { color: var(--bp-rosa-wash, #F5ECF0); }
 .bp-section--dark .bp-section-sub { color: rgba(245,236,240,.65); }
 .bp-section--dark .bp-eyebrow { color: var(--bp-gold); }
 .bp-section--dark .bp-eyebrow::before,
@@ -1459,7 +1459,7 @@
 }
 .bp-form-radio:has(input:checked) {
   border-color: var(--bp-rosa);
-  background: rgba(207,143,169,.12);
+  background: rgba(201,118,138,.12);
 }
 .bp-form-radio input { accent-color: var(--bp-rosa); }
 .bp-form-radio strong { display: block; font-weight: 700; color: var(--bp-white); }
@@ -1484,11 +1484,11 @@
 }
 .bp-form-submit:hover,
 .bp-form-submit:focus-visible {
-  background: #5E3A47;
+  background: #B07730;
   color: #FFFFFF;
-  border-color: #5E3A47;
+  border-color: #B07730;
   transform: translateY(-1px);
-  box-shadow: 0 10px 28px rgba(122,79,94,.40);
+  box-shadow: 0 10px 28px rgba(196,138,58,.40);
 }
 .bp-form-note {
   text-align: center;
@@ -1597,7 +1597,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 50%, transparent 45%, rgba(58,53,50,.38) 100%);
+  background: radial-gradient(ellipse at 50% 50%, transparent 45%, rgba(15,26,41,.38) 100%);
   pointer-events: none;
   border-radius: inherit;
 }
@@ -1618,7 +1618,7 @@
   width: 640px; height: 640px;
   right: -80px; top: -120px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(122,79,94,.14) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(196,138,58,.14) 0%, transparent 65%);
   animation: bp-glow-pulse 7s ease-in-out infinite;
   pointer-events: none;
   z-index: 0;
@@ -1628,7 +1628,7 @@
   width: 380px; height: 380px;
   left: -60px; bottom: -60px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(207,143,169,.10) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(201,118,138,.10) 0%, transparent 65%);
   animation: bp-glow-pulse 9s ease-in-out infinite;
   animation-delay: -3s;
   pointer-events: none;
@@ -1646,7 +1646,7 @@
 .bp-particle {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(122,79,94,.7) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(196,138,58,.7) 0%, transparent 70%);
   animation: bp-float-up linear infinite;
   bottom: -20px;
 }
@@ -1661,8 +1661,8 @@
    NB: niente inset shadow su --gradient: su sfondo già navy l'ombra crea una
    banda nera visibile al top, percepita come "blocco nero" tra il fade
    superiore e l'inizio del pricing. */
-.bp-section--parchment  { box-shadow: inset 0 8px 24px rgba(58,53,50,.06); }
-.bp-section--soft       { box-shadow: inset 0 8px 24px rgba(58,53,50,.05); }
+.bp-section--parchment  { box-shadow: inset 0 8px 24px rgba(15,26,41,.06); }
+.bp-section--soft       { box-shadow: inset 0 8px 24px rgba(15,26,41,.05); }
 
 /* Step card glass hover */
 .bp-step {
@@ -1685,7 +1685,7 @@
   transition: box-shadow .3s ease;
 }
 .bp-profile-card:hover .bp-profile-icon {
-  box-shadow: 0 0 28px rgba(122,79,94,.32);
+  box-shadow: 0 0 28px rgba(196,138,58,.32);
 }
 
 /* Grain texture overlay su sezioni parchment */
@@ -1772,8 +1772,8 @@
 .bp-section--amber,
 .bp-section--deep {
   background:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(122,79,94,.04) 0%, transparent 70%),
-    linear-gradient(180deg, #F6EAEE 0%, #F8F0F3 60%, #EEDDE3 100%) !important;
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(196,138,58,.04) 0%, transparent 70%),
+    linear-gradient(180deg, #FAF6EE 0%, #F2EBDC 60%, #E8DCC0 100%) !important;
   color: var(--bp-navy) !important;
   position: relative;
   box-shadow: none !important;
@@ -1813,7 +1813,7 @@
   transform: translateX(-50%);
   font-size: 1rem;
   color: var(--bp-gold);
-  background: #F6EAEE;
+  background: #FAF6EE;
   padding: 0 1.5rem;
   z-index: 3;
   line-height: 1.6;
@@ -1832,7 +1832,7 @@
 .bp-section--amber + .bp-section--white,
 .bp-section--white + .bp-section--deep,
 .bp-section--deep + .bp-section--white {
-  border-top: 1px solid rgba(122,79,94,.30);
+  border-top: 1px solid rgba(196,138,58,.30);
 }
 
 /* Blocchi navy (ancore) — pricing + form: ricevono polish dimensional */
@@ -1840,9 +1840,9 @@
 .bp-section--gradient-flat,
 .bp-section--dark {
   background:
-    radial-gradient(ellipse 70% 60% at 100% 50%, rgba(122,79,94,.10) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 60% at 100% 50%, rgba(196,138,58,.10) 0%, transparent 65%),
     radial-gradient(ellipse 60% 50% at 0% 30%, rgba(74,140,140,.05) 0%, transparent 65%),
-    linear-gradient(135deg, #3E2430 0%, #4A2C38 50%, #3E2430 100%) !important;
+    linear-gradient(135deg, #0B1220 0%, #131D33 50%, #0F1729 100%) !important;
   position: relative;
   overflow: hidden;
 }
@@ -1874,7 +1874,7 @@
 .bp-section--soft .bp-section-sub,
 .bp-section--amber .bp-section-sub,
 .bp-section--deep .bp-section-sub {
-  color: rgba(58,53,50,.65) !important;
+  color: rgba(15,26,41,.65) !important;
 }
 
 /* Eyebrows più "stamp" su parchment */
@@ -1904,60 +1904,60 @@
 /* ──── Cosa contiene — panel cards (Base + Avanzato) ──── */
 /* Base: era rosa-wash, ora cream con bordo gold per coerenza */
 .bp-tier-panel--essenziale {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F6EAEE 100%) !important;
-  border: 1px solid rgba(122,79,94,.30) !important;
+  background: linear-gradient(180deg, #FFFDF8 0%, #FAF6EE 100%) !important;
+  border: 1px solid rgba(196,138,58,.30) !important;
   border-top: 3px solid var(--bp-gold) !important;
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.8),
-    0 1px 2px rgba(58,53,50,.06),
-    0 12px 24px rgba(58,53,50,.08) !important;
+    0 1px 2px rgba(15,26,41,.06),
+    0 12px 24px rgba(15,26,41,.08) !important;
 }
 .bp-tier-panel--essenziale .bp-tier-panel__title { color: var(--bp-gold) !important; }
 .bp-tier-panel--essenziale .bp-section-num { color: var(--bp-gold) !important; }
 /* Avanzato: navy resta — è l'ancora del modulo, polish con gold border-left */
 .bp-tier-panel--completo {
-  background: linear-gradient(135deg, #3E2430 0%, #5E3A47 100%) !important;
-  border: 1px solid rgba(122,79,94,.40) !important;
+  background: linear-gradient(135deg, #0B1220 0%, #1A2540 100%) !important;
+  border: 1px solid rgba(196,138,58,.40) !important;
   border-top: 3px solid var(--bp-gold) !important;
   box-shadow:
-    inset 0 1px 0 rgba(122,79,94,.30),
-    0 2px 4px rgba(58,53,50,.20),
-    0 16px 32px -8px rgba(58,53,50,.30) !important;
+    inset 0 1px 0 rgba(196,138,58,.30),
+    0 2px 4px rgba(15,26,41,.20),
+    0 16px 32px -8px rgba(15,26,41,.30) !important;
 }
 
 /* ──── Pricing — uniforme con il resto ──── */
 .bp-pricing-card--ess {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F6EAEE 100%) !important;
-  border: 1px solid rgba(122,79,94,.30) !important;
+  background: linear-gradient(180deg, #FFFDF8 0%, #FAF6EE 100%) !important;
+  border: 1px solid rgba(196,138,58,.30) !important;
   border-top: 3px solid var(--bp-gold) !important;
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.8),
-    0 1px 2px rgba(58,53,50,.06),
-    0 16px 32px rgba(58,53,50,.10) !important;
+    0 1px 2px rgba(15,26,41,.06),
+    0 16px 32px rgba(15,26,41,.10) !important;
 }
 .bp-pricing-card--ess .bp-pricing-card__title { color: var(--bp-gold) !important; }
 .bp-pricing-card--ess .bp-feature-check { color: var(--bp-gold) !important; }
 .bp-pricing-card--comp {
-  background: linear-gradient(135deg, #3E2430 0%, #5E3A47 100%) !important;
+  background: linear-gradient(135deg, #0B1220 0%, #1A2540 100%) !important;
   box-shadow:
-    inset 0 1px 0 rgba(122,79,94,.30),
-    0 2px 4px rgba(58,53,50,.20),
-    0 24px 48px -12px rgba(58,53,50,.40) !important;
+    inset 0 1px 0 rgba(196,138,58,.30),
+    0 2px 4px rgba(15,26,41,.20),
+    0 24px 48px -12px rgba(15,26,41,.40) !important;
 }
 
 /* ──── Anteprima PDF — bordo gold, shadow più definita ──── */
 .bp-preview-page {
-  background: #F6EAEE !important;
+  background: #FAF6EE !important;
   box-shadow:
     0 2px 4px rgba(0,0,0,.10),
-    0 16px 32px -4px rgba(58,53,50,.15),
-    inset 0 0 0 1px rgba(122,79,94,.20) !important;
+    0 16px 32px -4px rgba(15,26,41,.15),
+    inset 0 0 0 1px rgba(196,138,58,.20) !important;
 }
 .bp-preview-page--featured {
   box-shadow:
     0 4px 8px rgba(0,0,0,.12),
-    0 32px 64px -8px rgba(58,53,50,.30),
-    inset 0 0 0 1px rgba(122,79,94,.45) !important;
+    0 32px 64px -8px rgba(15,26,41,.30),
+    inset 0 0 0 1px rgba(196,138,58,.45) !important;
 }
 .bp-preview-page figcaption {
   color: var(--bp-gold) !important;
@@ -1965,67 +1965,67 @@
 
 /* ──── Forchi-section — accent gold rinforzato ──── */
 .bp-forchi__grid--linked .bp-profile-card {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F6EAEE 100%) !important;
-  border: 1px solid rgba(122,79,94,.20) !important;
+  background: linear-gradient(180deg, #FFFDF8 0%, #FAF6EE 100%) !important;
+  border: 1px solid rgba(196,138,58,.20) !important;
   border-top: 3px solid var(--bp-gold) !important;
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.8),
-    0 1px 2px rgba(58,53,50,.06),
-    0 8px 20px rgba(58,53,50,.08) !important;
+    0 1px 2px rgba(15,26,41,.06),
+    0 8px 20px rgba(15,26,41,.08) !important;
 }
 .bp-forchi-title em,
 .bp-forchi-title { color: var(--bp-navy) !important; }
 
 /* ──── Steps — su parchment, niente più glassmorphism scuro ──── */
 .bp-step {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F6EAEE 100%) !important;
-  border: 1px solid rgba(122,79,94,.20) !important;
+  background: linear-gradient(180deg, #FFFDF8 0%, #FAF6EE 100%) !important;
+  border: 1px solid rgba(196,138,58,.20) !important;
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.8),
-    0 1px 2px rgba(58,53,50,.06),
-    0 8px 16px rgba(58,53,50,.08) !important;
+    0 1px 2px rgba(15,26,41,.06),
+    0 8px 16px rgba(15,26,41,.08) !important;
   backdrop-filter: none !important;
 }
 .bp-step__icon {
-  background: linear-gradient(180deg, #F8F0F3 0%, #EEDDE3 100%) !important;
+  background: linear-gradient(180deg, #F2EAD8 0%, #E8DBC0 100%) !important;
   color: var(--bp-gold) !important;
-  border: 1px solid rgba(122,79,94,.25) !important;
+  border: 1px solid rgba(196,138,58,.25) !important;
 }
 .bp-step__num { color: var(--bp-gold) !important; }
 .bp-step h3 { color: var(--bp-navy) !important; }
-.bp-step p { color: rgba(58,53,50,.7) !important; }
+.bp-step p { color: rgba(15,26,41,.7) !important; }
 .bp-steps__grid::before {
-  border-top-color: rgba(122,79,94,.30) !important;
+  border-top-color: rgba(196,138,58,.30) !important;
 }
 
 /* ──── Bio Valentina — bordo gold ──── */
 .bp-bio__photo {
   box-shadow:
-    0 0 0 5px #FFFFFF,
+    0 0 0 5px #FFFDF8,
     0 0 0 7px var(--bp-gold),
-    0 18px 36px -8px rgba(58,53,50,.25) !important;
+    0 18px 36px -8px rgba(15,26,41,.25) !important;
 }
 .bp-bio__credential { color: var(--bp-gold) !important; }
 .bp-bio__text h3 { color: var(--bp-navy) !important; }
-.bp-bio__text p { color: rgba(58,53,50,.72) !important; }
+.bp-bio__text p { color: rgba(15,26,41,.72) !important; }
 
 /* ──── FAQ — divisori gold ──── */
-.bp-faq-item { border-bottom-color: rgba(122,79,94,.25) !important; }
-.bp-faq-item:first-child { border-top-color: rgba(122,79,94,.25) !important; }
+.bp-faq-item { border-bottom-color: rgba(196,138,58,.25) !important; }
+.bp-faq-item:first-child { border-top-color: rgba(196,138,58,.25) !important; }
 .bp-faq-q { color: var(--bp-navy) !important; }
 .bp-faq-q:hover { color: var(--bp-gold) !important; }
 .bp-faq-icon {
-  border-color: rgba(122,79,94,.40) !important;
+  border-color: rgba(196,138,58,.40) !important;
   color: var(--bp-gold) !important;
 }
-.bp-faq-a p { color: rgba(58,53,50,.7) !important; }
+.bp-faq-a p { color: rgba(15,26,41,.7) !important; }
 
 /* ──── Link footer pricing — gold (era rosa) ──── */
 .bp-pricing__footer a { color: var(--bp-gold) !important; }
-.bp-pricing__footer a:hover { color: #5E3A47 !important; }
+.bp-pricing__footer a:hover { color: #A06820 !important; }
 
 /* ──── Section dark: titolo cream puro (era blush rosa-wash) ──── */
-.bp-section--dark .bp-section-title { color: #F6EAEE !important; }
+.bp-section--dark .bp-section-title { color: #F5EFE3 !important; }
 .bp-section--dark .bp-section-sub { color: rgba(245,239,227,.70) !important; }
 
 /* ──── Sezione separator: ornamento ◆ rinforzato ──── */
@@ -2055,12 +2055,12 @@
 .bp-section--parchment .bp-btn-primary,
 .bp-section--soft .bp-btn-primary,
 .bp-section--amber .bp-btn-primary {
-  background: linear-gradient(180deg, #8B5E70 0%, var(--bp-gold) 100%) !important;
+  background: linear-gradient(180deg, #D69847 0%, var(--bp-gold) 100%) !important;
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.4),
-    0 1px 2px rgba(122,79,94,.40),
-    0 4px 8px rgba(122,79,94,.30),
-    0 12px 24px rgba(122,79,94,.20) !important;
+    0 1px 2px rgba(196,138,58,.40),
+    0 4px 8px rgba(196,138,58,.30),
+    0 12px 24px rgba(196,138,58,.20) !important;
 }
 
 /* ════════════════════════════════════════════════════════════════════════════
@@ -2158,9 +2158,9 @@
   .bp-eyebrow { justify-content: center !important; }
 }
 </style>
-<link rel="stylesheet" href="libretto-d2.css?v=1788467587"></head>
+<link rel="stylesheet" href="libretto-d2.css?v=1788467738"></head>
 <body class="d2 pg-libretto">
-<div class="avviso">Bozza &middot; direzione 2 <b>Meccanica Calda</b> &middot; Libretto d'Istruzioni &middot; testi e struttura identici al sito online, palette tradotta &middot; nota: online manca l'indirizzo del venditore (segnaposto)</div>
+<div class="avviso">Bozza &middot; direzione 2 <b>Meccanica Calda</b> &middot; Libretto d'Istruzioni &middot; testi, struttura e colori identici al sito online (oro / blu notte) &middot; nota: online manca l'indirizzo del venditore (segnaposto)</div>
 <nav class="nav"><div class="wrap">
   <a class="brand" href="dir-2.html">Valentina Russo<em>Consulente BG5&reg;</em></a>
   <ul class="menu"><li><a href="servizi.html">Servizi</a></li><li><a href="human-design.html">Cos&rsquo;&egrave; lo Human Design</a></li><li><a href="blog.html">Blog</a></li><li><a href="chi-sono.html">Chi Sono</a></li><li><a href="contatti.html">Contatti</a></li><li><a href="aziende.html">Aziende</a></li></ul>
@@ -2481,7 +2481,7 @@
         <p>Valentina prepara il documento personalmente e lo revisiona prima di inviarlo. Arriva via email entro 2–4 giorni lavorativi.</p>
       </div>
     </div>
-    <p style="text-align:center;font-size:.82rem;color:rgba(58,53,50,.6);margin:2.5rem auto 0;max-width:680px;line-height:1.65;font-style:italic">
+    <p style="text-align:center;font-size:.82rem;color:rgba(15,26,41,.6);margin:2.5rem auto 0;max-width:680px;line-height:1.65;font-style:italic">
       Trasparenza: il Libretto è elaborato con il supporto di strumenti di intelligenza artificiale (Claude, Anthropic) sui tuoi dati di nascita, e revisionato personalmente da Valentina prima della consegna.
     </p>
   </div>
@@ -2509,7 +2509,7 @@
           <span class="bp-price">€90</span>
         </div>
         <p class="bp-price-label">4 capitoli · ~35 pagine · PDF</p>
-        <p style="font-size:.7rem;color:rgba(58,53,50,.55);text-align:center;margin:0 0 1rem">Prezzo finale · Regime forfettario, nessuna IVA</p>
+        <p style="font-size:.7rem;color:rgba(15,26,41,.55);text-align:center;margin:0 0 1rem">Prezzo finale · Regime forfettario, nessuna IVA</p>
         <ul class="bp-feature-list">
           <li><span class="bp-feature-check">·</span>Tipo, Strategia e Profilo energetico</li>
           <li><span class="bp-feature-check">·</span>Autorità Interiore nei contesti reali</li>
@@ -2532,10 +2532,10 @@
         <p class="bp-price-label">7 capitoli · ~55 pagine · PDF</p>
         <p style="font-size:.7rem;color:rgba(245,236,240,.55);text-align:center;margin:0 0 1rem">Prezzo finale · Regime forfettario, nessuna IVA</p>
         <ul class="bp-feature-list">
-          <li><span class="bp-feature-check" style="color:#0A98B1">·</span><span style="color:rgba(245,236,240,.85)">Tutto il Base (4 capitoli), più:</span></li>
-          <li><span class="bp-feature-check" style="color:#7A4F5E">+</span><span class="bp-feature-extra">Come comunichi: la tua voce</span></li>
-          <li><span class="bp-feature-check" style="color:#7A4F5E">+</span><span class="bp-feature-extra">Lavoro e costruzione di offerte</span></li>
-          <li><span class="bp-feature-check" style="color:#7A4F5E">+</span><span class="bp-feature-extra">Sintesi integrata e passi concreti</span></li>
+          <li><span class="bp-feature-check" style="color:#4A8C8C">·</span><span style="color:rgba(245,236,240,.85)">Tutto il Base (4 capitoli), più:</span></li>
+          <li><span class="bp-feature-check" style="color:#C48A3A">+</span><span class="bp-feature-extra">Come comunichi: la tua voce</span></li>
+          <li><span class="bp-feature-check" style="color:#C48A3A">+</span><span class="bp-feature-extra">Lavoro e costruzione di offerte</span></li>
+          <li><span class="bp-feature-check" style="color:#C48A3A">+</span><span class="bp-feature-extra">Sintesi integrata e passi concreti</span></li>
         </ul>
         <div class="bp-cta">
           <a href="https://valentinarussobg5.com/libretto-dati/checkout.php?tier=avanzato" class="bp-btn-primary" style="display:block;text-align:center">Ordina il Libretto Avanzato · €147</a>
@@ -2553,7 +2553,7 @@
       Altre domande? <a href="#faq">Leggi le FAQ →</a>
     </p>
 
-        <div class="bp-precontract" style="max-width:780px;margin:2.5rem auto 0;padding:1.25rem 1.5rem;background:rgba(255,255,255,.55);border:1px solid var(--bp-soft-parchment);border-radius:6px;font-size:.78rem;color:rgba(58,53,50,.7);line-height:1.7;text-align:center">
+        <div class="bp-precontract" style="max-width:780px;margin:2.5rem auto 0;padding:1.25rem 1.5rem;background:rgba(255,255,255,.55);border:1px solid var(--bp-soft-parchment);border-radius:6px;font-size:.78rem;color:rgba(15,26,41,.7);line-height:1.7;text-align:center">
       Vendita effettuata da <strong>Valentina Russo</strong> · P.IVA 03831440049 · [INDIRIZZO FISICO COMPLETO]<br>
       <a href="https://valentinarussobg5.com/terms" style="color:var(--bp-gold)">Condizioni di Vendita</a> ·
       <a href="https://valentinarussobg5.com/privacy" style="color:var(--bp-gold)">Informativa Privacy</a> ·
