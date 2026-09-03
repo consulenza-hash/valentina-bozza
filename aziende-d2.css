@@ -80,9 +80,10 @@
 .d2 .az-offerta li::before{content:"\2013";position:absolute;left:0;color:var(--acc-ink)}
 .d2 .az-dettagli{margin-top:auto;padding-top:14px;border-top:1px solid var(--linea);font-size:14px;color:var(--muto);display:flex;flex-direction:column;gap:4px}
 .d2 .az-dettagli b{font-family:Fraunces,Georgia,serif;font-style:italic;font-size:19px;color:var(--dom);font-weight:600}
-/* contatti aziende */
-.d2 .az-diretto{font-size:14px;color:var(--muto);margin:26px 0 10px}
-.d2 .az-diretti{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
-.d2 .az-diretti a{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border:1px solid var(--linea);border-radius:999px;background:var(--carta);color:var(--dom-2);text-decoration:none;font-size:14.5px;box-shadow:var(--ombra)}
-.d2 .az-diretti a:hover{border-color:var(--dom)}
+/* contatti aziende: stesse forme della pagina contatti privati, tinte azzurre */
+.d2.az .ct-ico{background:linear-gradient(135deg,rgba(47,179,201,.30),rgba(10,152,177,.20));color:var(--dom)}
+.d2.az .campo input,.d2.az .campo textarea{background:#F6FAFB}
+.d2.az .campo input:focus,.d2.az .campo textarea:focus{border-color:var(--dom);box-shadow:0 0 0 3px rgba(12,74,86,.14);background:#fff}
+.d2.az .consenso input{accent-color:var(--dom)}
+.d2 .ct-etichetta{font-size:14px;color:var(--muto);margin:26px 0 12px}
 @media (max-width:900px){.d2 .az-area .duo{grid-template-columns:1fr}}
