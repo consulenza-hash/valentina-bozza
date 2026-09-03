@@ -1,0 +1,444 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Workshop Scopri il tuo Disegno | Valentina Russo (bozza)</title>
+<link rel="icon" href="img/e18c9bb45946.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Outfit:wght@400;500;600&family=Fraunces:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dir.css?v=1788469355"><link rel="stylesheet" href="home-d2.css?v=1788469355">
+<style>
+/* ── Mobile-first overrides ─────────────────────────────────── */
+
+/* Touch-action su tutti gli elementi interattivi */
+button, input, select, label, a {
+    touch-action: manipulation;
+}
+
+/* Bottone full-width + tappo ottimale su mobile */
+#ws-submit {
+    width: 100%;
+    min-height: 52px;
+}
+
+/* Day-label touch target minimo 44px */
+.ws-day-label {
+    min-height: 44px;
+    padding: 0.6rem 1.1rem;
+    align-items: center;
+}
+
+/* Focus ring accessibile (keyboard + a11y) */
+input:focus-visible, select:focus-visible, button:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ── 768px ──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    /* Chi conduce: colonna singola, foto sotto */
+    .ws-bio-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    .ws-bio-grid h2 {
+        font-size: clamp(1.9rem, 7vw, 2.5rem) !important;
+        line-height: 1.15 !important;
+    }
+
+    /* Win-Win: colonna singola */
+    .ws-pricing-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    /* Sezione vantaggi */
+    .ws-vantaggi {
+        border-radius: 24px !important;
+        margin: 1rem 0.75rem !important;
+        padding: 3rem 1.5rem !important;
+    }
+    .ws-vantaggi h2 { font-size: 2rem !important; margin-bottom: 2rem !important; }
+
+    /* Card padding ridotto */
+    .ws-card-inner { padding: 1.75rem !important; }
+
+    /* Certificazione */
+    .ws-cert-box { padding: 2rem 1.5rem !important; }
+
+    /* Sezioni padding verticale */
+    .ws-section-v { padding-bottom: 3rem !important; }
+
+    /* "Il Concetto" card interna */
+    .ws-concetto-inner { padding: 2.5rem 1.5rem !important; }
+
+    /* Hero: meno padding verticale */
+    .ws-hero { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+
+    /* Format badge: wrap su 2 righe se necessario */
+    .ws-format-badge {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 0.35rem 0.75rem !important;
+        padding: 0.85rem 1.25rem !important;
+        text-align: center !important;
+    }
+}
+
+/* ── 480px — piccoli phone (iPhone SE, 375px) ───────────────── */
+@media (max-width: 480px) {
+    .ws-bio-grid h2 {
+        font-size: 1.85rem !important;
+    }
+    .ws-vantaggi {
+        margin: 0.75rem 0.5rem !important;
+        padding: 2.5rem 1.25rem !important;
+    }
+    .ws-vantaggi h2 { font-size: 1.75rem !important; }
+    .ws-card-inner { padding: 1.4rem !important; }
+    .ws-cert-box { padding: 1.75rem 1.1rem !important; }
+    .ws-concetto-inner { padding: 2rem 1.1rem !important; }
+
+    /* Day checkboxes: full-width su phone piccoli */
+    .ws-days-wrap { flex-direction: column !important; }
+    .ws-day-label { width: 100% !important; justify-content: flex-start !important; }
+
+    /* Prezzi: testo più compatto */
+    .ws-pricing-grid .ws-price-title { font-size: 1.4rem !important; }
+}
+
+/* Desktop: bottone auto-width */
+@media (min-width: 769px) {
+    #ws-submit { width: auto; min-width: 260px; }
+}
+</style>
+<link rel="stylesheet" href="workshop-d2.css?v=1788469355"></head>
+<body class="d2 pg-workshop">
+<div class="avviso">Bozza &middot; direzione 2 <b>Meccanica Calda</b> &middot; Workshop per centri olistici &middot; testi identici al sito online &middot; il modulo qui <b>non invia</b></div>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="dir-2.html">Valentina Russo<em>Consulente BG5&reg;</em></a>
+  <ul class="menu"><li><a href="servizi.html">Servizi</a></li><li><a href="human-design.html">Cos&rsquo;&egrave; lo Human Design</a></li><li><a href="blog.html">Blog</a></li><li><a href="chi-sono.html">Chi Sono</a></li><li><a href="contatti.html">Contatti</a></li><li><a href="aziende.html">Aziende</a></li></ul>
+  <a class="btn btn-1" href="calcolo-human-design.html">Calcola la tua carta gratis</a>
+</div></nav>
+<div class="ws">
+
+    <section class="section-padding ws-hero">
+        <div class="container">
+            <p class="text-uppercase">
+                Per Centri Olistici
+            </p>
+            <h1 class="serif">
+                Scopri il tuo<br><em>Disegno</em>
+            </h1>
+            <p class="serif italic">
+                Un approccio pratico e operativo: al termine del workshop, ogni persona avrà le basi esatte per capire come operare e muoversi correttamente nel mondo secondo il proprio disegno individuale.
+            </p>
+            <div class="ws-format-badge">
+                Format: <strong>Masterclass Interattiva</strong> | Durata: <strong>90-120 min</strong>
+            </div>
+        </div>
+    </section>
+    <section class="ws-section-v ws-video"><div class="ws-video-box">
+                    src="https://www.youtube-nocookie.com/embed/WPieOX8GoO0?rel=0"
+                    title="Workshop Scopri il tuo Disegno - Valentina Russo"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <section class="ws-section-v ws-certificazione">
+        <div class="container">
+            <div class="ws-cert-box">
+                <img src="img/487d3ff00853.png"
+                     alt="BG5 Certified — Jovian Archive">
+                <p>
+                    Questo è l'<strong>unico logo ufficiale</strong> rilasciato da Jovian Archive — la casa madre del sistema BG5® e Human Design. 
+                    Qualunque proposta priva di questa certificazione non garantisce l'accuratezza del metodo originale.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section-padding ws-concetto">
+        <div class="container">
+            <div class="blog-card">
+                <div class="ws-concetto-inner">
+                    <h2 class="serif">
+                        Più di un oroscopo,<br>più di un test di personalità
+                    </h2>
+                    <p>
+                        I frequentatori dei centri olistici cercano risposte a domande profonde: <em>"Perché ripeto sempre gli stessi schemi?"</em>, <em>"Perché mi mancano le energie?"</em>, <em>"Come posso prendere decisioni migliori?"</em>
+                    </p>
+                    <div>
+                        <p>
+                            <strong>Lo Human Design</strong> sintetizza saggezze antiche (Astrologia, I-Ching, Sistema dei Chakra e <em>Cabala Ebraica</em>) e scienza moderna (Genetica e Fisica Quantistica). È lo strumento più avanzato per l'auto-conoscenza oggi disponibile.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-padding ws-contenuto">
+        <div class="container">
+            <h2 class="serif text-center">
+                Il contenuto dell'evento
+            </h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="ws-card-inner">
+                        <div>
+                            <span>✦</span>
+                            <h3>I Vantaggi dello Human Design</h3>
+                        </div>
+                        <p>Applicazioni pratiche e benefici reali nella vita quotidiana. Come utilizzare questa mappa meccanica per migliorare le proprie relazioni e capire le proprie dinamiche comportamentali.</p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="ws-card-inner">
+                        <div>
+                            <span>❂</span>
+                            <h3>I Quattro Tipi Energetici</h3>
+                        </div>
+                        <p>Analisi delle diverse nature energetiche: Generatori, Proiettori, Manifestatori e Riflettori. Imparare a comprendere il modo corretto per processare l'energia senza resistenza e frustrazione.</p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="ws-card-inner">
+                        <div>
+                            <span>✧</span>
+                            <h3>Strategia e Autorità</h3>
+                        </div>
+                        <p>Gli strumenti fondamentali e meccanici per il processo decisionale. Scoprire dove risiede la propria vera bussola per fare scelte corrette e pienamente allineate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-padding ws-bio">
+        <div class="container">
+            <div class="ws-bio-grid">
+                <div>
+                    <h2 class="serif ws-bio-h2">Chi conduce</h2>
+                    <p class="serif italic">Human Design Analyst & Mental Advisor</p>
+                    <p>
+                        Valentina traduce la complessità del sistema BG5® in <strong>istruzioni pratiche</strong> per la vita quotidiana, con un approccio logico e diretto.
+                    </p>
+                    <p>
+                        Il suo obiettivo è fornire una chiave di lettura strutturale della propria natura per eliminare le frizioni energetiche e vivere con chiarezza.
+                    </p>
+                </div>
+                <div>
+                    <img src="img/31e1b0189fe6.jpg"
+                         alt="Valentina Russo">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ws-vantaggi">
+        <div class="container">
+            <h2 class="serif text-center">
+                Perché ospitare questo workshop?
+            </h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="ws-card-inner">
+                        <h3>Trend Attuale</h3>
+                        <p>Lo Human Design è un argomento di fortissimo richiamo attualmente nel mondo olistico e della crescita personale.</p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="ws-card-inner">
+                        <h3>Nuova Acquisizione</h3>
+                        <p>L'evento funge da magnete. È uno strumento eccellente per attirare e generare nuova clientela per la struttura ospitante.</p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="ws-card-inner">
+                        <h3>Pionierismo</h3>
+                        <p>In Italia è ancora un approccio nuovo e incontaminato. Ospitarlo ora offre un netto vantaggio competitivo rispetto agli altri centri della zona.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-padding ws-modello">
+        <div class="container">
+            <h2 class="serif text-center">
+                Un modello Win-Win
+            </h2>
+            <div class="ws-pricing-grid">
+                <div class="blog-card">
+                    <div class="ws-card-inner">
+                        <div>
+                            ★ Modello Consigliato
+                        </div>
+                        <h3>Opzione A</h3>
+                        <p class="ws-price-title">Revenue Share</p>
+                        <p>Il Centro trattiene il <strong>30%</strong> sull'intero incasso. <strong>Nessun costo fisso o rischio imprenditoriale.</strong></p>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div>
+                        <h3>Opzione B</h3>
+                        <p class="ws-price-title">Flat Fee</p>
+                        <p>Il gettone per la masterclass è da concordare e verrà quantificato di volta in volta in base alla location e alla capienza. Il Centro gestisce autonomamente il prezzo del biglietto, trattenendo il surplus.</p>
+                    </div>
+                </div>
+            </div>
+            <p>
+                * È possibile prevedere giornate di Letture Individuali Human Design nei giorni successivi, portando traffico ricorrente al Centro.
+            </p>
+        </div>
+    </section>
+    <section class="section-padding ws-contatto">
+        <div class="container">
+            <h2 class="serif text-center">
+                Collaboriamo?
+            </h2>
+            <p>
+                Lascia i tuoi dati e ti ricontatteremo nelle fasce orarie che preferisci.
+            </p>
+            <form id="ws-contact-form" novalidate>
+                <div>
+                    <label for="ws-centro">Nome del centro <span>*</span></label>
+                    <input id="ws-centro" name="centro" type="text" required autocomplete="organization"
+                        placeholder="Centro Olistico Esempio">
+                </div>
+                <div>
+                    <label for="ws-referente">Nome del referente <span>*</span></label>
+                    <input id="ws-referente" name="referente" type="text" required autocomplete="name"
+                        placeholder="Nome e Cognome">
+                </div>
+                <div>
+                    <label for="ws-telefono">Numero di telefono <span>*</span></label>
+                    <input id="ws-telefono" name="telefono" type="tel" required autocomplete="tel"
+                        placeholder="+39 000 000 0000">
+                </div>
+                <div>
+                    <label for="ws-fascia">Fascia oraria preferita</label>
+                    <select id="ws-fascia" name="fascia">
+                        <option value="">— Seleziona —</option>
+                        <option value="Mattina (9:00–12:00)">Mattina (9:00–12:00)</option>
+                        <option value="Primo pomeriggio (12:00–15:00)">Primo pomeriggio (12:00–15:00)</option>
+                        <option value="Pomeriggio (15:00–18:00)">Pomeriggio (15:00–18:00)</option>
+                        <option value="Sera (18:00–20:00)">Sera (18:00–20:00)</option>
+                    </select>
+                </div>
+                <div>
+                    <span>Giorni preferiti</span>
+                    <div class="ws-days-wrap">
+                                                <label class="ws-day-label">
+                            <input type="checkbox" name="giorni[]" value="Lunedì">
+                            Lunedì
+                        </label>
+                                                <label class="ws-day-label">
+                            <input type="checkbox" name="giorni[]" value="Martedì">
+                            Martedì
+                        </label>
+                                                <label class="ws-day-label">
+                            <input type="checkbox" name="giorni[]" value="Mercoledì">
+                            Mercoledì
+                        </label>
+                                                <label class="ws-day-label">
+                            <input type="checkbox" name="giorni[]" value="Giovedì">
+                            Giovedì
+                        </label>
+                                                <label class="ws-day-label">
+                            <input type="checkbox" name="giorni[]" value="Venerdì">
+                            Venerdì
+                        </label>
+                                                <label class="ws-day-label">
+                            <input type="checkbox" name="giorni[]" value="Sabato">
+                            Sabato
+                        </label>
+                                            </div>
+                </div>
+                <div id="ws-error"></div>
+                <button type="submit" id="ws-submit">
+                    Richiedi informazioni
+                </button>
+            </form>
+            <div id="ws-success">
+                <div>✓</div>
+                <h3>Richiesta inviata!</h3>
+                <p>Il team di Valentina ti contatterà a breve nelle fasce orarie indicate.</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+<footer><div class="wrap">
+  <div class="riga-1"><a class="brand" href="dir-2.html">Valentina Russo<em>Consulente BG5&reg;</em></a>
+    <nav class="piede-link"><a href="dir-2.html">Home</a><a href="chi-sono.html">Chi Sono</a><a href="servizi.html">Servizi</a><a href="blog.html">Blog</a><a href="contatti.html">Contatti</a><a href="privacy.html">Privacy</a><a href="terms.html">Termini</a><a href="https://www.instagram.com/valentinarussobg5/">Instagram</a><a href="https://bg5businessinstitute.com/">BG5&reg; Business Institute</a><a href="https://www.jovianarchive.com/">Human Design Official</a></nav></div>
+  <p class="citta-riga"><span>Consulente BG5&reg; per citt&agrave;:</span> <a href="consulente-bg5-torino.html">Torino</a> &middot; <a href="consulente-bg5-milano.html">Milano</a> &middot; <a href="consulente-bg5-roma.html">Roma</a> &middot; <a href="consulente-bg5-firenze.html">Firenze</a> &middot; <a href="consulente-bg5-bologna.html">Bologna</a> &middot; <a href="consulente-bg5-napoli.html">Napoli</a> &middot; <a href="consulente-bg5-venezia.html">Venezia</a> &middot; <a href="consulente-bg5-bari.html">Bari</a> &middot; <a href="consulente-bg5-palermo.html">Palermo</a> &middot; <a href="consulente-bg5-verona.html">Verona</a> &middot; <a href="consulente-bg5-italia.html">Tutta Italia</a></p>
+  <p class="legale">&copy; 2026 Valentina Russo &mdash; Consulente BG5&reg; | Human Design Analyst. Tutti i diritti riservati. P.IVA 03831440049 &middot; <a href="https://bg5businessinstitute.com/professionals?id=399d41b3-612b-48d1-88b9-7bc26ed71418">Analista Certificata BG5&reg; &mdash; Profilo Ufficiale</a></p>
+</div></footer>
+<script>
+    (function () {
+        var form    = document.getElementById('ws-contact-form');
+        var success = document.getElementById('ws-success');
+        var errBox  = document.getElementById('ws-error');
+        var btn     = document.getElementById('ws-submit');
+
+        // Focus style per i campi
+        form.querySelectorAll('input[type="text"],input[type="tel"],select').forEach(function (el) {
+            el.addEventListener('focus',  function () { this.style.borderColor = 'var(--primary-color)'; });
+            el.addEventListener('blur',   function () { this.style.borderColor = '#ddd'; });
+        });
+
+        // Hover/tap style per i checkbox-giorno
+        form.querySelectorAll('.ws-day-label').forEach(function (lbl) {
+            var cb = lbl.querySelector('input[type="checkbox"]');
+            function applyChecked() {
+                lbl.style.background  = cb.checked ? 'rgba(182,131,151,0.08)' : '';
+                lbl.style.borderColor = cb.checked ? 'var(--primary-color)' : '#ddd';
+                lbl.style.fontWeight  = cb.checked ? '700' : '';
+            }
+            lbl.addEventListener('mouseenter', function () { lbl.style.borderColor = 'var(--primary-color)'; });
+            lbl.addEventListener('mouseleave', function () { lbl.style.borderColor = cb.checked ? 'var(--primary-color)' : '#ddd'; });
+            cb.addEventListener('change', applyChecked);
+        });
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            errBox.style.display = 'none';
+
+            var centro    = form.querySelector('[name="centro"]').value.trim();
+            var referente = form.querySelector('[name="referente"]').value.trim();
+            var telefono  = form.querySelector('[name="telefono"]').value.trim();
+
+            if (!centro || !referente || !telefono) {
+                errBox.textContent = 'Compila i campi obbligatori: nome del centro, referente e telefono.';
+                errBox.style.display = 'block';
+                return;
+            }
+
+            btn.disabled = true;
+            btn.textContent = 'Invio in corso…';
+
+            var data = new FormData(form);
+
+            fetch('/workshop-contact.php', {
+                method: 'POST',
+                body: data
+            })
+            .then(function (r) { return r.json(); })
+            .then(function (json) {
+                if (json.ok) {
+                    form.style.display    = 'none';
+                    success.style.display = 'block';
+                } else {
+                    errBox.textContent  = 'Si è verificato un errore. Scrivi direttamente a staff@valentinarussobg5.com';
+                    errBox.style.display = 'block';
+                    btn.disabled    = false;
+                    btn.textContent = 'Richiedi informazioni';
+                }
+            })
+            .catch(function () {
+                errBox.textContent  = 'Problema di connessione. Scrivi direttamente a staff@valentinarussobg5.com';
+                errBox.style.display = 'block';
+                btn.disabled    = false;
+                btn.textContent = 'Richiedi informazioni';
+            });
+        });
+    })();
+    </script>
+</body></html>
