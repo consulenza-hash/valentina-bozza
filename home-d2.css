@@ -1,0 +1,42 @@
+
+.d2 .menu{gap:0}.d2 .menu a{white-space:nowrap;padding:0 9px;font-size:14.5px}
+.d2 .nav .btn-1{white-space:nowrap}
+.d2 .fine .btn-2:hover{background:rgba(255,255,255,.14);border-color:#fff;color:#fff;transform:translateY(-2px)}
+/* stati prima visita / visita successiva */
+.solo-torna{display:none}
+body.torna .solo-nuovo{display:none}
+body.torna .solo-torna{display:flex}
+body.torna p.solo-torna{display:block}
+/* citazione: banda sottile, senza virgoletta in filigrana */
+.d2 .banda-cit{background:var(--carta);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);padding:26px 0}
+.d2 .banda-cit p{margin:0 auto;max-width:60ch;text-align:center;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:19px;line-height:1.5;color:var(--ink)}
+/* si parte da qui: una card principale, due tappe successive piu' discrete */
+.d2 .partenza{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;margin-top:40px;align-items:start}
+.d2 .card-prima{padding:36px 34px;background:linear-gradient(160deg,#fff,var(--tint));border:1px solid rgba(122,79,94,.14)}
+.d2 .card-prima h3{font-size:28px}
+.d2 .card-prima p{font-size:17px}
+.d2 .card-prima .azioni{margin-top:14px;align-items:center}
+.d2 .poi{display:grid;gap:14px}
+.d2 .poi>.etich{margin:6px 0 0}
+.d2 .card-poi{padding:22px 24px;box-shadow:none;border:1px solid var(--linea);border-radius:12px}
+.d2 .card-poi h3{font-size:19px}
+.d2 .card-poi p{font-size:15px}
+.d2 .card-poi::after{display:none}
+.d2 .card-poi:hover{transform:none;box-shadow:var(--ombra)}
+/* la carta vera */
+.d2 .carta{margin:0;background:#fff;border-radius:16px;padding:18px;box-shadow:var(--ombra);border:1px solid var(--linea)}
+.d2 .carta img{width:100%;height:auto;border-radius:8px}
+.d2 .carta figcaption{margin-top:12px;font-size:13.5px;color:var(--muto);text-align:center}
+/* pie' di pagina basso, in orizzontale */
+.d2 footer{padding:30px 0 22px}
+.d2 .riga-1{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.d2 .piede-link{display:flex;flex-wrap:wrap;gap:2px 4px}
+.d2 .piede-link a{min-height:44px;display:inline-flex;align-items:center;padding:0 10px;color:var(--muto);text-decoration:none;font-size:14px}
+.d2 .piede-link a:hover{color:var(--ink)}
+.d2 .citta-riga{margin:14px auto 0;font-size:13.5px;color:var(--muto);max-width:none;line-height:2.2;text-align:center}
+.d2 .citta-riga span{font-weight:600}
+.d2 .citta-riga a{color:var(--muto);text-decoration:none;padding:6px 2px}
+.d2 .citta-riga a:hover{color:var(--ink)}
+.d2 .legale{margin:10px 0 0;padding-top:12px;border-top:1px solid var(--linea);font-size:12.5px;max-width:none}
+.d2 .legale a{color:var(--muto)}
+@media (max-width:900px){.d2 .partenza{grid-template-columns:1fr}.d2 .riga-1{flex-direction:column;align-items:flex-start}}
