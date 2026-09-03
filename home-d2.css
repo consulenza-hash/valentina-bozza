@@ -37,6 +37,6 @@ body.torna p.solo-torna{display:block}
 .d2 .citta-riga span{font-weight:600}
 .d2 .citta-riga a{color:var(--muto);text-decoration:none;padding:6px 2px}
 .d2 .citta-riga a:hover{color:var(--ink)}
-.d2 .legale{margin:10px 0 0;padding-top:12px;border-top:1px solid var(--linea);font-size:12.5px;max-width:none}
+.d2 .legale{margin:10px 0 0;padding-top:12px;border-top:1px solid var(--linea);font-size:12.5px;max-width:none;text-align:center}
 .d2 .legale a{color:var(--muto)}
 @media (max-width:900px){.d2 .partenza{grid-template-columns:1fr}.d2 .riga-1{flex-direction:column;align-items:flex-start}}
