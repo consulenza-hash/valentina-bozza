@@ -11,6 +11,8 @@ body.d2.pg-libretto{background:var(--fondo)}
 .d2 .bp-btn-hero-outline:hover,.d2 .bp-btn-outline:hover,.d2 .bp-btn-outline-ess:hover,.d2 .bp-btn-outline-lg:hover{background:var(--tint)!important}
 .d2 .bp-pricing-card,.d2 .bp-tier-panel,.d2 .bp-profile,.d2 .bp-step,.d2 .bp-faq-item{border-radius:12px!important}
 .d2 .bp-eyebrow{letter-spacing:.14em!important}
+/* voci extra della card scura piu' leggibili */
+.d2 .bp-pricing-card--comp li,.d2 .bp-pricing-card--comp li.extra,.d2 .bp-tier-panel--comp li.extra{color:rgba(255,255,255,.88)!important}
 /* nella card scura il bottone principale passa al giallo di accento, come nelle chiusure d2 */
 .d2 .bp-pricing-card[class*="bp-pricing-card--"] .bp-btn-primary{background:linear-gradient(180deg,#FFCB74,#F0AA3E)!important;color:#3A3532!important;box-shadow:0 10px 24px -8px rgba(253,188,90,.55),inset 0 1px 0 rgba(255,255,255,.5)!important}
 .d2 .bp-pricing-card[class*="bp-pricing-card--"] .bp-btn-primary:hover{box-shadow:0 16px 30px -10px rgba(253,188,90,.7),inset 0 1px 0 rgba(255,255,255,.5)!important}
