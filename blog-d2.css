@@ -10,7 +10,7 @@
 .d2 .bl-hero{padding:64px 0 56px}
 .d2 .bl-testa{text-align:center;max-width:none}
 .d2 .bl-testa h1{margin:0 0 12px}
-.d2 .bl-sotto{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:19px;color:var(--muto);max-width:none;margin:0 auto}
+.d2 .bl-sotto{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:15.5px;color:var(--muto);max-width:none;margin:0 auto}
 .d2 .bl-cerca{margin:0 0 14px}
 .d2 .bl-riga{display:flex;gap:10px}
 .d2 .bl-riga input{flex:1}
