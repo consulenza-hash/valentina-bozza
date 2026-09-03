@@ -7,7 +7,14 @@
 .d2 .bl-chip.attivo{background:var(--dom);border-color:var(--dom);color:#fff}
 .d2 .bl-chip:focus-visible{outline:3px solid var(--acc-ink);outline-offset:2px}
 .d2 .bl-lista{padding-top:48px}
-.d2 .bl-cerca{max-width:560px;margin:0 0 10px}
+.d2 .bl-hero{padding:64px 0 56px}
+.d2 .bl-testa{text-align:center;max-width:none}
+.d2 .bl-testa h1{margin:0 0 12px}
+.d2 .bl-sotto{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:19px;color:var(--muto);max-width:none;margin:0 auto}
+.d2 .bl-cerca{margin:0 0 14px}
+.d2 .bl-riga{display:flex;gap:10px}
+.d2 .bl-riga input{flex:1}
+.d2 .bl-riga .btn{border-radius:999px;flex:none}
 .d2 .bl-cerca .etich{margin-bottom:8px}
 .d2 .bl-cerca input{width:100%;min-height:50px;padding:0 18px;font:16px Outfit,sans-serif;border:1px solid var(--linea);border-radius:999px;background:var(--carta);color:var(--ink);box-shadow:var(--ombra)}
 .d2 .bl-cerca input:focus{outline:3px solid var(--acc-ink);outline-offset:2px;border-color:var(--dom)}
