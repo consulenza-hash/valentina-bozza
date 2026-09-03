@@ -10,22 +10,22 @@
 .d2.az .az-hero::before{background:radial-gradient(500px 500px at 15% 90%,rgba(47,179,201,.14),transparent 65%)}
 .d2.az .foto::before{background:linear-gradient(135deg,rgba(10,152,177,.5),rgba(47,179,201,.32))}
 .d2.az .foto img{box-shadow:0 30px 60px -24px rgba(8,54,64,.45),0 0 0 1px rgba(255,255,255,.6) inset}
+.d2.az .banda-cit{background:var(--carta);border-color:var(--linea)}
+.d2.az .carta{background:#fff}
 .d2.az .az-hero h1{font-size:clamp(34px,4.2vw,54px);line-height:1.06;margin:0 0 16px}
 .d2.az .az-hero .sotto{max-width:52ch}
 .d2 .az-pills{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 26px}
 .d2 .az-pill{background:var(--carta);border:1px solid var(--linea);border-radius:999px;padding:8px 15px;font-size:14px;color:var(--dom-2);box-shadow:var(--ombra)}
 .d2 .az-nuovo{font-size:14px;color:var(--muto);margin:18px 0 0}
 .d2 .az-nuovo a{color:var(--dom);font-weight:600}
-.d2 .az-cert{display:inline-flex;align-items:center;gap:14px;margin-top:26px;text-decoration:none;color:var(--muto);font-size:13.5px;max-width:320px;line-height:1.4}
-.d2 .az-cert img{width:110px;height:auto;background:#fff;border:1px solid var(--linea);border-radius:8px;padding:4px}
 .d2 .az-hero-piccolo{padding:56px 0 60px}
 .d2 .az-hero-piccolo .wrap{display:block;text-align:center;max-width:820px}
 .d2 .az-hero-piccolo h1{margin:0 0 12px}
 .d2 .az-hero-piccolo .sotto{margin:0 auto;max-width:60ch}
 .d2 .az-centro{text-align:center;max-width:780px;margin:0 auto}
 .d2 .az-centro .sotto{margin:10px auto 0;color:var(--muto);font-size:17.5px;max-width:70ch}
-.d2 .az-vantaggio{padding:84px 0}
-.d2 .az-vantaggio .griglia{margin-top:40px}
+.d2 .az-vantaggio{padding:72px 0}
+.d2 .az-vantaggio .griglia{margin-top:0}
 .d2 .az-sit h3{margin:0;font-size:21px}
 .d2 .az-sit p{color:var(--muto)}
 .d2 .az-sit .lnk{margin-top:auto;font-weight:600}
