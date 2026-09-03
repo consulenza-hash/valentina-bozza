@@ -82,6 +82,7 @@
 .rv-d2 .hd-vs-card li{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--linea);font-size:15px}
 .rv-d2 .hd-vs-card li:first-child{border-top:0}
 .rv-d2 .hd-vs-key{font:600 12px Outfit,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muto);padding-top:3px}
+.rv-d2 .sez-scheda{padding:0 0 60px}
 .rv-d2 .valentina-box{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center;background:var(--carta);border-radius:16px;padding:24px 28px;box-shadow:var(--ombra);margin-top:30px}
 .rv-d2 .valentina-photo{width:200px;height:200px;object-fit:cover;object-position:50% 20%;border-radius:12px}
 .rv-d2 .valentina-box-text p{margin:0 0 10px}
