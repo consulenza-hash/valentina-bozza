@@ -20,6 +20,7 @@
 .d2 .bl-cerca input:focus{outline:3px solid var(--acc-ink);outline-offset:2px;border-color:var(--dom)}
 .d2 .bl-vuoto{text-align:center;color:var(--muto);margin:30px 0;max-width:none}
 .d2 .bl-card{background:var(--carta);border-radius:14px;box-shadow:var(--ombra);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.d2 .bl-card[hidden]{display:none}
 .d2 .bl-card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -18px rgba(58,53,50,.28)}
 .d2 .bl-img{display:block}
 .d2 .bl-img img{width:100%;aspect-ratio:16/10;object-fit:cover}
