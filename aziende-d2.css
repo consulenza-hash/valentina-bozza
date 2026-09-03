@@ -59,6 +59,8 @@
 .d2 .bg5-k{font:600 11.5px Outfit,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--muto);line-height:1.35}
 .d2 .bg5-v{color:var(--ink)}
 .d2 .bg5-vs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:var(--carta);border:1px solid var(--linea);display:flex;align-items:center;justify-content:center;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:19px;color:var(--dom);box-shadow:var(--ombra)}
+
+.d2 .bg5-porta{margin-top:20px;padding-top:16px;border-top:1px solid var(--linea);font-weight:600;text-decoration:none}
 .d2 .bg5-chiusa{max-width:70ch;margin:38px auto 0;text-align:center;font-size:17.5px;line-height:1.65;color:var(--ink)}
 .d2 .bg5-box{max-width:820px;margin:38px auto 0;flex-direction:row;align-items:center;gap:26px}
 .d2 .bg5-box:hover{transform:none}
