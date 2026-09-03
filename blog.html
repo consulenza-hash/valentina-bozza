@@ -42,7 +42,8 @@
   function norm(t){ return (t||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
   function ok(el){
     var t = tema==='tutti' || (el.getAttribute('data-temi')||'').split(' ').indexOf(tema)>=0;
-    var s = !q || norm(el.textContent).indexOf(q)>=0;
+    var testo = norm(el.textContent);
+    var s = !q || q.split(/\s+/).every(function(w){ var r = w.length>4 ? w.replace(/[aeio]$/,'') : w; return testo.indexOf(r)>=0; });
     return t && s;
   }
   function aggiorna(){
