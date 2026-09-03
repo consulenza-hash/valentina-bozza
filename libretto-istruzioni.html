@@ -1,461 +1,5008 @@
-<!doctype html>
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Manuale d'Istruzioni Human Design in PDF | Valentina Russo (bozza)</title>
+<link rel="icon" href="img/e18c9bb45946.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Outfit:wght@400;500;600&family=Fraunces:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dir.css?v=1788466273"><link rel="stylesheet" href="home-d2.css?v=1788466273">
+<style>
+/* ── BG5 Blueprint Landing — Token extra ── */
+:root {
+  --bp-gold:          #7A4F5E;
+  --bp-navy-deep:     #4A2C38;
+  --bp-rosa-wash:     #F6EAEE;
+  --bp-teal-wash:     #E9F3F6;
+  --bp-gold-glow:     rgba(122,79,94,.30);
+  --bp-rosa-glow:     rgba(207,143,169,.12);
+  --bp-navy-glow:     rgba(58,53,50,.35);
+  --bp-parchment:     #FBF7F5;
+  --bp-soft-parchment:#E8DDD9;
+  --bp-rosa:          #CF8FA9;
+  --bp-teal:          #0A98B1;
+  --bp-navy:          #5E3A47;
+  --bp-text:          #3A3532;
+  --bp-text-muted:    #6B625D;
+  --bp-white:         #FFFFFF;
+}
+
+/* ── Reset & Base ── */
+.bp-landing * { box-sizing: border-box; }
+.bp-landing { font-family: 'Outfit', sans-serif; color: var(--bp-text); }
+.bp-landing h1, .bp-landing h2, .bp-landing h3,
+.bp-landing .bp-price { font-family: 'Playfair Display', serif; }
+
+.bp-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Eyebrow label ── */
+.bp-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: .8125rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--bp-rosa);
+  margin-bottom: 1.25rem;
+}
+.bp-eyebrow::before,
+.bp-eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--bp-rosa);
+}
+
+/* H2 con ornamento ── */
+.bp-section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--bp-navy);
+  line-height: 1.2;
+  margin-bottom: .75rem;
+}
+.bp-section-sub {
+  font-size: 1.0625rem;
+  color: var(--bp-text-muted);
+  line-height: 1.65;
+  max-width: 620px;
+}
+
+/* ── Sezione separatore curva ── */
+.bp-section {
+  position: relative;
+  padding: 5rem 0;
+}
+
+/* Gradienti ricchi per ogni tipo di sezione */
+.bp-section--white {
+  background: linear-gradient(165deg, #FFFFFF 0%, #FBF8F6 40%, #F5EFF4 100%);
+}
+.bp-section--parchment {
+  background: linear-gradient(150deg, #FBF7F5 0%, #F8F0F3 40%, #F6EAEE 100%);
+}
+.bp-section--soft {
+  background: linear-gradient(140deg, #E8DDD9 0%, #EEDDE3 45%, #E4EEF0 100%);
+}
+/* "Come funziona" — teal profondo */
+.bp-section--deep {
+  background: linear-gradient(148deg, #0D2B2B 0%, #142E38 40%, #1A2040 100%);
+}
+/* --deep mantenuto per uso futuro */
+.bp-section--deep .bp-section-title { color: #E9F3F6; }
+.bp-section--deep .bp-section-sub   { color: rgba(232,244,244,.65); }
+.bp-section--deep .bp-eyebrow       { color: var(--bp-gold); }
+.bp-section--deep .bp-eyebrow::before,
+.bp-section--deep .bp-eyebrow::after { background: var(--bp-gold); }
+
+.bp-section--dark {
+  background: linear-gradient(150deg, #4A2C38 0%, #1A1230 50%, #0A0F1E 100%);
+}
+/* Sezione chi è Valentina */
+.bp-bio__grid {
+  display: grid;
+  grid-template-columns: 370px 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+.bp-bio__photo {
+  position: relative;
+  width: 340px;
+  height: 340px;          /* dimensione esplicita → cerchio garantito */
+  border-radius: 50%;
+  overflow: hidden;       /* taglia l'immagine al cerchio */
+  flex-shrink: 0;
+  box-shadow: 0 24px 64px rgba(26,35,50,.20), 0 0 0 7px var(--bp-white), 0 0 0 12px var(--bp-rosa);
+}
+.bp-bio__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;           /* riempie il container quadrato */
+  object-fit: cover;
+  object-position: center top;
+}
+.bp-bio__photo::after {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 30% 30%, rgba(122,79,94,.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+.bp-bio__text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bp-navy);
+  margin: 0 0 .375rem;
+}
+.bp-bio__credential {
+  font-size: .8125rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--bp-rosa);
+  margin: 0 0 1.5rem;
+}
+.bp-bio__text p {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--bp-text);
+  margin: 0 0 1rem;
+}
+.bp-bio__text p:last-child { margin: 0; }
+@media (max-width: 900px) {
+  .bp-bio__grid { grid-template-columns: 1fr; }
+  .bp-bio__photo { width: 260px; height: 260px; margin: 0 auto; }
+}
+
+/* "Inizia ora" — chiaro elegante, respira dopo il dark pricing */
+.bp-section--amber {
+  background: linear-gradient(155deg, #FBF7F5 0%, #F8F0F3 45%, #F6EAEE 100%);
+}
+/* Pricing — dark dramatico */
+.bp-section--gradient {
+  background: linear-gradient(150deg, #5E3A47 0%, #4A2C38 45%, #3E2430 100%);
+}
+/* Variante "flat-top": il top è solido navy così combacia col fade superiore.
+   Il bottom transition→wave è gestito dalla .bp-wave--seamless che eredita
+   lo stesso gradient + noise del pricing. */
+.bp-section--gradient-flat {
+  background:
+    linear-gradient(180deg, #5E3A47 0%, #5E3A47 60px, transparent 60px),
+    linear-gradient(150deg, #5E3A47 0%, #4A2C38 45%, #3E2430 100%);
+  box-shadow: none;
+}
+
+/* Fade fluido tra "Come funziona" (parchment) e "Pricing" (navy).
+   Niente SVG wave: la wave creava una banda nera al seam perché il fill
+   solido #5E3A47 incontrava il gradient parchment-end (#F6EAEE).
+   Qui partiamo dal colore esatto di chiusura della parchment a destra,
+   passiamo per un mid-tone neutro e atterriamo sul navy puro del pricing. */
+.bp-fade-to-navy {
+  height: 110px;
+  background: linear-gradient(
+    180deg,
+    #F6EAEE 0%,
+    #B5B8D4 32%,
+    #5C6488 62%,
+    #2A334A 85%,
+    #5E3A47 100%
+  );
+  position: relative;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+/* Texture sottile di carta antica per dare matericità (non solo sfumatura piatta) */
+.bp-fade-to-navy::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='.06'/%3E%3C/svg%3E");
+  opacity: .8;
+  pointer-events: none;
+}
+.bp-section--gradient .bp-section-title { color: #F0EBF2; }
+.bp-section--gradient .bp-section-sub   { color: rgba(240,235,242,.65); }
+.bp-section--gradient .bp-eyebrow       { color: var(--bp-gold); }
+.bp-section--gradient .bp-eyebrow::before,
+.bp-section--gradient .bp-eyebrow::after { background: var(--bp-gold); }
+
+/* Wave dividers — DEPRECATI dopo refactor 01/05/2026 (pricing su parchment,
+   niente più transizioni navy↔parchment). Lasciati come no-op per safety
+   nel caso ci siano riferimenti residui in cache/prod. */
+.bp-wave,
+.bp-fade-to-parchment,
+.bp-ordine-ornament {
+  display: none !important;
+}
+.bp-wave svg {
+  display: block;
+  width: 100%;
+  height: 56px;
+}
+
+/* ── Scroll reveal ── */
+.bp-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.bp-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@supports (animation-timeline: view()) {
+  .bp-reveal {
+    animation: bp-fade-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes bp-fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ══════════════════════════════════════════
+   1. HERO — Paper-craft editoriale: cream/parchment con accenti gold+navy
+══════════════════════════════════════════ */
+.bp-hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: #F6EAEE;
+}
+
+/* Sfondo: gradient parchment con due radial accent (oro top-right, navy soft top-left)
+   per dare warmth e suggerire luce naturale che cade sulla "scrivania". */
+.bp-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 30% 50%, rgba(122,79,94,.06) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 80% 20%, rgba(122,79,94,.04) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 60% at 10% 90%, rgba(58,53,50,.04) 0%, transparent 70%),
+    linear-gradient(135deg, #F6EAEE 0%, #F2EBDC 60%, #E8DCC0 100%);
+}
+/* Grain texture per matericità di carta antica */
+.bp-hero__noise {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='.10'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+.bp-hero__container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+.bp-hero__layout {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* COVER editorial custom — cornice dorata, cofanetto background,
+   typography "Libretto d'Istruzioni Human Design". Tilt 2°, drop-shadow forte. */
+.bp-hero__visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.bp-hero__cover {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 595 / 842;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #4A2C38;
+  transform: rotate(2deg);
+  box-shadow:
+    0 2px 4px rgba(0,0,0,.20),
+    0 32px 64px -8px rgba(0,0,0,.65),
+    0 18px 32px -10px rgba(122,79,94,.25),
+    inset 0 0 0 1px rgba(122,79,94,.45);
+  transition: transform .6s cubic-bezier(.2,.8,.2,1);
+  animation: bp-cover-breath 8s ease-in-out infinite alternate;
+  isolation: isolate;
+}
+@keyframes bp-cover-breath {
+  0%   { transform: rotate(2deg)   translateY(0); }
+  100% { transform: rotate(1.2deg) translateY(-6px); }
+}
+
+/* Background: l'immagine del cofanetto sotto a un overlay scuro */
+.bp-hero__cover-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.bp-hero__cover-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  filter: contrast(1.05) brightness(.85) saturate(.9);
+}
+.bp-hero__cover-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(58,53,50,.78) 0%, rgba(58,53,50,.30) 38%, rgba(58,53,50,.30) 65%, rgba(58,53,50,.85) 100%);
+}
+
+/* Cornice dorata interna + contenuto */
+.bp-hero__cover-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 14% 11% 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #F6EAEE;
+  border: 1px solid rgba(122,79,94,.55);
+  margin: 18px;
+  height: calc(100% - 36px);
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgba(122,79,94,.18);
+}
+
+/* Ornamenti agli angoli — quadrati dorati con cerchio centrale */
+.bp-hero__cover-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--bp-gold);
+}
+.bp-hero__cover-corner::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  border: 1px solid var(--bp-gold);
+}
+.bp-hero__cover-corner--tl { top: -7px; left: -7px; }
+.bp-hero__cover-corner--tr { top: -7px; right: -7px; }
+.bp-hero__cover-corner--bl { bottom: -7px; left: -7px; }
+.bp-hero__cover-corner--br { bottom: -7px; right: -7px; }
+
+/* Brand BG-5 piccolo in alto */
+.bp-hero__cover-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: .7rem;
+  font-style: italic;
+  letter-spacing: .35em;
+  color: var(--bp-gold);
+  margin: 0 0 auto;
+  opacity: .9;
+}
+
+/* Titolo principale */
+.bp-hero__cover-title-wrap {
+  margin: auto 0;
+}
+.bp-hero__cover-title {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  line-height: 1;
+  color: #F6EAEE;
+}
+.bp-hero__cover-title span {
+  display: block;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 400;
+  letter-spacing: .02em;
+  margin-bottom: .2em;
+}
+.bp-hero__cover-title em {
+  display: block;
+  font-size: clamp(2rem, 3.6vw, 2.85rem);
+  font-style: italic;
+  font-weight: 700;
+  color: #F6EAEE;
+  letter-spacing: -.01em;
+  text-shadow: 0 2px 18px rgba(122,79,94,.35);
+}
+.bp-hero__cover-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(.8rem, 1.1vw, 1rem);
+  font-weight: 400;
+  letter-spacing: .15em;
+  color: var(--bp-gold);
+  margin: .8em 0 0;
+  text-transform: uppercase;
+}
+
+/* Bottom — autore + tagline */
+.bp-hero__cover-bottom {
+  margin-top: auto;
+}
+.bp-hero__cover-divider {
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: var(--bp-gold);
+  margin: 0 auto 1rem;
+  opacity: .7;
+}
+.bp-hero__cover-author {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(.9rem, 1.25vw, 1.05rem);
+  font-weight: 400;
+  color: #F6EAEE;
+  margin: 0 0 .35rem;
+  letter-spacing: .01em;
+}
+.bp-hero__cover-tagline {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(.6rem, .8vw, .7rem);
+  font-style: italic;
+  color: rgba(245,239,227,.65);
+  margin: 0;
+  letter-spacing: .04em;
+  line-height: 1.4;
+  max-width: 200px;
+  margin: 0 auto;
+}
+.bp-hero__cover-caption {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: .8125rem;
+  text-align: center;
+  color: rgba(58,53,50,.55);
+  letter-spacing: .05em;
+  line-height: 1.6;
+}
+.bp-hero__cover-caption-num {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--bp-gold);
+  margin-right: .25rem;
+}
+.bp-hero__cover-caption em {
+  font-style: italic;
+  color: rgba(122,79,94,.85);
+}
+
+/* Colonna testo */
+.bp-hero__content {
+  max-width: 580px;
+}
+
+.bp-hero__kicker {
+  font-family: 'Outfit', sans-serif;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--bp-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: .85rem;
+  margin: 0 0 1.75rem;
+}
+.bp-hero__kicker-line {
+  display: inline-block;
+  width: 36px;
+  height: 1px;
+  background: var(--bp-gold);
+  opacity: .7;
+}
+
+.bp-hero__h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5.6vw, 4.25rem);
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  margin: 0 0 1.75rem;
+  color: var(--bp-navy);
+}
+.bp-hero__h1 em {
+  font-style: italic;
+  color: var(--bp-gold);
+  font-weight: 700;
+}
+.bp-hero__h1 span {
+  font-style: italic;
+  color: var(--bp-gold);
+  position: relative;
+}
+.bp-hero__h1 span::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -.05em;
+  height: 3px;
+  background: var(--bp-gold);
+  opacity: .25;
+  border-radius: 2px;
+}
+
+.bp-hero__sub {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.7;
+  color: rgba(58,53,50,.70);
+  max-width: 560px;
+  margin: 0 0 2.25rem;
+  font-weight: 400;
+}
+
+/* CTA "manuale tecnico" — niente rosa pieno, leggibilità su sfondo scuro */
+.bp-hero__cta-group {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.bp-btn-hero-primary,
+.bp-btn-hero-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.85rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: .95rem;
+  text-decoration: none;
+  border-radius: 2px;
+  letter-spacing: .03em;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+  position: relative;
+}
+.bp-btn-hero-primary {
+  background: var(--bp-gold);
+  color: var(--bp-navy-deep);
+  font-weight: 700;
+  border: 1px solid var(--bp-gold);
+  box-shadow: 0 8px 28px rgba(122,79,94,.35), 0 0 0 1px rgba(122,79,94,.2);
+}
+/* Pulsante "arancione/dorato": al hover il testo diventa BIANCO */
+.bp-btn-hero-primary:hover,
+.bp-btn-hero-primary:focus-visible {
+  background: #5E3A47;
+  color: #FFFFFF;
+  border-color: #5E3A47;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(122,79,94,.55);
+}
+.bp-btn-hero-outline {
+  background: #FFFFFF;
+  color: var(--bp-gold);
+  font-weight: 700;
+  border: 1px solid rgba(122,79,94,.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.6),
+    0 1px 2px rgba(58,53,50,.06),
+    0 4px 8px rgba(58,53,50,.06);
+}
+/* Pulsante "bianco/outline": al hover testo e bordo diventano DORATI scuri */
+.bp-btn-hero-outline:hover,
+.bp-btn-hero-outline:focus-visible {
+  background: #FFFFFF;
+  color: #5E3A47;
+  border-color: var(--bp-gold);
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.6),
+    0 4px 8px rgba(58,53,50,.08),
+    0 12px 24px rgba(58,53,50,.10);
+}
+.bp-btn-hero-outline:hover strong { border-color: currentColor; }
+.bp-btn-hero-primary span,
+.bp-btn-hero-outline span { font-weight: 600; }
+.bp-btn-hero-primary strong,
+.bp-btn-hero-outline strong {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding-left: 1.25rem;
+  border-left: 1px solid currentColor;
+  opacity: .95;
+}
+
+/* Meta info — UNA RIGA SOLA, testo grigio, separatori "·" tra le voci */
+.bp-hero__meta {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: .85rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: .8125rem;
+  color: rgba(58,53,50,.55);
+  letter-spacing: .04em;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.bp-hero__meta li {
+  display: inline-flex;
+  align-items: center;
+  gap: .85rem;
+}
+.bp-hero__meta li + li::before {
+  content: '·';
+  color: rgba(122,79,94,.6);
+  font-weight: 700;
+}
+/* Bullet rimossi — il punto medio fa già da separatore */
+.bp-hero__meta-dot { display: none; }
+/* Pulsante "arancione/dorato" pieno (era rosa-rosa, ora gold per coerenza palette
+   e contrasto WCAG AA con testo navy/scuro su gold). Hover → testo bianco. */
+.bp-btn-primary {
+  display: inline-block;
+  background: var(--bp-gold);
+  color: var(--bp-navy-deep);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid var(--bp-gold);
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s, transform .15s, box-shadow .2s;
+  letter-spacing: .02em;
+}
+.bp-btn-primary:hover,
+.bp-btn-primary:focus-visible {
+  background: #5E3A47;
+  color: #FFFFFF;
+  border-color: #5E3A47;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(122,79,94,.40);
+}
+
+/* Pulsante "bianco/outline" (era rosa, ora gold). Hover → testo/bordo dorato intensificato. */
+.bp-btn-outline {
+  display: inline-block;
+  color: var(--bp-gold);
+  background: transparent;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: .9rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 2px solid var(--bp-gold);
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s, transform .15s;
+}
+.bp-btn-outline:hover,
+.bp-btn-outline:focus-visible {
+  background: rgba(122,79,94,.08);
+  color: #5E3A47;
+  border-color: #5E3A47;
+  transform: translateY(-1px);
+}
+
+/* Modifier "large" per CTA prominenti finali */
+.bp-btn-primary--lg {
+  padding: 1.25rem 2.75rem;
+  font-size: 1.125rem;
+  box-shadow: 0 8px 28px rgba(122,79,94,.30);
+}
+.bp-btn-primary--lg strong {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  margin-left: .25rem;
+}
+.bp-btn-outline--lg {
+  padding: 1.1rem 2.25rem;
+  font-size: 1.0625rem;
+}
+
+.bp-hero__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .35rem;
+  color: rgba(58,53,50,.45);
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: .7rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  transition: color .2s;
+}
+.bp-hero__scroll:hover { color: var(--bp-gold); }
+.bp-hero__scroll-arrow {
+  font-size: 1.1rem;
+  animation: bp-bounce .9s ease-in-out infinite alternate;
+}
+@keyframes bp-bounce {
+  from { transform: translateY(0); }
+  to   { transform: translateY(6px); }
+}
+
+
+/* ══════════════════════════════════════════
+   2. COS'È IL BLUEPRINT
+══════════════════════════════════════════ */
+.bp-what__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.bp-what__list {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0 0;
+}
+.bp-what__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: .875rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--bp-text);
+}
+.bp-what__list li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  background: var(--bp-teal);
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L4.5 7.5L11 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Immagine sezione cos'è */
+.bp-doc-mockup {
+  position: relative;
+  transform: rotate(-1.5deg);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(26,35,50,.20), 0 4px 16px rgba(26,35,50,.10);
+  transition: transform .4s ease;
+}
+.bp-doc-mockup:hover { transform: rotate(0deg) scale(1.01); }
+.bp-doc-mockup img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* ══════════════════════════════════════════
+   3. COSA CONTIENE
+══════════════════════════════════════════ */
+.bp-contains__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.bp-tier-panel {
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+}
+.bp-tier-panel--essenziale {
+  background: var(--bp-rosa-wash, #F6EAEE);
+  border: 1.5px solid rgba(207,143,169,.3);
+}
+.bp-tier-panel--completo {
+  background: var(--bp-navy);
+  color: var(--bp-white);
+}
+.bp-tier-panel__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+.bp-tier-panel--essenziale .bp-tier-panel__title { color: var(--bp-rosa); }
+.bp-tier-panel--completo .bp-tier-panel__title { color: var(--bp-gold, #7A4F5E); }
+
+.bp-tier-panel__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 .3rem;
+  line-height: 1.2;
+}
+.bp-tier-panel--essenziale .bp-tier-panel__heading { color: var(--bp-navy); }
+.bp-tier-panel--completo .bp-tier-panel__heading { color: var(--bp-white); }
+
+.bp-tier-panel__count {
+  font-size: .875rem;
+  margin-bottom: 1.75rem;
+}
+.bp-tier-panel--essenziale .bp-tier-panel__count { color: var(--bp-text-muted); }
+.bp-tier-panel--completo .bp-tier-panel__count { color: rgba(245,236,240,.6); }
+
+.bp-section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bp-section-list li {
+  display: flex;
+  align-items: baseline;
+  gap: .875rem;
+  padding: .5rem 0;
+  border-bottom: 1px solid;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+.bp-tier-panel--essenziale .bp-section-list li { border-color: rgba(207,143,169,.15); color: var(--bp-text); }
+.bp-tier-panel--completo .bp-section-list li { border-color: rgba(245,236,240,.1); color: rgba(245,236,240,.85); }
+.bp-tier-panel--completo .bp-section-list li:last-child { border-bottom: none; }
+.bp-tier-panel--essenziale .bp-section-list li:last-child { border-bottom: none; }
+
+.bp-section-num {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.bp-tier-panel--essenziale .bp-section-num { color: var(--bp-rosa); }
+.bp-tier-panel--completo .bp-section-num { color: var(--bp-gold, #7A4F5E); }
+
+.bp-section-list li.extra {
+  font-style: italic;
+}
+.bp-tier-panel--completo .bp-section-list li.extra { color: #7A4F5E; }
+
+
+/* ══════════════════════════════════════════
+   3b. ANTEPRIMA — fanned book layout
+══════════════════════════════════════════ */
+.bp-preview-section {
+  padding: 6rem 0 7rem;
+  position: relative;
+}
+.bp-preview-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 4rem;
+}
+
+/* Layout fanned: 5 pagine a ventaglio, quella centrale dritta e prominente,
+   le laterali ruotate e leggermente più piccole. Effetto "libro sfogliato". */
+.bp-preview-fan {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;
+  perspective: 1600px;
+  padding: 2rem 0 3rem;
+  min-height: 560px;
+}
+.bp-preview-page {
+  position: relative;
+  margin: 0;
+  width: clamp(140px, 18vw, 240px);
+  aspect-ratio: 595 / 842;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #F6EAEE;
+  box-shadow:
+    0 2px 4px rgba(0,0,0,.08),
+    0 24px 48px rgba(58,53,50,.18),
+    inset 0 0 0 1px rgba(122,79,94,.12);
+  transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease, z-index 0s linear .5s;
+  cursor: zoom-in;
+  flex-shrink: 0;
+}
+.bp-preview-page img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.bp-preview-page figcaption {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 0; right: 0;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--bp-gold);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .9;
+}
+/* Disposizione ventaglio (default desktop) */
+.bp-preview-page--1 { transform: translateX(60px) rotate(-8deg) translateY(20px); z-index: 1; }
+.bp-preview-page--2 { transform: translateX(30px) rotate(-3deg) translateY(8px);  z-index: 2; }
+.bp-preview-page--3 { transform: scale(1.18) translateY(-12px);                   z-index: 5;
+                      box-shadow: 0 4px 8px rgba(0,0,0,.10), 0 36px 72px rgba(58,53,50,.30),
+                                  inset 0 0 0 1px rgba(122,79,94,.25); }
+.bp-preview-page--4 { transform: translateX(-30px) rotate(3deg) translateY(8px);  z-index: 2; }
+.bp-preview-page--5 { transform: translateX(-60px) rotate(8deg) translateY(20px); z-index: 1; }
+
+/* Hover: la pagina si solleva e si raddrizza, mostrando contenuto in primo piano */
+.bp-preview-page:hover {
+  transform: scale(1.32) translateY(-30px) rotate(0);
+  z-index: 10;
+  transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, z-index 0s;
+  box-shadow:
+    0 6px 12px rgba(0,0,0,.12),
+    0 48px 96px rgba(58,53,50,.40),
+    inset 0 0 0 1px rgba(122,79,94,.35);
+}
+
+.bp-preview-footnote {
+  text-align: center;
+  margin-top: 4.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: .8125rem;
+  font-style: italic;
+  color: var(--bp-text-muted);
+}
+
+/* Mobile: stack verticale, niente ventaglio (altrimenti illeggibile) */
+@media (max-width: 900px) {
+  .bp-preview-section { padding: 4rem 0 5rem; }
+  .bp-preview-fan {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.25rem 1rem;
+    perspective: none;
+    padding: 1rem 0 2rem;
+    min-height: 0;
+  }
+  .bp-preview-page,
+  .bp-preview-page--1,
+  .bp-preview-page--2,
+  .bp-preview-page--3,
+  .bp-preview-page--4,
+  .bp-preview-page--5 {
+    transform: none;
+    width: clamp(140px, 42vw, 200px);
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 16px 32px rgba(58,53,50,.18);
+  }
+  .bp-preview-page:hover {
+    transform: scale(1.05) translateY(-4px);
+  }
+  .bp-preview-page figcaption {
+    bottom: -1.75rem;
+    font-size: .7rem;
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   4. PER CHI È — titolo dominante + connettore visivo
+══════════════════════════════════════════ */
+.bp-forchi-section { padding: 6rem 0 6.5rem; }
+.bp-forchi-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+}
+.bp-forchi-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.75rem, 5.5vw, 4rem);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--bp-navy);
+  line-height: 1.05;
+  letter-spacing: -.015em;
+  margin: 0 0 1.25rem;
+}
+.bp-forchi-sub {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--bp-text-muted);
+  max-width: 560px;
+  margin: 0 auto;
+}
+/* Connettore visivo: pallino dorato + linea verticale che lega titolo alle card */
+.bp-forchi-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin: 2.25rem auto 0;
+  height: 56px;
+}
+.bp-forchi-connector__dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--bp-gold);
+  box-shadow: 0 0 0 5px rgba(122,79,94,.15);
+  flex-shrink: 0;
+}
+.bp-forchi-connector__line {
+  width: 1.5px;
+  flex: 1;
+  background: linear-gradient(180deg, var(--bp-gold) 0%, rgba(122,79,94,.15) 100%);
+}
+
+.bp-forchi__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+/* Variante "linked" — bordo top dorato che richiama il connettore */
+.bp-forchi__grid--linked .bp-profile-card {
+  position: relative;
+  background: var(--bp-white);
+  border: 1px solid rgba(122,79,94,.18);
+  border-top: 3px solid var(--bp-gold);
+  padding: 2.25rem 1.75rem 1.75rem;
+  border-radius: 6px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.bp-forchi__grid--linked .bp-profile-card::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--bp-white);
+  border: 2px solid var(--bp-gold);
+  z-index: 2;
+}
+.bp-forchi__grid--linked .bp-profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 44px rgba(58,53,50,.12);
+  border-color: var(--bp-gold);
+}
+.bp-profile-num {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--bp-gold);
+  letter-spacing: .08em;
+  margin-bottom: .65rem;
+}
+.bp-profile-card .bp-profile-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F2EAD8 0%, #E8DBC0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--bp-gold);
+  border: 1px solid rgba(122,79,94,.25);
+}
+.bp-profile-card h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--bp-navy);
+  line-height: 1.3;
+  margin: 0 0 .85rem;
+}
+.bp-profile-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--bp-text);
+  margin: 0 0 1.25rem;
+}
+.bp-profile-tag {
+  display: inline-block;
+  font-size: .8125rem;
+  font-style: italic;
+  color: var(--bp-text-muted);
+  border-left: 2px solid var(--bp-gold);
+  padding-left: .75rem;
+  line-height: 1.55;
+}
+
+
+/* ══════════════════════════════════════════
+   5. COME FUNZIONA
+══════════════════════════════════════════ */
+.bp-steps__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+  position: relative;
+}
+.bp-steps__grid::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: calc(16.66% + 1rem);
+  right: calc(16.66% + 1rem);
+  height: 1px;
+  border-top: 2px dashed var(--bp-soft-parchment);
+  z-index: 0;
+}
+.bp-step {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.bp-step__num {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: .75rem;
+  letter-spacing: .12em;
+  color: var(--bp-teal);
+  display: block;
+  margin: 0 auto .625rem;
+  text-align: center;
+}
+.bp-step__icon {
+  position: relative;
+  z-index: 1;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--bp-teal-wash, #E9F3F6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  color: var(--bp-teal);
+}
+.bp-step h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--bp-navy);
+  margin: 0 0 .625rem;
+  position: relative;
+  z-index: 1;
+}
+.bp-step p {
+  font-size: .9375rem;
+  line-height: 1.65;
+  color: var(--bp-text);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ══════════════════════════════════════════
+   6. PRICING
+══════════════════════════════════════════ */
+.bp-pricing__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: end;
+  max-width: 860px;
+  margin: 3rem auto 0;
+}
+.bp-pricing-card {
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Essenziale */
+.bp-pricing-card--ess {
+  background: var(--bp-white);
+  border: 1.5px solid var(--bp-rosa);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 24px var(--bp-rosa-glow);
+}
+.bp-pricing-card--ess .bp-price {
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--bp-navy);
+  line-height: 1;
+}
+.bp-pricing-card--ess .bp-price-label {
+  font-size: .875rem;
+  color: var(--bp-text-muted);
+  margin-bottom: 1.75rem;
+}
+.bp-pricing-card--ess .bp-cta { margin-top: 2rem; }
+
+/* Completo */
+.bp-pricing-card--comp {
+  background: var(--bp-navy-deep);
+  padding: 3.5rem 2rem;
+  box-shadow: 0 12px 48px var(--bp-navy-glow), 0 0 0 1px rgba(122,79,94,.3);
+}
+.bp-pricing-badge {
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background: var(--bp-gold);
+  color: var(--bp-white);
+  font-family: 'Outfit', sans-serif;
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: .375rem 1.25rem;
+  border-radius: 100px;
+  box-shadow: 0 2px 12px var(--bp-gold-glow);
+}
+.bp-pricing-card--comp .bp-price {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--bp-rosa-wash, #F6EAEE);
+  line-height: 1;
+}
+.bp-pricing-card--comp .bp-price-label {
+  font-size: .875rem;
+  color: rgba(245,236,240,.55);
+  margin-bottom: 1.75rem;
+}
+.bp-pricing-card--comp .bp-cta { margin-top: 2rem; }
+.bp-pricing-card--comp .bp-btn-primary {
+  background: var(--bp-gold);
+  color: var(--bp-navy-deep);
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.bp-pricing-card__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+.bp-pricing-card--ess .bp-pricing-card__title { color: var(--bp-rosa); }
+.bp-pricing-card--comp .bp-pricing-card__title { color: var(--bp-gold); }
+
+.bp-pricing-card__name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 .25rem;
+}
+.bp-pricing-card--ess .bp-pricing-card__name { color: var(--bp-navy); }
+.bp-pricing-card--comp .bp-pricing-card__name { color: var(--bp-white); }
+
+.bp-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+.bp-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  padding: .5rem 0;
+  font-size: .9375rem;
+  line-height: 1.5;
+  border-bottom: 1px solid;
+}
+.bp-feature-list li:last-child { border-bottom: none; }
+.bp-pricing-card--ess .bp-feature-list li { border-color: var(--bp-soft-parchment); color: var(--bp-text); }
+.bp-pricing-card--comp .bp-feature-list li { border-color: rgba(245,236,240,.1); color: rgba(245,236,240,.85); }
+
+.bp-feature-check {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  color: var(--bp-teal);
+  font-size: .875rem;
+}
+.bp-feature-extra {
+  color: var(--bp-gold);
+  font-weight: 600;
+  font-size: .8125rem;
+}
+
+.bp-pricing__footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: .875rem;
+  color: var(--bp-text-muted);
+}
+.bp-pricing__footer a { color: var(--bp-rosa); }
+
+/* Pulsante "bianco/outline" del Libretto Base nel pricing — palette gold,
+   hover testo/bordo dorato intensificato. */
+.bp-btn-outline-ess {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: var(--bp-gold);
+  background: transparent;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: .95rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 2px solid var(--bp-gold);
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s, transform .15s;
+}
+.bp-btn-outline-ess:hover,
+.bp-btn-outline-ess:focus-visible {
+  background: rgba(122,79,94,.08);
+  color: #5E3A47;
+  border-color: #5E3A47;
+  transform: translateY(-1px);
+}
+
+
+/* ══════════════════════════════════════════
+   7. FORM
+══════════════════════════════════════════ */
+.bp-form-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.bp-section--dark .bp-section-title { color: var(--bp-rosa-wash, #F6EAEE); }
+.bp-section--dark .bp-section-sub { color: rgba(245,236,240,.65); }
+.bp-section--dark .bp-eyebrow { color: var(--bp-gold); }
+.bp-section--dark .bp-eyebrow::before,
+.bp-section--dark .bp-eyebrow::after { background: var(--bp-gold); }
+
+.bp-form { margin-top: 2.5rem; }
+.bp-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.bp-form-group {
+  margin-bottom: 1.25rem;
+}
+.bp-form-group label {
+  display: block;
+  font-size: .875rem;
+  font-weight: 600;
+  color: rgba(245,236,240,.8);
+  margin-bottom: .4rem;
+}
+.bp-form-group input,
+.bp-form-group select {
+  width: 100%;
+  padding: .8rem 1rem;
+  background: rgba(255,255,255,.08);
+  border: 1.5px solid rgba(245,236,240,.2);
+  border-radius: 4px;
+  color: var(--bp-white);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  transition: border-color .2s;
+}
+.bp-form-group input:focus,
+.bp-form-group select:focus {
+  outline: 2px solid var(--bp-rosa);
+  outline-offset: 2px;
+  border-color: var(--bp-rosa);
+}
+.bp-form-group input::placeholder { color: rgba(245,236,240,.35); }
+.bp-form-group select option { background: var(--bp-navy-deep); color: var(--bp-white); }
+
+.bp-form-radio-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.bp-form-radio {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  cursor: pointer;
+  font-size: .9375rem;
+  color: rgba(245,236,240,.85);
+  padding: .75rem 1.25rem;
+  border: 1.5px solid rgba(245,236,240,.2);
+  border-radius: 4px;
+  transition: border-color .2s, background .2s;
+  flex: 1;
+  min-width: 200px;
+}
+.bp-form-radio:has(input:checked) {
+  border-color: var(--bp-rosa);
+  background: rgba(207,143,169,.12);
+}
+.bp-form-radio input { accent-color: var(--bp-rosa); }
+.bp-form-radio strong { display: block; font-weight: 700; color: var(--bp-white); }
+.bp-form-radio span { font-size: .8125rem; color: rgba(245,236,240,.55); }
+
+/* Form submit allineato alla nuova palette gold/navy (era rosa).
+   Hover → testo bianco (regola "pulsanti pieni"). */
+.bp-form-submit {
+  width: 100%;
+  padding: 1.125rem;
+  background: var(--bp-gold);
+  color: var(--bp-navy-deep);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  border: 1px solid var(--bp-gold);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s, transform .15s, box-shadow .2s;
+  margin-top: .5rem;
+  letter-spacing: .02em;
+}
+.bp-form-submit:hover,
+.bp-form-submit:focus-visible {
+  background: #5E3A47;
+  color: #FFFFFF;
+  border-color: #5E3A47;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(122,79,94,.40);
+}
+.bp-form-note {
+  text-align: center;
+  font-size: .8125rem;
+  color: rgba(139,157,181,.8);
+  margin-top: .75rem;
+}
+.bp-form-success {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(74,140,140,.15);
+  border: 1.5px solid var(--bp-teal);
+  border-radius: 8px;
+  color: var(--bp-white);
+  margin-top: 1rem;
+}
+
+
+/* ══════════════════════════════════════════
+   8. FAQ
+══════════════════════════════════════════ */
+.bp-faq-wrap {
+  max-width: 720px;
+  margin: 3rem auto 0;
+}
+.bp-faq-item {
+  border-bottom: 1px solid var(--bp-soft-parchment);
+}
+.bp-faq-item:first-child { border-top: 1px solid var(--bp-soft-parchment); }
+.bp-faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--bp-navy);
+  transition: color .2s;
+}
+.bp-faq-q:hover { color: var(--bp-rosa); }
+.bp-faq-q:focus { outline: 2px solid var(--bp-rosa); outline-offset: 2px; }
+.bp-faq-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid var(--bp-soft-parchment);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--bp-rosa);
+  transition: transform .3s;
+}
+.bp-faq-item.open .bp-faq-icon { transform: rotate(45deg); }
+.bp-faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, padding .35s ease;
+}
+.bp-faq-item.open .bp-faq-a { max-height: 400px; padding-bottom: 1.25rem; }
+.bp-faq-a p {
+  font-size: .9375rem;
+  line-height: 1.7;
+  color: var(--bp-text);
+  margin: 0;
+}
+
+
+/* Immagini accent sezioni */
+.bp-section-img {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(26,35,50,.16);
+}
+.bp-section-img img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center 30%;
+  transition: transform .6s ease;
+  will-change: transform;
+}
+
+/* ══════════════════════════════════════════
+   DEPTH & IMMERSION
+══════════════════════════════════════════ */
+
+/* Vignette su ogni immagine */
+.bp-section-img::after,
+.bp-doc-mockup::after,
+.bp-hero__img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, transparent 45%, rgba(58,53,50,.38) 100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Hero: position + img transition */
+.bp-hero__img {
+  position: relative;
+}
+.bp-hero__img img { will-change: transform; transition: transform .05s linear; }
+
+/* Glow ambientale animato */
+@keyframes bp-glow-pulse {
+  0%,100% { opacity:.35; transform:scale(1);   }
+  50%      { opacity:.65; transform:scale(1.18); }
+}
+.bp-hero__ambient {
+  position: absolute;
+  width: 640px; height: 640px;
+  right: -80px; top: -120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(122,79,94,.14) 0%, transparent 65%);
+  animation: bp-glow-pulse 7s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+.bp-hero__ambient-2 {
+  position: absolute;
+  width: 380px; height: 380px;
+  left: -60px; bottom: -60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(207,143,169,.10) 0%, transparent 65%);
+  animation: bp-glow-pulse 9s ease-in-out infinite;
+  animation-delay: -3s;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Particelle fluttuanti */
+.bp-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.bp-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(122,79,94,.7) 0%, transparent 70%);
+  animation: bp-float-up linear infinite;
+  bottom: -20px;
+}
+@keyframes bp-float-up {
+  0%   { transform: translateY(0) translateX(0); opacity: 0; }
+  8%   { opacity: 1; }
+  88%  { opacity: .7; }
+  100% { transform: translateY(-110vh) translateX(var(--drift,0px)); opacity: 0; }
+}
+
+/* Sezione layer effect — ombre di profondità.
+   NB: niente inset shadow su --gradient: su sfondo già navy l'ombra crea una
+   banda nera visibile al top, percepita come "blocco nero" tra il fade
+   superiore e l'inizio del pricing. */
+.bp-section--parchment  { box-shadow: inset 0 8px 24px rgba(58,53,50,.06); }
+.bp-section--soft       { box-shadow: inset 0 8px 24px rgba(58,53,50,.05); }
+
+/* Step card glass hover */
+.bp-step {
+  background: rgba(255,255,255,.6);
+  border: 1px solid rgba(234,229,225,.8);
+  border-radius: 16px;
+  padding: 1.75rem 1.25rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+.bp-step:hover {
+  background: rgba(255,255,255,.9);
+  box-shadow: 0 16px 40px rgba(26,35,50,.12);
+  transform: translateY(-4px);
+}
+
+/* Profile cards glow hover */
+.bp-profile-icon {
+  transition: box-shadow .3s ease;
+}
+.bp-profile-card:hover .bp-profile-icon {
+  box-shadow: 0 0 28px rgba(122,79,94,.32);
+}
+
+/* Grain texture overlay su sezioni parchment */
+.bp-section--parchment::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+.bp-section--parchment > * { position: relative; z-index: 1; }
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+/* Fascia 1024-1280: la cover si stringe leggermente */
+@media (max-width: 1280px) {
+  .bp-hero__layout { gap: 2.5rem; }
+  .bp-hero__cover { max-width: 320px; }
+}
+@media (max-width: 900px) {
+  .bp-what__grid { grid-template-columns: 1fr; }
+  .bp-doc-mockup { display: none; }
+  .bp-contains__grid { grid-template-columns: 1fr; }
+  .bp-forchi__grid { grid-template-columns: 1fr; }
+  .bp-steps__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .bp-steps__grid::before { display: none; }
+  .bp-step { text-align: left; }
+  .bp-step__num { display: block; }
+  .bp-step__icon { margin: 0 0 1rem; }
+  .bp-pricing__grid { grid-template-columns: 1fr; }
+  .bp-pricing-card--comp { order: -1; }
+  .bp-section-title { font-size: 1.75rem; }
+
+  /* Hero responsive: stack verticale, cover sopra al testo */
+  .bp-hero__layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .bp-hero__visual { order: -1; }
+  .bp-hero__cover { max-width: 280px; margin: 0 auto; }
+  .bp-hero__content { max-width: 100%; }
+  .bp-hero__bg-overlay {
+    background:
+      linear-gradient(180deg, rgba(11,18,32,.55) 0%, rgba(11,18,32,.78) 60%, rgba(11,18,32,.92) 100%);
+  }
+  .bp-hero__h1 { font-size: clamp(2.25rem, 8vw, 3rem); }
+  .bp-hero__frame { padding: 2rem 0 0 0; }
+  .bp-forchi-title { font-size: clamp(2.25rem, 8vw, 3rem); }
+}
+@media (max-width: 600px) {
+  .bp-section { padding: 3.5rem 0; }
+  .bp-hero { min-height: 92vh; min-height: 92dvh; }
+  .bp-hero__content { padding: 5rem 0 4.5rem; }
+  .bp-form-row { grid-template-columns: 1fr; }
+  .bp-hero__cta-group { flex-direction: column; align-items: stretch; gap: .75rem; }
+  .bp-btn-hero-primary, .bp-btn-hero-outline { justify-content: space-between; }
+  .bp-hero__cover { max-width: 220px; }
+  .bp-hero__cover-caption { font-size: .75rem; }
+  .bp-hero__meta { gap: 1rem; font-size: .7rem; }
+  .bp-hero__scroll { display: none; }
+}
+
+/* Reduced motion — disattiva animazioni decorative */
+@media (prefers-reduced-motion: reduce) {
+  .bp-hero__cover { animation: none; transform: rotate(2deg); }
+  .bp-hero__scroll-arrow { animation: none; }
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   EDITORIAL OVERRIDE — flusso continuo paper-craft su tutte le sezioni cream.
+   Tutto su parchment unificato, separato da ornamenti dorati ◆.
+   I blocchi navy (pricing, form) restano "ancore" visive di rottura ritmo.
+═══════════════════════════════════════════════════════════════════════════ */
+
+/* Tutte le sezioni cream condividono lo stesso linguaggio editoriale */
+.bp-section--white,
+.bp-section--parchment,
+.bp-section--soft,
+.bp-section--amber,
+.bp-section--deep {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(122,79,94,.04) 0%, transparent 70%),
+    linear-gradient(180deg, #F6EAEE 0%, #F2EBDC 60%, #E8DCC0 100%) !important;
+  color: var(--bp-navy) !important;
+  position: relative;
+  box-shadow: none !important;
+  overflow: visible;
+}
+/* Grain texture per matericità */
+.bp-section--white::before,
+.bp-section--parchment::before,
+.bp-section--soft::before,
+.bp-section--amber::before,
+.bp-section--deep::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='.06'/%3E%3C/svg%3E") !important;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+
+/* Ornamento divisore ◆ tra sezioni cream consecutive */
+.bp-section--white + .bp-section--white::after,
+.bp-section--white + .bp-section--parchment::after,
+.bp-section--white + .bp-section--soft::after,
+.bp-section--parchment + .bp-section--white::after,
+.bp-section--parchment + .bp-section--parchment::after,
+.bp-section--parchment + .bp-section--soft::after,
+.bp-section--soft + .bp-section--white::after,
+.bp-section--soft + .bp-section--parchment::after,
+.bp-section--soft + .bp-section--soft::after,
+.bp-section--white + .bp-section--amber::after,
+.bp-section--amber + .bp-section--white::after,
+.bp-section--white + .bp-section--deep::after,
+.bp-section--deep + .bp-section--white::after {
+  content: '◆';
+  position: absolute;
+  top: -.8rem; left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: var(--bp-gold);
+  background: #F6EAEE;
+  padding: 0 1.5rem;
+  z-index: 3;
+  line-height: 1.6;
+}
+/* Linea oro sottile tra sezioni cream consecutive */
+.bp-section--white + .bp-section--white,
+.bp-section--white + .bp-section--parchment,
+.bp-section--white + .bp-section--soft,
+.bp-section--parchment + .bp-section--white,
+.bp-section--parchment + .bp-section--parchment,
+.bp-section--parchment + .bp-section--soft,
+.bp-section--soft + .bp-section--white,
+.bp-section--soft + .bp-section--parchment,
+.bp-section--soft + .bp-section--soft,
+.bp-section--white + .bp-section--amber,
+.bp-section--amber + .bp-section--white,
+.bp-section--white + .bp-section--deep,
+.bp-section--deep + .bp-section--white {
+  border-top: 1px solid rgba(122,79,94,.30);
+}
+
+/* Blocchi navy (ancore) — pricing + form: ricevono polish dimensional */
+.bp-section--gradient,
+.bp-section--gradient-flat,
+.bp-section--dark {
+  background:
+    radial-gradient(ellipse 70% 60% at 100% 50%, rgba(122,79,94,.10) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 50% at 0% 30%, rgba(74,140,140,.05) 0%, transparent 65%),
+    linear-gradient(135deg, #3E2430 0%, #131D33 50%, #0F1729 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+.bp-section--gradient::before,
+.bp-section--gradient-flat::before,
+.bp-section--dark::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='.04'/%3E%3C/svg%3E") !important;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Texture sottostante: i parchment con ::before grain potrebbero coprire contenuto.
+   Forziamo z-index del bp-container interno */
+.bp-section > .bp-container,
+.bp-section > * { position: relative; z-index: 1; }
+
+/* I titoli delle sezioni cream ora vivono su parchment, non più su gradient */
+.bp-section--white .bp-section-title,
+.bp-section--parchment .bp-section-title,
+.bp-section--soft .bp-section-title,
+.bp-section--amber .bp-section-title,
+.bp-section--deep .bp-section-title {
+  color: var(--bp-navy) !important;
+}
+.bp-section--white .bp-section-sub,
+.bp-section--parchment .bp-section-sub,
+.bp-section--soft .bp-section-sub,
+.bp-section--amber .bp-section-sub,
+.bp-section--deep .bp-section-sub {
+  color: rgba(58,53,50,.65) !important;
+}
+
+/* Eyebrows più "stamp" su parchment */
+.bp-section--white .bp-eyebrow,
+.bp-section--parchment .bp-eyebrow,
+.bp-section--soft .bp-eyebrow,
+.bp-section--amber .bp-eyebrow,
+.bp-section--deep .bp-eyebrow {
+  color: var(--bp-gold) !important;
+}
+.bp-section--white .bp-eyebrow::before,
+.bp-section--white .bp-eyebrow::after,
+.bp-section--parchment .bp-eyebrow::before,
+.bp-section--parchment .bp-eyebrow::after,
+.bp-section--soft .bp-eyebrow::before,
+.bp-section--soft .bp-eyebrow::after,
+.bp-section--amber .bp-eyebrow::before,
+.bp-section--amber .bp-eyebrow::after,
+.bp-section--deep .bp-eyebrow::before,
+.bp-section--deep .bp-eyebrow::after {
+  background: var(--bp-gold) !important;
+}
+
+/* Fade-to-navy + transizioni: rimosso (le ancore navy ora confinano direttamente) */
+.bp-fade-to-navy { display: none !important; }
+
+/* ──── Cosa contiene — panel cards (Base + Avanzato) ──── */
+/* Base: era rosa-wash, ora cream con bordo gold per coerenza */
+.bp-tier-panel--essenziale {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F6EAEE 100%) !important;
+  border: 1px solid rgba(122,79,94,.30) !important;
+  border-top: 3px solid var(--bp-gold) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.8),
+    0 1px 2px rgba(58,53,50,.06),
+    0 12px 24px rgba(58,53,50,.08) !important;
+}
+.bp-tier-panel--essenziale .bp-tier-panel__title { color: var(--bp-gold) !important; }
+.bp-tier-panel--essenziale .bp-section-num { color: var(--bp-gold) !important; }
+/* Avanzato: navy resta — è l'ancora del modulo, polish con gold border-left */
+.bp-tier-panel--completo {
+  background: linear-gradient(135deg, #3E2430 0%, #1A2540 100%) !important;
+  border: 1px solid rgba(122,79,94,.40) !important;
+  border-top: 3px solid var(--bp-gold) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(122,79,94,.30),
+    0 2px 4px rgba(58,53,50,.20),
+    0 16px 32px -8px rgba(58,53,50,.30) !important;
+}
+
+/* ──── Pricing — uniforme con il resto ──── */
+.bp-pricing-card--ess {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F6EAEE 100%) !important;
+  border: 1px solid rgba(122,79,94,.30) !important;
+  border-top: 3px solid var(--bp-gold) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.8),
+    0 1px 2px rgba(58,53,50,.06),
+    0 16px 32px rgba(58,53,50,.10) !important;
+}
+.bp-pricing-card--ess .bp-pricing-card__title { color: var(--bp-gold) !important; }
+.bp-pricing-card--ess .bp-feature-check { color: var(--bp-gold) !important; }
+.bp-pricing-card--comp {
+  background: linear-gradient(135deg, #3E2430 0%, #1A2540 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(122,79,94,.30),
+    0 2px 4px rgba(58,53,50,.20),
+    0 24px 48px -12px rgba(58,53,50,.40) !important;
+}
+
+/* ──── Anteprima PDF — bordo gold, shadow più definita ──── */
+.bp-preview-page {
+  background: #F6EAEE !important;
+  box-shadow:
+    0 2px 4px rgba(0,0,0,.10),
+    0 16px 32px -4px rgba(58,53,50,.15),
+    inset 0 0 0 1px rgba(122,79,94,.20) !important;
+}
+.bp-preview-page--featured {
+  box-shadow:
+    0 4px 8px rgba(0,0,0,.12),
+    0 32px 64px -8px rgba(58,53,50,.30),
+    inset 0 0 0 1px rgba(122,79,94,.45) !important;
+}
+.bp-preview-page figcaption {
+  color: var(--bp-gold) !important;
+}
+
+/* ──── Forchi-section — accent gold rinforzato ──── */
+.bp-forchi__grid--linked .bp-profile-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F6EAEE 100%) !important;
+  border: 1px solid rgba(122,79,94,.20) !important;
+  border-top: 3px solid var(--bp-gold) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.8),
+    0 1px 2px rgba(58,53,50,.06),
+    0 8px 20px rgba(58,53,50,.08) !important;
+}
+.bp-forchi-title em,
+.bp-forchi-title { color: var(--bp-navy) !important; }
+
+/* ──── Steps — su parchment, niente più glassmorphism scuro ──── */
+.bp-step {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F6EAEE 100%) !important;
+  border: 1px solid rgba(122,79,94,.20) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.8),
+    0 1px 2px rgba(58,53,50,.06),
+    0 8px 16px rgba(58,53,50,.08) !important;
+  backdrop-filter: none !important;
+}
+.bp-step__icon {
+  background: linear-gradient(180deg, #F2EAD8 0%, #E8DBC0 100%) !important;
+  color: var(--bp-gold) !important;
+  border: 1px solid rgba(122,79,94,.25) !important;
+}
+.bp-step__num { color: var(--bp-gold) !important; }
+.bp-step h3 { color: var(--bp-navy) !important; }
+.bp-step p { color: rgba(58,53,50,.7) !important; }
+.bp-steps__grid::before {
+  border-top-color: rgba(122,79,94,.30) !important;
+}
+
+/* ──── Bio Valentina — bordo gold ──── */
+.bp-bio__photo {
+  box-shadow:
+    0 0 0 5px #FFFFFF,
+    0 0 0 7px var(--bp-gold),
+    0 18px 36px -8px rgba(58,53,50,.25) !important;
+}
+.bp-bio__credential { color: var(--bp-gold) !important; }
+.bp-bio__text h3 { color: var(--bp-navy) !important; }
+.bp-bio__text p { color: rgba(58,53,50,.72) !important; }
+
+/* ──── FAQ — divisori gold ──── */
+.bp-faq-item { border-bottom-color: rgba(122,79,94,.25) !important; }
+.bp-faq-item:first-child { border-top-color: rgba(122,79,94,.25) !important; }
+.bp-faq-q { color: var(--bp-navy) !important; }
+.bp-faq-q:hover { color: var(--bp-gold) !important; }
+.bp-faq-icon {
+  border-color: rgba(122,79,94,.40) !important;
+  color: var(--bp-gold) !important;
+}
+.bp-faq-a p { color: rgba(58,53,50,.7) !important; }
+
+/* ──── Link footer pricing — gold (era rosa) ──── */
+.bp-pricing__footer a { color: var(--bp-gold) !important; }
+.bp-pricing__footer a:hover { color: #A06820 !important; }
+
+/* ──── Section dark: titolo cream puro (era blush rosa-wash) ──── */
+.bp-section--dark .bp-section-title { color: #F6EAEE !important; }
+.bp-section--dark .bp-section-sub { color: rgba(245,239,227,.70) !important; }
+
+/* ──── Sezione separator: ornamento ◆ rinforzato ──── */
+.bp-section--white + .bp-section--white::after,
+.bp-section--white + .bp-section--parchment::after,
+.bp-section--white + .bp-section--soft::after,
+.bp-section--parchment + .bp-section--white::after,
+.bp-section--parchment + .bp-section--parchment::after,
+.bp-section--parchment + .bp-section--soft::after,
+.bp-section--soft + .bp-section--white::after,
+.bp-section--soft + .bp-section--parchment::after,
+.bp-section--soft + .bp-section--soft::after,
+.bp-section--white + .bp-section--amber::after,
+.bp-section--amber + .bp-section--white::after,
+.bp-section--white + .bp-section--deep::after,
+.bp-section--deep + .bp-section--white::after,
+.bp-section--white + .bp-forchi-section::after,
+.bp-section--parchment + .bp-forchi-section::after,
+.bp-forchi-section + .bp-section--white::after,
+.bp-forchi-section + .bp-section--parchment::after {
+  font-size: 1.25rem !important;
+  top: -1rem !important;
+}
+
+/* CTA in sezioni cream — niente più bp-btn-primary background gold pure */
+.bp-section--white .bp-btn-primary,
+.bp-section--parchment .bp-btn-primary,
+.bp-section--soft .bp-btn-primary,
+.bp-section--amber .bp-btn-primary {
+  background: linear-gradient(180deg, #D69847 0%, var(--bp-gold) 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.4),
+    0 1px 2px rgba(122,79,94,.40),
+    0 4px 8px rgba(122,79,94,.30),
+    0 12px 24px rgba(122,79,94,.20) !important;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   MOBILE POLISH — fix layout issues su viewport ≤ 600px
+════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+
+  /* 1. Hero: rimuovi min-height forzata e padding eccessivo
+        Il padding-top: 5rem sul content causava il gap enorme tra cover e testo */
+  .bp-hero { min-height: auto !important; padding-bottom: 2.5rem; }
+  .bp-hero__content { padding: 0 0 2rem !important; }
+  .bp-hero__layout { gap: 1.25rem !important; }
+  .bp-hero__cover { max-width: 240px !important; }
+  .bp-hero__kicker { margin-bottom: 1rem; }
+  .bp-hero__h1 { font-size: clamp(2rem, 9vw, 2.6rem) !important; margin-bottom: 1rem; }
+  .bp-hero__sub { margin-bottom: 1.5rem; }
+
+  /* 2. Preview fan → grid 2 colonne su mobile (via dei trasform desktop)
+        La pagina centrale (--3) rimane in evidenza come prima colonna */
+  .bp-preview-fan {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+    min-height: auto !important;
+    align-items: start !important;
+    padding: 0 !important;
+  }
+  .bp-preview-page--1,
+  .bp-preview-page--2,
+  .bp-preview-page--3,
+  .bp-preview-page--4,
+  .bp-preview-page--5 {
+    transform: none !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    z-index: auto !important;
+  }
+  /* La pagina "featured" al centro — prima in griglia, span 2 col */
+  .bp-preview-page--3 {
+    grid-column: 1 / -1 !important;
+    max-width: 280px !important;
+    margin: 0 auto 0.5rem !important;
+  }
+  .bp-preview-page figcaption {
+    position: static !important;
+    font-size: .65rem;
+    margin-top: .35rem;
+    text-align: center;
+  }
+  .bp-preview-section { padding: 3rem 0 3.5rem; }
+
+  /* 3. Bottone Avanzato: testo lungo su mobile → font più piccolo */
+  .bp-pricing-card--comp .bp-btn-primary {
+    font-size: .85rem !important;
+    padding: .9rem 1rem !important;
+    letter-spacing: -.01em;
+  }
+
+  /* 4. Section padding compatto — già 3.5rem ma ulteriore riduzione su 390px */
+  .bp-section { padding: 2.75rem 0 !important; }
+  .bp-section-title { font-size: 1.6rem !important; }
+
+  /* 5. Bio grid: colonna singola, foto più piccola */
+  .bp-bio__grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  .bp-bio__photo { width: 200px !important; height: 200px !important; }
+
+  /* 6. Tier panels: una sola colonna */
+  .bp-tier-panels { grid-template-columns: 1fr !important; }
+
+  /* 7. Steps: una colonna + testo centrato */
+  .bp-steps__grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  .bp-steps__grid::before { display: none !important; }
+  .bp-step { text-align: center !important; }
+  .bp-step__icon { margin: 0 auto !important; }
+  .bp-step__num { text-align: center !important; }
+
+  /* 8. Testo centrato su mobile — titoli, eyebrow, sottotitoli, intro testo */
+  .bp-eyebrow,
+  .bp-section-title,
+  .bp-section-sub,
+  .bp-what__intro,
+  .bp-bio__credential,
+  .bp-bio__text h3,
+  .bp-forchi-title,
+  .bp-preview-header,
+  .bp-steps__header,
+  .bp-pricing__header,
+  .bp-faq__header,
+  .bp-section-header,
+  .bp-hero__kicker {
+    text-align: center !important;
+  }
+  /* eyebrow linee: centra il flex */
+  .bp-eyebrow { justify-content: center !important; }
+}
+</style>
+<link rel="stylesheet" href="libretto-d2.css?v=1788466273"></head>
+<body class="d2 pg-libretto">
+<div class="avviso">Bozza &middot; direzione 2 <b>Meccanica Calda</b> &middot; Libretto d'Istruzioni &middot; testi e struttura identici al sito online, palette tradotta &middot; nota: online manca l'indirizzo del venditore (segnaposto)</div>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="dir-2.html">Valentina Russo<em>Consulente BG5&reg;</em></a>
+  <ul class="menu"><li><a href="servizi.html">Servizi</a></li><li><a href="human-design.html">Cos&rsquo;&egrave; lo Human Design</a></li><li><a href="blog.html">Blog</a></li><li><a href="chi-sono.html">Chi Sono</a></li><li><a href="contatti.html">Contatti</a></li><li><a href="aziende.html">Aziende</a></li></ul>
+  <a class="btn btn-1" href="calcolo-human-design.html">Calcola la tua carta gratis</a>
+</div></nav>
+E html>
 <html lang="it">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>Manuale d'Istruzioni Human Design in PDF | Valentina Russo &middot; BOZZA</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-<link rel="icon" href="img/e18c9bb45946.png">
-<link rel="stylesheet" href="stile.css?v=1788465769">
-</head>
-<body id="pg-libretto">
-<div class="avviso">Bozza riservata &middot; non indicizzata &middot; i testi sono identici al sito online</div>
-<nav class="nav"><div class="wrap"><a class="brand" href="index.html">Valentina Russo<em>Consulente BG5&reg;</em></a><ul class="navlinks"><li><a href="human-design.html">Human Design</a></li><li><a href="servizi.html">Servizi</a></li><li><a href="libretto-istruzioni.html">Libretto</a></li><li><a href="blog.html">Blog</a></li><li><a href="aziende.html">Business</a></li><li><a href="chi-sono.html">Chi Sono</a></li></ul><a class="btn btn-gold" href="calcolo-human-design.html">Calcola la tua carta</a></div></nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="rv">
-<html>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap">
+
+    <title>Manuale d'Istruzioni Human Design in PDF | Valentina Russo</title>
+    <meta name="description" content="Un documento PDF personalizzato che traduce la tua carta Human Design in linguaggio pratico: come sei fatta, come decidi, come lavori. Libretto Base €90 · Avanzato €147. Consegna in 2-4 giorni.">
+    <link rel="canonical" href="https://valentinarussobg5.com/libretto-istruzioni">
+    
+        <link rel="icon" type="image/png" href="https://valentinarussobg5.com/user/pages/assets/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="https://valentinarussobg5.com/user/pages/assets/apple-touch-icon.png">
+
+        <meta name="google-site-verification" content="hVvQ2yByWi_wqkv5-CpFa5ifdITtkTIsE1wBWU6WgOQ">
+
+        
+
+            <meta name="geo.placename" content="Torino, Italia">
+        <meta name="geo.region" content="IT">
+
+        <meta property="og:title" content="Manuale d&#039;Istruzioni Human Design in PDF | Valentina Russo">
+    <meta property="og:description" content="Un documento PDF personalizzato che traduce la tua carta Human Design in linguaggio pratico: come sei fatta, come decidi, come lavori. Libretto Base €90 · Avanzato €147. Consegna in 2-4 giorni.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://valentinarussobg5.com/libretto-istruzioni">
+                              <meta property="og:image" content="https://valentinarussobg5.com/user/themes/valentina/images/og-default.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://valentinarussobg5.com/user/themes/valentina/images/og-default.jpg">
+    <meta name="twitter:title" content="Manuale d&#039;Istruzioni Human Design in PDF | Valentina Russo">
+    <meta name="twitter:description" content="Un documento PDF personalizzato che traduce la tua carta Human Design in linguaggio pratico: come sei fatta, come decidi, come lavori. Libretto Base €90 · Avanzato €147. Consegna in 2-4 giorni.">
+    <meta name="twitter:creator" content="@valentinarussobg5">
+    <meta name="twitter:site" content="@valentinarussobg5">
+
+        <link rel="stylesheet" href="https://valentinarussobg5.com/user/themes/valentina/css/style.css?v=20260312_ULTRA">
+    <style>
+/* ── BG5 Blueprint Landing — Token extra ── */
+:root {
+  --bp-gold:          #7A4F5E;
+  --bp-navy-deep:     #4A2C38;
+  --bp-rosa-wash:     #F6EAEE;
+  --bp-teal-wash:     #E9F3F6;
+  --bp-gold-glow:     rgba(122,79,94,.30);
+  --bp-rosa-glow:     rgba(207,143,169,.12);
+  --bp-navy-glow:     rgba(58,53,50,.35);
+  --bp-parchment:     #FBF7F5;
+  --bp-soft-parchment:#E8DDD9;
+  --bp-rosa:          #CF8FA9;
+  --bp-teal:          #0A98B1;
+  --bp-navy:          #5E3A47;
+  --bp-text:          #3A3532;
+  --bp-text-muted:    #6B625D;
+  --bp-white:         #FFFFFF;
+}
+
+/* ── Reset & Base ── */
+.bp-landing * { box-sizing: border-box; }
+.bp-landing { font-family: 'Outfit', sans-serif; color: var(--bp-text); }
+.bp-landing h1, .bp-landing h2, .bp-landing h3,
+.bp-landing .bp-price { font-family: 'Playfair Display', serif; }
+
+.bp-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Eyebrow label ── */
+.bp-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: .8125rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--bp-rosa);
+  margin-bottom: 1.25rem;
+}
+.bp-eyebrow::before,
+.bp-eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--bp-rosa);
+}
+
+/* H2 con ornamento ── */
+.bp-section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--bp-navy);
+  line-height: 1.2;
+  margin-bottom: .75rem;
+}
+.bp-section-sub {
+  font-size: 1.0625rem;
+  color: var(--bp-text-muted);
+  line-height: 1.65;
+  max-width: 620px;
+}
+
+/* ── Sezione separatore curva ── */
+.bp-section {
+  position: relative;
+  padding: 5rem 0;
+}
+
+/* Gradienti ricchi per ogni tipo di sezione */
+.bp-section--white {
+  background: linear-gradient(165deg, #FFFFFF 0%, #FBF8F6 40%, #F5EFF4 100%);
+}
+.bp-section--parchment {
+  background: linear-gradient(150deg, #FBF7F5 0%, #F8F0F3 40%, #F6EAEE 100%);
+}
+.bp-section--soft {
+  background: linear-gradient(140deg, #E8DDD9 0%, #EEDDE3 45%, #E4EEF0 100%);
+}
+/* "Come funziona" — teal profondo */
+.bp-section--deep {
+  background: linear-gradient(148deg, #0D2B2B 0%, #142E38 40%, #1A2040 100%);
+}
+/* --deep mantenuto per uso futuro */
+.bp-section--deep .bp-section-title { color: #E9F3F6; }
+.bp-section--deep .bp-section-sub   { color: rgba(232,244,244,.65); }
+.bp-section--deep .bp-eyebrow       { color: var(--bp-gold); }
+.bp-section--deep .bp-eyebrow::before,
+.bp-section--deep .bp-eyebrow::after { background: var(--bp-gold); }
+
+.bp-section--dark {
+  background: linear-gradient(150deg, #4A2C38 0%, #1A1230 50%, #0A0F1E 100%);
+}
+/* Sezione chi è Valentina */
+.bp-bio__grid {
+  display: grid;
+  grid-template-columns: 370px 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+.bp-bio__photo {
+  position: relative;
+  width: 340px;
+  height: 340px;          /* dimensione esplicita → cerchio garantito */
+  border-radius: 50%;
+  overflow: hidden;       /* taglia l'immagine al cerchio */
+  flex-shrink: 0;
+  box-shadow: 0 24px 64px rgba(26,35,50,.20), 0 0 0 7px var(--bp-white), 0 0 0 12px var(--bp-rosa);
+}
+.bp-bio__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;           /* riempie il container quadrato */
+  object-fit: cover;
+  object-position: center top;
+}
+.bp-bio__photo::after {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 30% 30%, rgba(122,79,94,.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+.bp-bio__text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bp-navy);
+  margin: 0 0 .375rem;
+}
+.bp-bio__credential {
+  font-size: .8125rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--bp-rosa);
+  margin: 0 0 1.5rem;
+}
+.bp-bio__text p {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--bp-text);
+  margin: 0 0 1rem;
+}
+.bp-bio__text p:last-child { margin: 0; }
+@media (max-width: 900px) {
+  .bp-bio__grid { grid-template-columns: 1fr; }
+  .bp-bio__photo { width: 260px; height: 260px; margin: 0 auto; }
+}
+
+/* "Inizia ora" — chiaro elegante, respira dopo il dark pricing */
+.bp-section--amber {
+  background: linear-gradient(155deg, #FBF7F5 0%, #F8F0F3 45%, #F6EAEE 100%);
+}
+/* Pricing — dark dramatico */
+.bp-section--gradient {
+  background: linear-gradient(150deg, #5E3A47 0%, #4A2C38 45%, #3E2430 100%);
+}
+/* Variante "flat-top": il top è solido navy così combacia col fade superiore.
+   Il bottom transition→wave è gestito dalla .bp-wave--seamless che eredita
+   lo stesso gradient + noise del pricing. */
+.bp-section--gradient-flat {
+  background:
+    linear-gradient(180deg, #5E3A47 0%, #5E3A47 60px, transparent 60px),
+    linear-gradient(150deg, #5E3A47 0%, #4A2C38 45%, #3E2430 100%);
+  box-shadow: none;
+}
+
+/* Fade fluido tra "Come funziona" (parchment) e "Pricing" (navy).
+   Niente SVG wave: la wave creava una banda nera al seam perché il fill
+   solido #5E3A47 incontrava il gradient parchment-end (#F6EAEE).
+   Qui partiamo dal colore esatto di chiusura della parchment a destra,
+   passiamo per un mid-tone neutro e atterriamo sul navy puro del pricing. */
+.bp-fade-to-navy {
+  height: 110px;
+  background: linear-gradient(
+    180deg,
+    #F6EAEE 0%,
+    #B5B8D4 32%,
+    #5C6488 62%,
+    #2A334A 85%,
+    #5E3A47 100%
+  );
+  position: relative;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+/* Texture sottile di carta antica per dare matericità (non solo sfumatura piatta) */
+.bp-fade-to-navy::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='.06'/%3E%3C/svg%3E");
+  opacity: .8;
+  pointer-events: none;
+}
+.bp-section--gradient .bp-section-title { color: #F0EBF2; }
+.bp-section--gradient .bp-section-sub   { color: rgba(240,235,242,.65); }
+.bp-section--gradient .bp-eyebrow       { color: var(--bp-gold); }
+.bp-section--gradient .bp-eyebrow::before,
+.bp-section--gradient .bp-eyebrow::after { background: var(--bp-gold); }
+
+/* Wave dividers — DEPRECATI dopo refactor 01/05/2026 (pricing su parchment,
+   niente più transizioni navy↔parchment). Lasciati come no-op per safety
+   nel caso ci siano riferimenti residui in cache/prod. */
+.bp-wave,
+.bp-fade-to-parchment,
+.bp-ordine-ornament {
+  display: none !important;
+}
+.bp-wave svg {
+  display: block;
+  width: 100%;
+  height: 56px;
+}
+
+/* ── Scroll reveal ── */
+.bp-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.bp-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@supports (animation-timeline: view()) {
+  .bp-reveal {
+    animation: bp-fade-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes bp-fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ══════════════════════════════════════════
+   1. HERO — Paper-craft editoriale: cream/parchment con accenti gold+navy
+══════════════════════════════════════════ */
+.bp-hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: #F6EAEE;
+}
+
+/* Sfondo: gradient parchment con due radial accent (oro top-right, navy soft top-left)
+   per dare warmth e suggerire luce naturale che cade sulla "scrivania". */
+.bp-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 30% 50%, rgba(122,79,94,.06) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 80% 20%, rgba(122,79,94,.04) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 60% at 10% 90%, rgba(58,53,50,.04) 0%, transparent 70%),
+    linear-gradient(135deg, #F6EAEE 0%, #F2EBDC 60%, #E8DCC0 100%);
+}
+/* Grain texture per matericità di carta antica */
+.bp-hero__noise {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='.10'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+.bp-hero__container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+.bp-hero__layout {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* COVER editorial custom — cornice dorata, cofanetto background,
+   typography "Libretto d'Istruzioni Human Design". Tilt 2°, drop-shadow forte. */
+.bp-hero__visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.bp-hero__cover {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 595 / 842;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #4A2C38;
+  transform: rotate(2deg);
+  box-shadow:
+    0 2px 4px rgba(0,0,0,.20),
+    0 32px 64px -8px rgba(0,0,0,.65),
+    0 18px 32px -10px rgba(122,79,94,.25),
+    inset 0 0 0 1px rgba(122,79,94,.45);
+  transition: transform .6s cubic-bezier(.2,.8,.2,1);
+  animation: bp-cover-breath 8s ease-in-out infinite alternate;
+  isolation: isolate;
+}
+@keyframes bp-cover-breath {
+  0%   { transform: rotate(2deg)   translateY(0); }
+  100% { transform: rotate(1.2deg) translateY(-6px); }
+}
+
+/* Background: l'immagine del cofanetto sotto a un overlay scuro */
+.bp-hero__cover-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.bp-hero__cover-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  filter: contrast(1.05) brightness(.85) saturate(.9);
+}
+.bp-hero__cover-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(58,53,50,.78) 0%, rgba(58,53,50,.30) 38%, rgba(58,53,50,.30) 65%, rgba(58,53,50,.85) 100%);
+}
+
+/* Cornice dorata interna + contenuto */
+.bp-hero__cover-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 14% 11% 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #F6EAEE;
+  border: 1px solid rgba(122,79,94,.55);
+  margin: 18px;
+  height: calc(100% - 36px);
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgba(122,79,94,.18);
+}
+
+/* Ornamenti agli angoli — quadrati dorati con cerchio centrale */
+.bp-hero__cover-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--bp-gold);
+}
+.bp-hero__cover-corner::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  border: 1px solid var(--bp-gold);
+}
+.bp-hero__cover-corner--tl { top: -7px; left: -7px; }
+.bp-hero__cover-corner--tr { top: -7px; right: -7px; }
+.bp-hero__cover-corner--bl { bottom: -7px; left: -7px; }
+.bp-hero__cover-corner--br { bottom: -7px; right: -7px; }
+
+/* Brand BG-5 piccolo in alto */
+.bp-hero__cover-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: .7rem;
+  font-style: italic;
+  letter-spacing: .35em;
+  color: var(--bp-gold);
+  margin: 0 0 auto;
+  opacity: .9;
+}
+
+/* Titolo principale */
+.bp-hero__cover-title-wrap {
+  margin: auto 0;
+}
+.bp-hero__cover-title {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  line-height: 1;
+  color: #F6EAEE;
+}
+.bp-hero__cover-title span {
+  display: block;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 400;
+  letter-spacing: .02em;
+  margin-bottom: .2em;
+}
+.bp-hero__cover-title em {
+  display: block;
+  font-size: clamp(2rem, 3.6vw, 2.85rem);
+  font-style: italic;
+  font-weight: 700;
+  color: #F6EAEE;
+  letter-spacing: -.01em;
+  text-shadow: 0 2px 18px rgba(122,79,94,.35);
+}
+.bp-hero__cover-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(.8rem, 1.1vw, 1rem);
+  font-weight: 400;
+  letter-spacing: .15em;
+  color: var(--bp-gold);
+  margin: .8em 0 0;
+  text-transform: uppercase;
+}
+
+/* Bottom — autore + tagline */
+.bp-hero__cover-bottom {
+  margin-top: auto;
+}
+.bp-hero__cover-divider {
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: var(--bp-gold);
+  margin: 0 auto 1rem;
+  opacity: .7;
+}
+.bp-hero__cover-author {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(.9rem, 1.25vw, 1.05rem);
+  font-weight: 400;
+  color: #F6EAEE;
+  margin: 0 0 .35rem;
+  letter-spacing: .01em;
+}
+.bp-hero__cover-tagline {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(.6rem, .8vw, .7rem);
+  font-style: italic;
+  color: rgba(245,239,227,.65);
+  margin: 0;
+  letter-spacing: .04em;
+  line-height: 1.4;
+  max-width: 200px;
+  margin: 0 auto;
+}
+.bp-hero__cover-caption {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: .8125rem;
+  text-align: center;
+  color: rgba(58,53,50,.55);
+  letter-spacing: .05em;
+  line-height: 1.6;
+}
+.bp-hero__cover-caption-num {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--bp-gold);
+  margin-right: .25rem;
+}
+.bp-hero__cover-caption em {
+  font-style: italic;
+  color: rgba(122,79,94,.85);
+}
+
+/* Colonna testo */
+.bp-hero__content {
+  max-width: 580px;
+}
+
+.bp-hero__kicker {
+  font-family: 'Outfit', sans-serif;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--bp-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: .85rem;
+  margin: 0 0 1.75rem;
+}
+.bp-hero__kicker-line {
+  display: inline-block;
+  width: 36px;
+  height: 1px;
+  background: var(--bp-gold);
+  opacity: .7;
+}
+
+.bp-hero__h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5.6vw, 4.25rem);
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  margin: 0 0 1.75rem;
+  color: var(--bp-navy);
+}
+.bp-hero__h1 em {
+  font-style: italic;
+  color: var(--bp-gold);
+  font-weight: 700;
+}
+.bp-hero__h1 span {
+  font-style: italic;
+  color: var(--bp-gold);
+  position: relative;
+}
+.bp-hero__h1 span::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -.05em;
+  height: 3px;
+  background: var(--bp-gold);
+  opacity: .25;
+  border-radius: 2px;
+}
+
+.bp-hero__sub {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.7;
+  color: rgba(58,53,50,.70);
+  max-width: 560px;
+  margin: 0 0 2.25rem;
+  font-weight: 400;
+}
+
+/* CTA "manuale tecnico" — niente rosa pieno, leggibilità su sfondo scuro */
+.bp-hero__cta-group {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.bp-btn-hero-primary,
+.bp-btn-hero-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.85rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: .95rem;
+  text-decoration: none;
+  border-radius: 2px;
+  letter-spacing: .03em;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+  position: relative;
+}
+.bp-btn-hero-primary {
+  background: var(--bp-gold);
+  color: var(--bp-navy-deep);
+  font-weight: 700;
+  border: 1px solid var(--bp-gold);
+  box-shadow: 0 8px 28px rgba(122,79,94,.35), 0 0 0 1px rgba(122,79,94,.2);
+}
+/* Pulsante "arancione/dorato": al hover il testo diventa BIANCO */
+.bp-btn-hero-primary:hover,
+.bp-btn-hero-primary:focus-visible {
+  background: #5E3A47;
+  color: #FFFFFF;
+  border-color: #5E3A47;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(122,79,94,.55);
+}
+.bp-btn-hero-outline {
+  background: #FFFFFF;
+  color: var(--bp-gold);
+  font-weight: 700;
+  border: 1px solid rgba(122,79,94,.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.6),
+    0 1px 2px rgba(58,53,50,.06),
+    0 4px 8px rgba(58,53,50,.06);
+}
+/* Pulsante "bianco/outline": al hover testo e bordo diventano DORATI scuri */
+.bp-btn-hero-outline:hover,
+.bp-btn-hero-outline:focus-visible {
+  background: #FFFFFF;
+  color: #5E3A47;
+  border-color: var(--bp-gold);
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.6),
+    0 4px 8px rgba(58,53,50,.08),
+    0 12px 24px rgba(58,53,50,.10);
+}
+.bp-btn-hero-outline:hover strong { border-color: currentColor; }
+.bp-btn-hero-primary span,
+.bp-btn-hero-outline span { font-weight: 600; }
+.bp-btn-hero-primary strong,
+.bp-btn-hero-outline strong {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding-left: 1.25rem;
+  border-left: 1px solid currentColor;
+  opacity: .95;
+}
+
+/* Meta info — UNA RIGA SOLA, testo grigio, separatori "·" tra le voci */
+.bp-hero__meta {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: .85rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: .8125rem;
+  color: rgba(58,53,50,.55);
+  letter-spacing: .04em;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.bp-hero__meta li {
+  display: inline-flex;
+  align-items: center;
+  gap: .85rem;
+}
+.bp-hero__meta li + li::before {
+  content: '·';
+  color: rgba(122,79,94,.6);
+  font-weight: 700;
+}
+/* Bullet rimossi — il punto medio fa già da separatore */
+.bp-hero__meta-dot { display: none; }
+/* Pulsante "arancione/dorato" pieno (era rosa-rosa, ora gold per coerenza palette
+   e contrasto WCAG AA con testo navy/scuro su gold). Hover → testo bianco. */
+.bp-btn-primary {
+  display: inline-block;
+  background: var(--bp-gold);
+  color: var(--bp-navy-deep);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid var(--bp-gold);
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s, transform .15s, box-shadow .2s;
+  letter-spacing: .02em;
+}
+.bp-btn-primary:hover,
+.bp-btn-primary:focus-visible {
+  background: #5E3A47;
+  color: #FFFFFF;
+  border-color: #5E3A47;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(122,79,94,.40);
+}
+
+/* Pulsante "bianco/outline" (era rosa, ora gold). Hover → testo/bordo dorato intensificato. */
+.bp-btn-outline {
+  display: inline-block;
+  color: var(--bp-gold);
+  background: transparent;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: .9rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 2px solid var(--bp-gold);
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s, transform .15s;
+}
+.bp-btn-outline:hover,
+.bp-btn-outline:focus-visible {
+  background: rgba(122,79,94,.08);
+  color: #5E3A47;
+  border-color: #5E3A47;
+  transform: translateY(-1px);
+}
+
+/* Modifier "large" per CTA prominenti finali */
+.bp-btn-primary--lg {
+  padding: 1.25rem 2.75rem;
+  font-size: 1.125rem;
+  box-shadow: 0 8px 28px rgba(122,79,94,.30);
+}
+.bp-btn-primary--lg strong {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  margin-left: .25rem;
+}
+.bp-btn-outline--lg {
+  padding: 1.1rem 2.25rem;
+  font-size: 1.0625rem;
+}
+
+.bp-hero__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .35rem;
+  color: rgba(58,53,50,.45);
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: .7rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  transition: color .2s;
+}
+.bp-hero__scroll:hover { color: var(--bp-gold); }
+.bp-hero__scroll-arrow {
+  font-size: 1.1rem;
+  animation: bp-bounce .9s ease-in-out infinite alternate;
+}
+@keyframes bp-bounce {
+  from { transform: translateY(0); }
+  to   { transform: translateY(6px); }
+}
+
+
+/* ══════════════════════════════════════════
+   2. COS'È IL BLUEPRINT
+══════════════════════════════════════════ */
+.bp-what__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.bp-what__list {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0 0;
+}
+.bp-what__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: .875rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--bp-text);
+}
+.bp-what__list li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  background: var(--bp-teal);
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L4.5 7.5L11 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Immagine sezione cos'è */
+.bp-doc-mockup {
+  position: relative;
+  transform: rotate(-1.5deg);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(26,35,50,.20), 0 4px 16px rgba(26,35,50,.10);
+  transition: transform .4s ease;
+}
+.bp-doc-mockup:hover { transform: rotate(0deg) scale(1.01); }
+.bp-doc-mockup img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* ══════════════════════════════════════════
+   3. COSA CONTIENE
+══════════════════════════════════════════ */
+.bp-contains__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.bp-tier-panel {
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+}
+.bp-tier-panel--essenziale {
+  background: var(--bp-rosa-wash, #F6EAEE);
+  border: 1.5px solid rgba(207,143,169,.3);
+}
+.bp-tier-panel--completo {
+  background: var(--bp-navy);
+  color: var(--bp-white);
+}
+.bp-tier-panel__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+.bp-tier-panel--essenziale .bp-tier-panel__title { color: var(--bp-rosa); }
+.bp-tier-panel--completo .bp-tier-panel__title { color: var(--bp-gold, #7A4F5E); }
+
+.bp-tier-panel__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 .3rem;
+  line-height: 1.2;
+}
+.bp-tier-panel--essenziale .bp-tier-panel__heading { color: var(--bp-navy); }
+.bp-tier-panel--completo .bp-tier-panel__heading { color: var(--bp-white); }
+
+.bp-tier-panel__count {
+  font-size: .875rem;
+  margin-bottom: 1.75rem;
+}
+.bp-tier-panel--essenziale .bp-tier-panel__count { color: var(--bp-text-muted); }
+.bp-tier-panel--completo .bp-tier-panel__count { color: rgba(245,236,240,.6); }
+
+.bp-section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bp-section-list li {
+  display: flex;
+  align-items: baseline;
+  gap: .875rem;
+  padding: .5rem 0;
+  border-bottom: 1px solid;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+.bp-tier-panel--essenziale .bp-section-list li { border-color: rgba(207,143,169,.15); color: var(--bp-text); }
+.bp-tier-panel--completo .bp-section-list li { border-color: rgba(245,236,240,.1); color: rgba(245,236,240,.85); }
+.bp-tier-panel--completo .bp-section-list li:last-child { border-bottom: none; }
+.bp-tier-panel--essenziale .bp-section-list li:last-child { border-bottom: none; }
+
+.bp-section-num {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.bp-tier-panel--essenziale .bp-section-num { color: var(--bp-rosa); }
+.bp-tier-panel--completo .bp-section-num { color: var(--bp-gold, #7A4F5E); }
+
+.bp-section-list li.extra {
+  font-style: italic;
+}
+.bp-tier-panel--completo .bp-section-list li.extra { color: #7A4F5E; }
+
+
+/* ══════════════════════════════════════════
+   3b. ANTEPRIMA — fanned book layout
+══════════════════════════════════════════ */
+.bp-preview-section {
+  padding: 6rem 0 7rem;
+  position: relative;
+}
+.bp-preview-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 4rem;
+}
+
+/* Layout fanned: 5 pagine a ventaglio, quella centrale dritta e prominente,
+   le laterali ruotate e leggermente più piccole. Effetto "libro sfogliato". */
+.bp-preview-fan {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;
+  perspective: 1600px;
+  padding: 2rem 0 3rem;
+  min-height: 560px;
+}
+.bp-preview-page {
+  position: relative;
+  margin: 0;
+  width: clamp(140px, 18vw, 240px);
+  aspect-ratio: 595 / 842;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #F6EAEE;
+  box-shadow:
+    0 2px 4px rgba(0,0,0,.08),
+    0 24px 48px rgba(58,53,50,.18),
+    inset 0 0 0 1px rgba(122,79,94,.12);
+  transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease, z-index 0s linear .5s;
+  cursor: zoom-in;
+  flex-shrink: 0;
+}
+.bp-preview-page img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.bp-preview-page figcaption {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 0; right: 0;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--bp-gold);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .9;
+}
+/* Disposizione ventaglio (default desktop) */
+.bp-preview-page--1 { transform: translateX(60px) rotate(-8deg) translateY(20px); z-index: 1; }
+.bp-preview-page--2 { transform: translateX(30px) rotate(-3deg) translateY(8px);  z-index: 2; }
+.bp-preview-page--3 { transform: scale(1.18) translateY(-12px);                   z-index: 5;
+                      box-shadow: 0 4px 8px rgba(0,0,0,.10), 0 36px 72px rgba(58,53,50,.30),
+                                  inset 0 0 0 1px rgba(122,79,94,.25); }
+.bp-preview-page--4 { transform: translateX(-30px) rotate(3deg) translateY(8px);  z-index: 2; }
+.bp-preview-page--5 { transform: translateX(-60px) rotate(8deg) translateY(20px); z-index: 1; }
+
+/* Hover: la pagina si solleva e si raddrizza, mostrando contenuto in primo piano */
+.bp-preview-page:hover {
+  transform: scale(1.32) translateY(-30px) rotate(0);
+  z-index: 10;
+  transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, z-index 0s;
+  box-shadow:
+    0 6px 12px rgba(0,0,0,.12),
+    0 48px 96px rgba(58,53,50,.40),
+    inset 0 0 0 1px rgba(122,79,94,.35);
+}
+
+.bp-preview-footnote {
+  text-align: center;
+  margin-top: 4.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: .8125rem;
+  font-style: italic;
+  color: var(--bp-text-muted);
+}
+
+/* Mobile: stack verticale, niente ventaglio (altrimenti illeggibile) */
+@media (max-width: 900px) {
+  .bp-preview-section { padding: 4rem 0 5rem; }
+  .bp-preview-fan {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.25rem 1rem;
+    perspective: none;
+    padding: 1rem 0 2rem;
+    min-height: 0;
+  }
+  .bp-preview-page,
+  .bp-preview-page--1,
+  .bp-preview-page--2,
+  .bp-preview-page--3,
+  .bp-preview-page--4,
+  .bp-preview-page--5 {
+    transform: none;
+    width: clamp(140px, 42vw, 200px);
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 16px 32px rgba(58,53,50,.18);
+  }
+  .bp-preview-page:hover {
+    transform: scale(1.05) translateY(-4px);
+  }
+  .bp-preview-page figcaption {
+    bottom: -1.75rem;
+    font-size: .7rem;
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   4. PER CHI È — titolo dominante + connettore visivo
+══════════════════════════════════════════ */
+.bp-forchi-section { padding: 6rem 0 6.5rem; }
+.bp-forchi-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+}
+.bp-forchi-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.75rem, 5.5vw, 4rem);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--bp-navy);
+  line-height: 1.05;
+  letter-spacing: -.015em;
+  margin: 0 0 1.25rem;
+}
+.bp-forchi-sub {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--bp-text-muted);
+  max-width: 560px;
+  margin: 0 auto;
+}
+/* Connettore visivo: pallino dorato + linea verticale che lega titolo alle card */
+.bp-forchi-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin: 2.25rem auto 0;
+  height: 56px;
+}
+.bp-forchi-connector__dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--bp-gold);
+  box-shadow: 0 0 0 5px rgba(122,79,94,.15);
+  flex-shrink: 0;
+}
+.bp-forchi-connector__line {
+  width: 1.5px;
+  flex: 1;
+  background: linear-gradient(180deg, var(--bp-gold) 0%, rgba(122,79,94,.15) 100%);
+}
+
+.bp-forchi__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+/* Variante "linked" — bordo top dorato che richiama il connettore */
+.bp-forchi__grid--linked .bp-profile-card {
+  position: relative;
+  background: var(--bp-white);
+  border: 1px solid rgba(122,79,94,.18);
+  border-top: 3px solid var(--bp-gold);
+  padding: 2.25rem 1.75rem 1.75rem;
+  border-radius: 6px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.bp-forchi__grid--linked .bp-profile-card::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--bp-white);
+  border: 2px solid var(--bp-gold);
+  z-index: 2;
+}
+.bp-forchi__grid--linked .bp-profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 44px rgba(58,53,50,.12);
+  border-color: var(--bp-gold);
+}
+.bp-profile-num {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--bp-gold);
+  letter-spacing: .08em;
+  margin-bottom: .65rem;
+}
+.bp-profile-card .bp-profile-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F2EAD8 0%, #E8DBC0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--bp-gold);
+  border: 1px solid rgba(122,79,94,.25);
+}
+.bp-profile-card h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--bp-navy);
+  line-height: 1.3;
+  margin: 0 0 .85rem;
+}
+.bp-profile-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--bp-text);
+  margin: 0 0 1.25rem;
+}
+.bp-profile-tag {
+  display: inline-block;
+  font-size: .8125rem;
+  font-style: italic;
+  color: var(--bp-text-muted);
+  border-left: 2px solid var(--bp-gold);
+  padding-left: .75rem;
+  line-height: 1.55;
+}
+
+
+/* ══════════════════════════════════════════
+   5. COME FUNZIONA
+══════════════════════════════════════════ */
+.bp-steps__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+  position: relative;
+}
+.bp-steps__grid::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: calc(16.66% + 1rem);
+  right: calc(16.66% + 1rem);
+  height: 1px;
+  border-top: 2px dashed var(--bp-soft-parchment);
+  z-index: 0;
+}
+.bp-step {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.bp-step__num {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: .75rem;
+  letter-spacing: .12em;
+  color: var(--bp-teal);
+  display: block;
+  margin: 0 auto .625rem;
+  text-align: center;
+}
+.bp-step__icon {
+  position: relative;
+  z-index: 1;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--bp-teal-wash, #E9F3F6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  color: var(--bp-teal);
+}
+.bp-step h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--bp-navy);
+  margin: 0 0 .625rem;
+  position: relative;
+  z-index: 1;
+}
+.bp-step p {
+  font-size: .9375rem;
+  line-height: 1.65;
+  color: var(--bp-text);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ══════════════════════════════════════════
+   6. PRICING
+══════════════════════════════════════════ */
+.bp-pricing__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: end;
+  max-width: 860px;
+  margin: 3rem auto 0;
+}
+.bp-pricing-card {
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Essenziale */
+.bp-pricing-card--ess {
+  background: var(--bp-white);
+  border: 1.5px solid var(--bp-rosa);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 24px var(--bp-rosa-glow);
+}
+.bp-pricing-card--ess .bp-price {
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--bp-navy);
+  line-height: 1;
+}
+.bp-pricing-card--ess .bp-price-label {
+  font-size: .875rem;
+  color: var(--bp-text-muted);
+  margin-bottom: 1.75rem;
+}
+.bp-pricing-card--ess .bp-cta { margin-top: 2rem; }
+
+/* Completo */
+.bp-pricing-card--comp {
+  background: var(--bp-navy-deep);
+  padding: 3.5rem 2rem;
+  box-shadow: 0 12px 48px var(--bp-navy-glow), 0 0 0 1px rgba(122,79,94,.3);
+}
+.bp-pricing-badge {
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background: var(--bp-gold);
+  color: var(--bp-white);
+  font-family: 'Outfit', sans-serif;
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: .375rem 1.25rem;
+  border-radius: 100px;
+  box-shadow: 0 2px 12px var(--bp-gold-glow);
+}
+.bp-pricing-card--comp .bp-price {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--bp-rosa-wash, #F6EAEE);
+  line-height: 1;
+}
+.bp-pricing-card--comp .bp-price-label {
+  font-size: .875rem;
+  color: rgba(245,236,240,.55);
+  margin-bottom: 1.75rem;
+}
+.bp-pricing-card--comp .bp-cta { margin-top: 2rem; }
+.bp-pricing-card--comp .bp-btn-primary {
+  background: var(--bp-gold);
+  color: var(--bp-navy-deep);
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.bp-pricing-card__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+.bp-pricing-card--ess .bp-pricing-card__title { color: var(--bp-rosa); }
+.bp-pricing-card--comp .bp-pricing-card__title { color: var(--bp-gold); }
+
+.bp-pricing-card__name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 .25rem;
+}
+.bp-pricing-card--ess .bp-pricing-card__name { color: var(--bp-navy); }
+.bp-pricing-card--comp .bp-pricing-card__name { color: var(--bp-white); }
+
+.bp-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+.bp-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  padding: .5rem 0;
+  font-size: .9375rem;
+  line-height: 1.5;
+  border-bottom: 1px solid;
+}
+.bp-feature-list li:last-child { border-bottom: none; }
+.bp-pricing-card--ess .bp-feature-list li { border-color: var(--bp-soft-parchment); color: var(--bp-text); }
+.bp-pricing-card--comp .bp-feature-list li { border-color: rgba(245,236,240,.1); color: rgba(245,236,240,.85); }
+
+.bp-feature-check {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  color: var(--bp-teal);
+  font-size: .875rem;
+}
+.bp-feature-extra {
+  color: var(--bp-gold);
+  font-weight: 600;
+  font-size: .8125rem;
+}
+
+.bp-pricing__footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: .875rem;
+  color: var(--bp-text-muted);
+}
+.bp-pricing__footer a { color: var(--bp-rosa); }
+
+/* Pulsante "bianco/outline" del Libretto Base nel pricing — palette gold,
+   hover testo/bordo dorato intensificato. */
+.bp-btn-outline-ess {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: var(--bp-gold);
+  background: transparent;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: .95rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 2px solid var(--bp-gold);
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s, transform .15s;
+}
+.bp-btn-outline-ess:hover,
+.bp-btn-outline-ess:focus-visible {
+  background: rgba(122,79,94,.08);
+  color: #5E3A47;
+  border-color: #5E3A47;
+  transform: translateY(-1px);
+}
+
+
+/* ══════════════════════════════════════════
+   7. FORM
+══════════════════════════════════════════ */
+.bp-form-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.bp-section--dark .bp-section-title { color: var(--bp-rosa-wash, #F6EAEE); }
+.bp-section--dark .bp-section-sub { color: rgba(245,236,240,.65); }
+.bp-section--dark .bp-eyebrow { color: var(--bp-gold); }
+.bp-section--dark .bp-eyebrow::before,
+.bp-section--dark .bp-eyebrow::after { background: var(--bp-gold); }
+
+.bp-form { margin-top: 2.5rem; }
+.bp-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.bp-form-group {
+  margin-bottom: 1.25rem;
+}
+.bp-form-group label {
+  display: block;
+  font-size: .875rem;
+  font-weight: 600;
+  color: rgba(245,236,240,.8);
+  margin-bottom: .4rem;
+}
+.bp-form-group input,
+.bp-form-group select {
+  width: 100%;
+  padding: .8rem 1rem;
+  background: rgba(255,255,255,.08);
+  border: 1.5px solid rgba(245,236,240,.2);
+  border-radius: 4px;
+  color: var(--bp-white);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  transition: border-color .2s;
+}
+.bp-form-group input:focus,
+.bp-form-group select:focus {
+  outline: 2px solid var(--bp-rosa);
+  outline-offset: 2px;
+  border-color: var(--bp-rosa);
+}
+.bp-form-group input::placeholder { color: rgba(245,236,240,.35); }
+.bp-form-group select option { background: var(--bp-navy-deep); color: var(--bp-white); }
+
+.bp-form-radio-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.bp-form-radio {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  cursor: pointer;
+  font-size: .9375rem;
+  color: rgba(245,236,240,.85);
+  padding: .75rem 1.25rem;
+  border: 1.5px solid rgba(245,236,240,.2);
+  border-radius: 4px;
+  transition: border-color .2s, background .2s;
+  flex: 1;
+  min-width: 200px;
+}
+.bp-form-radio:has(input:checked) {
+  border-color: var(--bp-rosa);
+  background: rgba(207,143,169,.12);
+}
+.bp-form-radio input { accent-color: var(--bp-rosa); }
+.bp-form-radio strong { display: block; font-weight: 700; color: var(--bp-white); }
+.bp-form-radio span { font-size: .8125rem; color: rgba(245,236,240,.55); }
+
+/* Form submit allineato alla nuova palette gold/navy (era rosa).
+   Hover → testo bianco (regola "pulsanti pieni"). */
+.bp-form-submit {
+  width: 100%;
+  padding: 1.125rem;
+  background: var(--bp-gold);
+  color: var(--bp-navy-deep);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  border: 1px solid var(--bp-gold);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s, transform .15s, box-shadow .2s;
+  margin-top: .5rem;
+  letter-spacing: .02em;
+}
+.bp-form-submit:hover,
+.bp-form-submit:focus-visible {
+  background: #5E3A47;
+  color: #FFFFFF;
+  border-color: #5E3A47;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(122,79,94,.40);
+}
+.bp-form-note {
+  text-align: center;
+  font-size: .8125rem;
+  color: rgba(139,157,181,.8);
+  margin-top: .75rem;
+}
+.bp-form-success {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(74,140,140,.15);
+  border: 1.5px solid var(--bp-teal);
+  border-radius: 8px;
+  color: var(--bp-white);
+  margin-top: 1rem;
+}
+
+
+/* ══════════════════════════════════════════
+   8. FAQ
+══════════════════════════════════════════ */
+.bp-faq-wrap {
+  max-width: 720px;
+  margin: 3rem auto 0;
+}
+.bp-faq-item {
+  border-bottom: 1px solid var(--bp-soft-parchment);
+}
+.bp-faq-item:first-child { border-top: 1px solid var(--bp-soft-parchment); }
+.bp-faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--bp-navy);
+  transition: color .2s;
+}
+.bp-faq-q:hover { color: var(--bp-rosa); }
+.bp-faq-q:focus { outline: 2px solid var(--bp-rosa); outline-offset: 2px; }
+.bp-faq-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid var(--bp-soft-parchment);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--bp-rosa);
+  transition: transform .3s;
+}
+.bp-faq-item.open .bp-faq-icon { transform: rotate(45deg); }
+.bp-faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, padding .35s ease;
+}
+.bp-faq-item.open .bp-faq-a { max-height: 400px; padding-bottom: 1.25rem; }
+.bp-faq-a p {
+  font-size: .9375rem;
+  line-height: 1.7;
+  color: var(--bp-text);
+  margin: 0;
+}
+
+
+/* Immagini accent sezioni */
+.bp-section-img {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(26,35,50,.16);
+}
+.bp-section-img img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center 30%;
+  transition: transform .6s ease;
+  will-change: transform;
+}
+
+/* ══════════════════════════════════════════
+   DEPTH & IMMERSION
+══════════════════════════════════════════ */
+
+/* Vignette su ogni immagine */
+.bp-section-img::after,
+.bp-doc-mockup::after,
+.bp-hero__img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, transparent 45%, rgba(58,53,50,.38) 100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Hero: position + img transition */
+.bp-hero__img {
+  position: relative;
+}
+.bp-hero__img img { will-change: transform; transition: transform .05s linear; }
+
+/* Glow ambientale animato */
+@keyframes bp-glow-pulse {
+  0%,100% { opacity:.35; transform:scale(1);   }
+  50%      { opacity:.65; transform:scale(1.18); }
+}
+.bp-hero__ambient {
+  position: absolute;
+  width: 640px; height: 640px;
+  right: -80px; top: -120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(122,79,94,.14) 0%, transparent 65%);
+  animation: bp-glow-pulse 7s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+.bp-hero__ambient-2 {
+  position: absolute;
+  width: 380px; height: 380px;
+  left: -60px; bottom: -60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(207,143,169,.10) 0%, transparent 65%);
+  animation: bp-glow-pulse 9s ease-in-out infinite;
+  animation-delay: -3s;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Particelle fluttuanti */
+.bp-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.bp-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(122,79,94,.7) 0%, transparent 70%);
+  animation: bp-float-up linear infinite;
+  bottom: -20px;
+}
+@keyframes bp-float-up {
+  0%   { transform: translateY(0) translateX(0); opacity: 0; }
+  8%   { opacity: 1; }
+  88%  { opacity: .7; }
+  100% { transform: translateY(-110vh) translateX(var(--drift,0px)); opacity: 0; }
+}
+
+/* Sezione layer effect — ombre di profondità.
+   NB: niente inset shadow su --gradient: su sfondo già navy l'ombra crea una
+   banda nera visibile al top, percepita come "blocco nero" tra il fade
+   superiore e l'inizio del pricing. */
+.bp-section--parchment  { box-shadow: inset 0 8px 24px rgba(58,53,50,.06); }
+.bp-section--soft       { box-shadow: inset 0 8px 24px rgba(58,53,50,.05); }
+
+/* Step card glass hover */
+.bp-step {
+  background: rgba(255,255,255,.6);
+  border: 1px solid rgba(234,229,225,.8);
+  border-radius: 16px;
+  padding: 1.75rem 1.25rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+.bp-step:hover {
+  background: rgba(255,255,255,.9);
+  box-shadow: 0 16px 40px rgba(26,35,50,.12);
+  transform: translateY(-4px);
+}
+
+/* Profile cards glow hover */
+.bp-profile-icon {
+  transition: box-shadow .3s ease;
+}
+.bp-profile-card:hover .bp-profile-icon {
+  box-shadow: 0 0 28px rgba(122,79,94,.32);
+}
+
+/* Grain texture overlay su sezioni parchment */
+.bp-section--parchment::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+.bp-section--parchment > * { position: relative; z-index: 1; }
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+/* Fascia 1024-1280: la cover si stringe leggermente */
+@media (max-width: 1280px) {
+  .bp-hero__layout { gap: 2.5rem; }
+  .bp-hero__cover { max-width: 320px; }
+}
+@media (max-width: 900px) {
+  .bp-what__grid { grid-template-columns: 1fr; }
+  .bp-doc-mockup { display: none; }
+  .bp-contains__grid { grid-template-columns: 1fr; }
+  .bp-forchi__grid { grid-template-columns: 1fr; }
+  .bp-steps__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .bp-steps__grid::before { display: none; }
+  .bp-step { text-align: left; }
+  .bp-step__num { display: block; }
+  .bp-step__icon { margin: 0 0 1rem; }
+  .bp-pricing__grid { grid-template-columns: 1fr; }
+  .bp-pricing-card--comp { order: -1; }
+  .bp-section-title { font-size: 1.75rem; }
+
+  /* Hero responsive: stack verticale, cover sopra al testo */
+  .bp-hero__layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .bp-hero__visual { order: -1; }
+  .bp-hero__cover { max-width: 280px; margin: 0 auto; }
+  .bp-hero__content { max-width: 100%; }
+  .bp-hero__bg-overlay {
+    background:
+      linear-gradient(180deg, rgba(11,18,32,.55) 0%, rgba(11,18,32,.78) 60%, rgba(11,18,32,.92) 100%);
+  }
+  .bp-hero__h1 { font-size: clamp(2.25rem, 8vw, 3rem); }
+  .bp-hero__frame { padding: 2rem 0 0 0; }
+  .bp-forchi-title { font-size: clamp(2.25rem, 8vw, 3rem); }
+}
+@media (max-width: 600px) {
+  .bp-section { padding: 3.5rem 0; }
+  .bp-hero { min-height: 92vh; min-height: 92dvh; }
+  .bp-hero__content { padding: 5rem 0 4.5rem; }
+  .bp-form-row { grid-template-columns: 1fr; }
+  .bp-hero__cta-group { flex-direction: column; align-items: stretch; gap: .75rem; }
+  .bp-btn-hero-primary, .bp-btn-hero-outline { justify-content: space-between; }
+  .bp-hero__cover { max-width: 220px; }
+  .bp-hero__cover-caption { font-size: .75rem; }
+  .bp-hero__meta { gap: 1rem; font-size: .7rem; }
+  .bp-hero__scroll { display: none; }
+}
+
+/* Reduced motion — disattiva animazioni decorative */
+@media (prefers-reduced-motion: reduce) {
+  .bp-hero__cover { animation: none; transform: rotate(2deg); }
+  .bp-hero__scroll-arrow { animation: none; }
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   EDITORIAL OVERRIDE — flusso continuo paper-craft su tutte le sezioni cream.
+   Tutto su parchment unificato, separato da ornamenti dorati ◆.
+   I blocchi navy (pricing, form) restano "ancore" visive di rottura ritmo.
+═══════════════════════════════════════════════════════════════════════════ */
+
+/* Tutte le sezioni cream condividono lo stesso linguaggio editoriale */
+.bp-section--white,
+.bp-section--parchment,
+.bp-section--soft,
+.bp-section--amber,
+.bp-section--deep {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(122,79,94,.04) 0%, transparent 70%),
+    linear-gradient(180deg, #F6EAEE 0%, #F2EBDC 60%, #E8DCC0 100%) !important;
+  color: var(--bp-navy) !important;
+  position: relative;
+  box-shadow: none !important;
+  overflow: visible;
+}
+/* Grain texture per matericità */
+.bp-section--white::before,
+.bp-section--parchment::before,
+.bp-section--soft::before,
+.bp-section--amber::before,
+.bp-section--deep::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='.06'/%3E%3C/svg%3E") !important;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+
+/* Ornamento divisore ◆ tra sezioni cream consecutive */
+.bp-section--white + .bp-section--white::after,
+.bp-section--white + .bp-section--parchment::after,
+.bp-section--white + .bp-section--soft::after,
+.bp-section--parchment + .bp-section--white::after,
+.bp-section--parchment + .bp-section--parchment::after,
+.bp-section--parchment + .bp-section--soft::after,
+.bp-section--soft + .bp-section--white::after,
+.bp-section--soft + .bp-section--parchment::after,
+.bp-section--soft + .bp-section--soft::after,
+.bp-section--white + .bp-section--amber::after,
+.bp-section--amber + .bp-section--white::after,
+.bp-section--white + .bp-section--deep::after,
+.bp-section--deep + .bp-section--white::after {
+  content: '◆';
+  position: absolute;
+  top: -.8rem; left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: var(--bp-gold);
+  background: #F6EAEE;
+  padding: 0 1.5rem;
+  z-index: 3;
+  line-height: 1.6;
+}
+/* Linea oro sottile tra sezioni cream consecutive */
+.bp-section--white + .bp-section--white,
+.bp-section--white + .bp-section--parchment,
+.bp-section--white + .bp-section--soft,
+.bp-section--parchment + .bp-section--white,
+.bp-section--parchment + .bp-section--parchment,
+.bp-section--parchment + .bp-section--soft,
+.bp-section--soft + .bp-section--white,
+.bp-section--soft + .bp-section--parchment,
+.bp-section--soft + .bp-section--soft,
+.bp-section--white + .bp-section--amber,
+.bp-section--amber + .bp-section--white,
+.bp-section--white + .bp-section--deep,
+.bp-section--deep + .bp-section--white {
+  border-top: 1px solid rgba(122,79,94,.30);
+}
+
+/* Blocchi navy (ancore) — pricing + form: ricevono polish dimensional */
+.bp-section--gradient,
+.bp-section--gradient-flat,
+.bp-section--dark {
+  background:
+    radial-gradient(ellipse 70% 60% at 100% 50%, rgba(122,79,94,.10) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 50% at 0% 30%, rgba(74,140,140,.05) 0%, transparent 65%),
+    linear-gradient(135deg, #3E2430 0%, #131D33 50%, #0F1729 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+.bp-section--gradient::before,
+.bp-section--gradient-flat::before,
+.bp-section--dark::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='.04'/%3E%3C/svg%3E") !important;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Texture sottostante: i parchment con ::before grain potrebbero coprire contenuto.
+   Forziamo z-index del bp-container interno */
+.bp-section > .bp-container,
+.bp-section > * { position: relative; z-index: 1; }
+
+/* I titoli delle sezioni cream ora vivono su parchment, non più su gradient */
+.bp-section--white .bp-section-title,
+.bp-section--parchment .bp-section-title,
+.bp-section--soft .bp-section-title,
+.bp-section--amber .bp-section-title,
+.bp-section--deep .bp-section-title {
+  color: var(--bp-navy) !important;
+}
+.bp-section--white .bp-section-sub,
+.bp-section--parchment .bp-section-sub,
+.bp-section--soft .bp-section-sub,
+.bp-section--amber .bp-section-sub,
+.bp-section--deep .bp-section-sub {
+  color: rgba(58,53,50,.65) !important;
+}
+
+/* Eyebrows più "stamp" su parchment */
+.bp-section--white .bp-eyebrow,
+.bp-section--parchment .bp-eyebrow,
+.bp-section--soft .bp-eyebrow,
+.bp-section--amber .bp-eyebrow,
+.bp-section--deep .bp-eyebrow {
+  color: var(--bp-gold) !important;
+}
+.bp-section--white .bp-eyebrow::before,
+.bp-section--white .bp-eyebrow::after,
+.bp-section--parchment .bp-eyebrow::before,
+.bp-section--parchment .bp-eyebrow::after,
+.bp-section--soft .bp-eyebrow::before,
+.bp-section--soft .bp-eyebrow::after,
+.bp-section--amber .bp-eyebrow::before,
+.bp-section--amber .bp-eyebrow::after,
+.bp-section--deep .bp-eyebrow::before,
+.bp-section--deep .bp-eyebrow::after {
+  background: var(--bp-gold) !important;
+}
+
+/* Fade-to-navy + transizioni: rimosso (le ancore navy ora confinano direttamente) */
+.bp-fade-to-navy { display: none !important; }
+
+/* ──── Cosa contiene — panel cards (Base + Avanzato) ──── */
+/* Base: era rosa-wash, ora cream con bordo gold per coerenza */
+.bp-tier-panel--essenziale {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F6EAEE 100%) !important;
+  border: 1px solid rgba(122,79,94,.30) !important;
+  border-top: 3px solid var(--bp-gold) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.8),
+    0 1px 2px rgba(58,53,50,.06),
+    0 12px 24px rgba(58,53,50,.08) !important;
+}
+.bp-tier-panel--essenziale .bp-tier-panel__title { color: var(--bp-gold) !important; }
+.bp-tier-panel--essenziale .bp-section-num { color: var(--bp-gold) !important; }
+/* Avanzato: navy resta — è l'ancora del modulo, polish con gold border-left */
+.bp-tier-panel--completo {
+  background: linear-gradient(135deg, #3E2430 0%, #1A2540 100%) !important;
+  border: 1px solid rgba(122,79,94,.40) !important;
+  border-top: 3px solid var(--bp-gold) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(122,79,94,.30),
+    0 2px 4px rgba(58,53,50,.20),
+    0 16px 32px -8px rgba(58,53,50,.30) !important;
+}
+
+/* ──── Pricing — uniforme con il resto ──── */
+.bp-pricing-card--ess {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F6EAEE 100%) !important;
+  border: 1px solid rgba(122,79,94,.30) !important;
+  border-top: 3px solid var(--bp-gold) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.8),
+    0 1px 2px rgba(58,53,50,.06),
+    0 16px 32px rgba(58,53,50,.10) !important;
+}
+.bp-pricing-card--ess .bp-pricing-card__title { color: var(--bp-gold) !important; }
+.bp-pricing-card--ess .bp-feature-check { color: var(--bp-gold) !important; }
+.bp-pricing-card--comp {
+  background: linear-gradient(135deg, #3E2430 0%, #1A2540 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(122,79,94,.30),
+    0 2px 4px rgba(58,53,50,.20),
+    0 24px 48px -12px rgba(58,53,50,.40) !important;
+}
+
+/* ──── Anteprima PDF — bordo gold, shadow più definita ──── */
+.bp-preview-page {
+  background: #F6EAEE !important;
+  box-shadow:
+    0 2px 4px rgba(0,0,0,.10),
+    0 16px 32px -4px rgba(58,53,50,.15),
+    inset 0 0 0 1px rgba(122,79,94,.20) !important;
+}
+.bp-preview-page--featured {
+  box-shadow:
+    0 4px 8px rgba(0,0,0,.12),
+    0 32px 64px -8px rgba(58,53,50,.30),
+    inset 0 0 0 1px rgba(122,79,94,.45) !important;
+}
+.bp-preview-page figcaption {
+  color: var(--bp-gold) !important;
+}
+
+/* ──── Forchi-section — accent gold rinforzato ──── */
+.bp-forchi__grid--linked .bp-profile-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F6EAEE 100%) !important;
+  border: 1px solid rgba(122,79,94,.20) !important;
+  border-top: 3px solid var(--bp-gold) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.8),
+    0 1px 2px rgba(58,53,50,.06),
+    0 8px 20px rgba(58,53,50,.08) !important;
+}
+.bp-forchi-title em,
+.bp-forchi-title { color: var(--bp-navy) !important; }
+
+/* ──── Steps — su parchment, niente più glassmorphism scuro ──── */
+.bp-step {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F6EAEE 100%) !important;
+  border: 1px solid rgba(122,79,94,.20) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.8),
+    0 1px 2px rgba(58,53,50,.06),
+    0 8px 16px rgba(58,53,50,.08) !important;
+  backdrop-filter: none !important;
+}
+.bp-step__icon {
+  background: linear-gradient(180deg, #F2EAD8 0%, #E8DBC0 100%) !important;
+  color: var(--bp-gold) !important;
+  border: 1px solid rgba(122,79,94,.25) !important;
+}
+.bp-step__num { color: var(--bp-gold) !important; }
+.bp-step h3 { color: var(--bp-navy) !important; }
+.bp-step p { color: rgba(58,53,50,.7) !important; }
+.bp-steps__grid::before {
+  border-top-color: rgba(122,79,94,.30) !important;
+}
+
+/* ──── Bio Valentina — bordo gold ──── */
+.bp-bio__photo {
+  box-shadow:
+    0 0 0 5px #FFFFFF,
+    0 0 0 7px var(--bp-gold),
+    0 18px 36px -8px rgba(58,53,50,.25) !important;
+}
+.bp-bio__credential { color: var(--bp-gold) !important; }
+.bp-bio__text h3 { color: var(--bp-navy) !important; }
+.bp-bio__text p { color: rgba(58,53,50,.72) !important; }
+
+/* ──── FAQ — divisori gold ──── */
+.bp-faq-item { border-bottom-color: rgba(122,79,94,.25) !important; }
+.bp-faq-item:first-child { border-top-color: rgba(122,79,94,.25) !important; }
+.bp-faq-q { color: var(--bp-navy) !important; }
+.bp-faq-q:hover { color: var(--bp-gold) !important; }
+.bp-faq-icon {
+  border-color: rgba(122,79,94,.40) !important;
+  color: var(--bp-gold) !important;
+}
+.bp-faq-a p { color: rgba(58,53,50,.7) !important; }
+
+/* ──── Link footer pricing — gold (era rosa) ──── */
+.bp-pricing__footer a { color: var(--bp-gold) !important; }
+.bp-pricing__footer a:hover { color: #A06820 !important; }
+
+/* ──── Section dark: titolo cream puro (era blush rosa-wash) ──── */
+.bp-section--dark .bp-section-title { color: #F6EAEE !important; }
+.bp-section--dark .bp-section-sub { color: rgba(245,239,227,.70) !important; }
+
+/* ──── Sezione separator: ornamento ◆ rinforzato ──── */
+.bp-section--white + .bp-section--white::after,
+.bp-section--white + .bp-section--parchment::after,
+.bp-section--white + .bp-section--soft::after,
+.bp-section--parchment + .bp-section--white::after,
+.bp-section--parchment + .bp-section--parchment::after,
+.bp-section--parchment + .bp-section--soft::after,
+.bp-section--soft + .bp-section--white::after,
+.bp-section--soft + .bp-section--parchment::after,
+.bp-section--soft + .bp-section--soft::after,
+.bp-section--white + .bp-section--amber::after,
+.bp-section--amber + .bp-section--white::after,
+.bp-section--white + .bp-section--deep::after,
+.bp-section--deep + .bp-section--white::after,
+.bp-section--white + .bp-forchi-section::after,
+.bp-section--parchment + .bp-forchi-section::after,
+.bp-forchi-section + .bp-section--white::after,
+.bp-forchi-section + .bp-section--parchment::after {
+  font-size: 1.25rem !important;
+  top: -1rem !important;
+}
+
+/* CTA in sezioni cream — niente più bp-btn-primary background gold pure */
+.bp-section--white .bp-btn-primary,
+.bp-section--parchment .bp-btn-primary,
+.bp-section--soft .bp-btn-primary,
+.bp-section--amber .bp-btn-primary {
+  background: linear-gradient(180deg, #D69847 0%, var(--bp-gold) 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.4),
+    0 1px 2px rgba(122,79,94,.40),
+    0 4px 8px rgba(122,79,94,.30),
+    0 12px 24px rgba(122,79,94,.20) !important;
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   MOBILE POLISH — fix layout issues su viewport ≤ 600px
+════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+
+  /* 1. Hero: rimuovi min-height forzata e padding eccessivo
+        Il padding-top: 5rem sul content causava il gap enorme tra cover e testo */
+  .bp-hero { min-height: auto !important; padding-bottom: 2.5rem; }
+  .bp-hero__content { padding: 0 0 2rem !important; }
+  .bp-hero__layout { gap: 1.25rem !important; }
+  .bp-hero__cover { max-width: 240px !important; }
+  .bp-hero__kicker { margin-bottom: 1rem; }
+  .bp-hero__h1 { font-size: clamp(2rem, 9vw, 2.6rem) !important; margin-bottom: 1rem; }
+  .bp-hero__sub { margin-bottom: 1.5rem; }
+
+  /* 2. Preview fan → grid 2 colonne su mobile (via dei trasform desktop)
+        La pagina centrale (--3) rimane in evidenza come prima colonna */
+  .bp-preview-fan {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+    min-height: auto !important;
+    align-items: start !important;
+    padding: 0 !important;
+  }
+  .bp-preview-page--1,
+  .bp-preview-page--2,
+  .bp-preview-page--3,
+  .bp-preview-page--4,
+  .bp-preview-page--5 {
+    transform: none !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    z-index: auto !important;
+  }
+  /* La pagina "featured" al centro — prima in griglia, span 2 col */
+  .bp-preview-page--3 {
+    grid-column: 1 / -1 !important;
+    max-width: 280px !important;
+    margin: 0 auto 0.5rem !important;
+  }
+  .bp-preview-page figcaption {
+    position: static !important;
+    font-size: .65rem;
+    margin-top: .35rem;
+    text-align: center;
+  }
+  .bp-preview-section { padding: 3rem 0 3.5rem; }
+
+  /* 3. Bottone Avanzato: testo lungo su mobile → font più piccolo */
+  .bp-pricing-card--comp .bp-btn-primary {
+    font-size: .85rem !important;
+    padding: .9rem 1rem !important;
+    letter-spacing: -.01em;
+  }
+
+  /* 4. Section padding compatto — già 3.5rem ma ulteriore riduzione su 390px */
+  .bp-section { padding: 2.75rem 0 !important; }
+  .bp-section-title { font-size: 1.6rem !important; }
+
+  /* 5. Bio grid: colonna singola, foto più piccola */
+  .bp-bio__grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  .bp-bio__photo { width: 200px !important; height: 200px !important; }
+
+  /* 6. Tier panels: una sola colonna */
+  .bp-tier-panels { grid-template-columns: 1fr !important; }
+
+  /* 7. Steps: una colonna + testo centrato */
+  .bp-steps__grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  .bp-steps__grid::before { display: none !important; }
+  .bp-step { text-align: center !important; }
+  .bp-step__icon { margin: 0 auto !important; }
+  .bp-step__num { text-align: center !important; }
+
+  /* 8. Testo centrato su mobile — titoli, eyebrow, sottotitoli, intro testo */
+  .bp-eyebrow,
+  .bp-section-title,
+  .bp-section-sub,
+  .bp-what__intro,
+  .bp-bio__credential,
+  .bp-bio__text h3,
+  .bp-forchi-title,
+  .bp-preview-header,
+  .bp-steps__header,
+  .bp-pricing__header,
+  .bp-faq__header,
+  .bp-section-header,
+  .bp-hero__kicker {
+    text-align: center !important;
+  }
+  /* eyebrow linee: centra il flex */
+  .bp-eyebrow { justify-content: center !important; }
+}
+</style>
+
+        <meta name="last-modified" content="Tue, 28 Apr 2026 19:01:06 GMT">
+
+            
+    
+
+
+        
+
+        
+
+        
+
+        
+
+        
+
+    </head>
 
 <body>
 
-<div>
+    
+    <div class="bp-landing">
 
-<section class="apertura">
-<div></div>
-<div></div>
+<section class="bp-hero bp-hero--editorial">
+  <div class="bp-hero__bg" aria-hidden="true"></div>
+  <div class="bp-hero__noise" aria-hidden="true"></div>
 
-<div class="wrap">
-<div>
-<div>
-<p>
-<span></span>
-PDF &#183; Human Design Personale
-</p>
-<h1>
-Libretto d'Istruzioni<br>
-<span>Human Design</span>.
-</h1>
-<p>
-PDF personalizzato che traduce la tua configurazione Human Design in linguaggio pratico. Spiega perch&#233; ti esaurisci dove altri sembrano avere energia infinita, e dove riconoscere il segnale del corpo che ti dice se una decisione ti appartiene davvero.
-</p>
-<div>
-<a href="#">
-<span>Libretto Avanzato</span>
-<strong>&#8364;147</strong>
-</a>
-<a href="#">
-<span>Libretto Base</span>
-<strong>&#8364;90</strong>
-</a>
-</div>
-<ul>
-<li>Consegna 2&#8211;4 giorni</li>
-<li>PDF via email</li>
-<li>Niente call</li>
-</ul>
-</div>
+  <div class="bp-container bp-hero__container">
+    <div class="bp-hero__layout">
+            <div class="bp-hero__content">
+        <p class="bp-hero__kicker">
+          <span class="bp-hero__kicker-line"></span>
+          PDF · Human Design Personale
+        </p>
+        <h1 class="bp-hero__h1">
+          Libretto d'Istruzioni<br>
+          <span>Human Design</span>.
+        </h1>
+        <p class="bp-hero__sub">
+          PDF personalizzato che traduce la tua configurazione Human Design in linguaggio pratico. Spiega perché ti esaurisci dove altri sembrano avere energia infinita, e dove riconoscere il segnale del corpo che ti dice se una decisione ti appartiene davvero.
+        </p>
+        <div class="bp-hero__cta-group">
+          <a href="https://valentinarussobg5.com/libretto-dati/checkout.php?tier=avanzato" class="bp-btn-hero-primary">
+            <span>Libretto Avanzato</span>
+            <strong>€147</strong>
+          </a>
+          <a href="https://valentinarussobg5.com/libretto-dati/checkout.php?tier=base" class="bp-btn-hero-outline">
+            <span>Libretto Base</span>
+            <strong>€90</strong>
+          </a>
+        </div>
+        <ul class="bp-hero__meta">
+          <li>Consegna 2–4 giorni</li>
+          <li>PDF via email</li>
+          <li>Niente call</li>
+        </ul>
+      </div>
 
-<div>
-<figure>
-<div>
-<img alt="" loading="eager" src="img/e759eecc19ef.jpg">
-</div>
-<div>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
+            <div class="bp-hero__visual">
+        <figure class="bp-hero__cover" aria-label="Copertina del Libretto d'Istruzioni Human Design">
+          <div class="bp-hero__cover-bg" aria-hidden="true">
+            <img src="img/e759eecc19ef.jpg"
+                 alt=""
+                 width="1920" height="1280"
+                 loading="eager"
+                 fetchpriority="high">
+          </div>
+          <div class="bp-hero__cover-frame">
+            <span class="bp-hero__cover-corner bp-hero__cover-corner--tl" aria-hidden="true"></span>
+            <span class="bp-hero__cover-corner bp-hero__cover-corner--tr" aria-hidden="true"></span>
+            <span class="bp-hero__cover-corner bp-hero__cover-corner--bl" aria-hidden="true"></span>
+            <span class="bp-hero__cover-corner bp-hero__cover-corner--br" aria-hidden="true"></span>
 
-<p>Human Design</p>
+            <p class="bp-hero__cover-brand">Human Design</p>
 
-<div>
-<h2>
-<span>Libretto</span>
-<em>d'Istruzioni</em>
-</h2>
-</div>
+            <div class="bp-hero__cover-title-wrap">
+              <h2 class="bp-hero__cover-title">
+                <span>Libretto</span>
+                <em>d'Istruzioni</em>
+              </h2>
+            </div>
 
-<div>
-<span></span>
-<p>Valentina Russo</p>
-<p>la mappa che ti appartiene da sempre.</p>
-</div>
-</div>
-</figure>
-<p>
-<span>~55</span>
-pagine &#183; 7 capitoli<br>
-<em>scritti sulla tua carta</em>
-</p>
-</div>
-</div>
-</div>
+            <div class="bp-hero__cover-bottom">
+              <span class="bp-hero__cover-divider" aria-hidden="true"></span>
+              <p class="bp-hero__cover-author">Valentina Russo</p>
+              <p class="bp-hero__cover-tagline">la mappa che ti appartiene da sempre.</p>
+            </div>
+          </div>
+        </figure>
+        <p class="bp-hero__cover-caption">
+          <span class="bp-hero__cover-caption-num">~55</span>
+          pagine · 7 capitoli<br>
+          <em>scritti sulla tua carta</em>
+        </p>
+      </div>
+    </div>
+  </div>
 
-<a href="#blueprint">
-<span>scorri</span>
-<span>&#8595;</span>
-</a>
+  <a href="#blueprint" class="bp-hero__scroll" aria-label="Scorri in basso">
+    <span class="bp-hero__scroll-text">scorri</span>
+    <span class="bp-hero__scroll-arrow">↓</span>
+  </a>
 </section>
 
-<section class="sez-panna">
-<div class="wrap">
-<div>
-<div>
-<p class="eyebrow">Cos'&#232;</p>
-<h2 class="h2">Ognuno ha la sua carta.<br>Questo &#232; il manuale della tua.</h2>
-<p>
-Valentina prende la tua carta e la legge parametro per parametro, prima di scrivere il documento sulla tua configurazione specifica. Lo stile &#232; descrittivo, senza decorazioni: come sei fatta dentro, dove succede di perdere energia per niente, dove invece il sistema regge bene.
-</p>
-<ul>
-<li>Tipo energetico: come funziona la tua energia, e perch&#233; certe giornate ti lasciano svuotata anche se sulla carta erano leggere</li>
-<li>Autorit&#224; interiore: il segnale specifico nel tuo corpo che ti dice quando una decisione &#232; buona</li>
-<li>Centri definiti e aperti: dove sei strutturalmente forte e dove assorbi lo stato di chi ti &#232; intorno</li>
-<li>Croce di incarnazione: la direzione di fondo del tuo percorso, intesa come orientamento pi&#249; che come missione da trovare</li>
-<li>Variabile: l'ambiente in cui rendi al meglio e il tipo di attenzione per cui sei ottimizzata</li>
-</ul>
-</div>
-<div>
-<img alt="Mappa antica con bussola dorata e rosa" loading="lazy" src="img/c0134797e9da.jpg">
-</div>
-</div>
-</div>
+
+<section class="bp-section bp-section--white" id="blueprint">
+  <div class="bp-container">
+    <div class="bp-what__grid">
+      <div>
+        <p class="bp-eyebrow">Cos'è</p>
+        <h2 class="bp-section-title">Ognuno ha la sua carta.<br>Questo è il manuale della tua.</h2>
+        <p class="bp-section-sub">
+          Valentina prende la tua carta e la legge parametro per parametro, prima di scrivere il documento sulla tua configurazione specifica. Lo stile è descrittivo, senza decorazioni: come sei fatta dentro, dove succede di perdere energia per niente, dove invece il sistema regge bene.
+        </p>
+        <ul class="bp-what__list">
+          <li>Tipo energetico: come funziona la tua energia, e perché certe giornate ti lasciano svuotata anche se sulla carta erano leggere</li>
+          <li>Autorità interiore: il segnale specifico nel tuo corpo che ti dice quando una decisione è buona</li>
+          <li>Centri definiti e aperti: dove sei strutturalmente forte e dove assorbi lo stato di chi ti è intorno</li>
+          <li>Croce di incarnazione: la direzione di fondo del tuo percorso, intesa come orientamento più che come missione da trovare</li>
+          <li>Variabile: l'ambiente in cui rendi al meglio e il tipo di attenzione per cui sei ottimizzata</li>
+        </ul>
+      </div>
+      <div class="bp-doc-mockup bp-reveal">
+        <img src="img/c0134797e9da.jpg"
+             alt="Mappa antica con bussola dorata e rosa"
+             width="900" height="600" loading="lazy">
+      </div>
+    </div>
+  </div>
 </section>
 
-<section>
-<div class="wrap">
-<div>
-<p class="eyebrow">Cosa contiene</p>
-<h2 class="h2">Cosa trovi in ciascuna versione.</h2>
-<p>Il Base copre la tua configurazione energetica: chi sei e come prendi le decisioni che ti appartengono. L'Avanzato aggiunge tre capitoli su come comunichi e su come applicare il tuo design al lavoro.</p>
-</div>
-<div>
-<div>
-<p>Libretto Base</p>
-<h3>Identit&#224; energetica</h3>
-<p>4 capitoli &#183; ~35 pagine &#183; &#8364;90</p>
-<ol>
-<li><p class="eyebrow">01</p>Chi sei davvero: tipo energetico e profilo, con la strategia che ne deriva</li>
-<li><p class="eyebrow">02</p>Come decidi: la tua autorit&#224; interiore applicata ai casi concreti</li>
-<li><p class="eyebrow">03</p>Come sei fatto: i centri attivi e le connessioni che li attraversano</li>
-<li><p class="eyebrow">04</p>La tua mappa: croce di incarnazione e ambiente in cui rendi al meglio</li>
-</ol>
-</div>
-<div>
-<p>Libretto Avanzato</p>
-<h3>Identit&#224; + Applicazione</h3>
-<p>7 capitoli &#183; ~55 pagine &#183; &#8364;147</p>
-<p>Tutti e 4 i capitoli del Base, pi&#249;:</p>
-<ol>
-<li><p class="eyebrow">05</p>Come comunichi: la tua voce in pratica</li>
-<li><p class="eyebrow">06</p>Lavoro e costruzione: come arrivare a offerte allineate</li>
-<li><p class="eyebrow">07</p>Sintesi integrata: i cinque passi pratici</li>
-</ol>
-</div>
-</div>
-</div>
+
+<section class="bp-section bp-section--parchment" id="contiene">
+  <div class="bp-container">
+    <div style="text-align:center">
+      <p class="bp-eyebrow" style="justify-content:center">Cosa contiene</p>
+      <h2 class="bp-section-title" style="margin:0 auto .75rem">Cosa trovi in ciascuna versione.</h2>
+      <p class="bp-section-sub" style="margin:0 auto">Il Base copre la tua configurazione energetica: chi sei e come prendi le decisioni che ti appartengono. L'Avanzato aggiunge tre capitoli su come comunichi e su come applicare il tuo design al lavoro.</p>
+    </div>
+    <div class="bp-contains__grid">
+      <div class="bp-tier-panel bp-tier-panel--essenziale bp-reveal">
+        <p class="bp-tier-panel__title">Libretto Base</p>
+        <h3 class="bp-tier-panel__heading">Identità energetica</h3>
+        <p class="bp-tier-panel__count">4 capitoli · ~35 pagine · €90</p>
+        <ol class="bp-section-list">
+          <li><span class="bp-section-num">01</span>Chi sei davvero: tipo energetico e profilo, con la strategia che ne deriva</li>
+          <li><span class="bp-section-num">02</span>Come decidi: la tua autorità interiore applicata ai casi concreti</li>
+          <li><span class="bp-section-num">03</span>Come sei fatto: i centri attivi e le connessioni che li attraversano</li>
+          <li><span class="bp-section-num">04</span>La tua mappa: croce di incarnazione e ambiente in cui rendi al meglio</li>
+        </ol>
+      </div>
+      <div class="bp-tier-panel bp-tier-panel--completo bp-reveal" style="border-left:3px solid var(--bp-teal)">
+        <p class="bp-tier-panel__title">Libretto Avanzato</p>
+        <h3 class="bp-tier-panel__heading" style="color:#fff">Identità + Applicazione</h3>
+        <p class="bp-tier-panel__count">7 capitoli · ~55 pagine · €147</p>
+        <p style="font-size:.875rem;color:rgba(245,236,240,.6);margin:0 0 1rem">Tutti e 4 i capitoli del Base, più:</p>
+        <ol class="bp-section-list" start="5">
+          <li class="extra"><span class="bp-section-num">05</span>Come comunichi: la tua voce in pratica</li>
+          <li class="extra"><span class="bp-section-num">06</span>Lavoro e costruzione: come arrivare a offerte allineate</li>
+          <li class="extra"><span class="bp-section-num">07</span>Sintesi integrata: i cinque passi pratici</li>
+        </ol>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="sez-panna">
-<div class="wrap">
-<div>
-<p class="eyebrow">Anteprima</p>
-<h2 class="h2">Cosa vedrai dentro il documento.</h2>
-<p>
-Non &#232; un PDF generico con la stessa struttura per tutti. Ogni pagina &#232; scritta sulla tua carta specifica &#8212; bodygraph, profilo, centri attivi. Qui sotto alcuni campioni reali del Libretto Avanzato.
-</p>
-</div>
 
-<div>
-<figure>
-<img alt="Anteprima copertina del Libretto d&#x27;Istruzioni Human Design" loading="lazy" src="img/2e4a1c004e17.jpg">
-<figcaption>Copertina</figcaption>
-</figure>
-<figure>
-<img alt="Anteprima pagina con bodygraph personalizzato" loading="lazy" src="img/1804bb1d8769.jpg">
-<figcaption>La tua mappa</figcaption>
-</figure>
-<figure>
-<img alt="Anteprima sezione Chi sei davvero" loading="lazy" src="img/6e3643332423.jpg">
-<figcaption>Chi sei davvero</figcaption>
-</figure>
-<figure>
-<img alt="Anteprima del protocollo decisionale personalizzato" loading="lazy" src="img/82ac4d224049.jpg">
-<figcaption>Il protocollo</figcaption>
-</figure>
-<figure>
-<img alt="Anteprima sezione La tua missione" loading="lazy" src="img/748bb62e748c.jpg">
-<figcaption>La tua missione</figcaption>
-</figure>
-</div>
+<section class="bp-section bp-section--white bp-preview-section" id="anteprima">
+  <div class="bp-container">
+    <div class="bp-preview-header">
+      <p class="bp-eyebrow" style="justify-content:center">Anteprima</p>
+      <h2 class="bp-section-title" style="margin:0 auto .75rem">Cosa vedrai dentro il documento.</h2>
+      <p class="bp-section-sub" style="margin:0 auto">
+        Non è un PDF generico con la stessa struttura per tutti. Ogni pagina è scritta sulla tua carta specifica — bodygraph, profilo, centri attivi. Qui sotto alcuni campioni reali del Libretto Avanzato.
+      </p>
+    </div>
 
-<p>
-Esempi tratti dal Libretto Avanzato di Valentina Russo (~55 pagine, 7 capitoli).
-</p>
-</div>
+    <div class="bp-preview-fan">
+      <figure class="bp-preview-page bp-preview-page--1">
+        <img src="img/2e4a1c004e17.jpg"
+             alt="Anteprima copertina del Libretto d'Istruzioni Human Design"
+             width="595" height="842" loading="lazy">
+        <figcaption>Copertina</figcaption>
+      </figure>
+      <figure class="bp-preview-page bp-preview-page--2">
+        <img src="img/1804bb1d8769.jpg"
+             alt="Anteprima pagina con bodygraph personalizzato"
+             width="595" height="842" loading="lazy">
+        <figcaption>La tua mappa</figcaption>
+      </figure>
+      <figure class="bp-preview-page bp-preview-page--3 bp-preview-page--featured">
+        <img src="img/6e3643332423.jpg"
+             alt="Anteprima sezione Chi sei davvero"
+             width="595" height="842" loading="lazy">
+        <figcaption>Chi sei davvero</figcaption>
+      </figure>
+      <figure class="bp-preview-page bp-preview-page--4">
+        <img src="img/82ac4d224049.jpg"
+             alt="Anteprima del protocollo decisionale personalizzato"
+             width="595" height="842" loading="lazy">
+        <figcaption>Il protocollo</figcaption>
+      </figure>
+      <figure class="bp-preview-page bp-preview-page--5">
+        <img src="img/748bb62e748c.jpg"
+             alt="Anteprima sezione La tua missione"
+             width="595" height="842" loading="lazy">
+        <figcaption>La tua missione</figcaption>
+      </figure>
+    </div>
+
+    <p class="bp-preview-footnote">
+      Esempi tratti dal Libretto Avanzato di Valentina Russo (~55 pagine, 7 capitoli).
+    </p>
+  </div>
 </section>
 
-<section>
-<div class="wrap">
-<div>
-<h2>Per chi &#232;.</h2>
-<p>Non serve sapere niente di Human Design &#8212; il Libretto &#232; scritto in linguaggio pratico, per chi parte da zero.</p>
-<div>
-<span></span>
-<span></span>
-</div>
-</div>
-<div>
-<div>
-<div>01</div>
-<div>
 
-</div>
-<h3>Chi si esaurisce senza capire perch&#233;</h3>
-<p>Fai le stesse cose di chi ti sta intorno. Alcune funzionano, molte no. La verit&#224; &#232; che hai un sistema energetico diverso da quello che si sta usando, e ancora non sai com'&#232; fatto.</p>
-<p>ti svegli stanca anche dopo una giornata che sulla carta non era pesante</p>
-</div>
-<div>
-<div>02</div>
-<div>
-
-</div>
-<h3>Chi decide e poi ci ripensa</h3>
-<p>Ragioni veloce. Sai rispondere a tutto. Ma le tue decisioni migliori, quelle che hai tenuto nel tempo, le hai prese in un modo diverso dal solito. Il Libretto spiega quale.</p>
-<p>ti accorgi di aver deciso "di testa" solo dopo che le cose non funzionano</p>
-</div>
-<div>
-<div>03</div>
-<div>
-
-</div>
-<h3>Chi sta cambiando direzione</h3>
-<p>Stai lasciando qualcosa, o ricominciando da qualcos'altro. Prima della prossima mossa, ha senso capire cos'&#232; strutturalmente tuo e cos'&#232; condizionamento ereditato dagli anni passati.</p>
-<p>hai preso una decisione ma senti che manca ancora un pezzo</p>
-</div>
-</div>
-</div>
+<section class="bp-section bp-section--soft bp-forchi-section">
+  <div class="bp-container">
+    <div class="bp-forchi-header">
+      <h2 class="bp-forchi-title">Per chi è.</h2>
+      <p class="bp-forchi-sub">Non serve sapere niente di Human Design — il Libretto è scritto in linguaggio pratico, per chi parte da zero.</p>
+      <div class="bp-forchi-connector" aria-hidden="true">
+        <span class="bp-forchi-connector__dot"></span>
+        <span class="bp-forchi-connector__line"></span>
+      </div>
+    </div>
+    <div class="bp-forchi__grid bp-forchi__grid--linked">
+      <div class="bp-profile-card bp-reveal">
+        <div class="bp-profile-num" aria-hidden="true">01</div>
+        <div class="bp-profile-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </div>
+        <h3>Chi si esaurisce senza capire perché</h3>
+        <p>Fai le stesse cose di chi ti sta intorno. Alcune funzionano, molte no. La verità è che hai un sistema energetico diverso da quello che si sta usando, e ancora non sai com'è fatto.</p>
+        <p class="bp-profile-tag">ti svegli stanca anche dopo una giornata che sulla carta non era pesante</p>
+      </div>
+      <div class="bp-profile-card bp-reveal">
+        <div class="bp-profile-num" aria-hidden="true">02</div>
+        <div class="bp-profile-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h3>Chi decide e poi ci ripensa</h3>
+        <p>Ragioni veloce. Sai rispondere a tutto. Ma le tue decisioni migliori, quelle che hai tenuto nel tempo, le hai prese in un modo diverso dal solito. Il Libretto spiega quale.</p>
+        <p class="bp-profile-tag">ti accorgi di aver deciso "di testa" solo dopo che le cose non funzionano</p>
+      </div>
+      <div class="bp-profile-card bp-reveal">
+        <div class="bp-profile-num" aria-hidden="true">03</div>
+        <div class="bp-profile-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <h3>Chi sta cambiando direzione</h3>
+        <p>Stai lasciando qualcosa, o ricominciando da qualcos'altro. Prima della prossima mossa, ha senso capire cos'è strutturalmente tuo e cos'è condizionamento ereditato dagli anni passati.</p>
+        <p class="bp-profile-tag">hai preso una decisione ma senti che manca ancora un pezzo</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="sez-panna">
-<div class="wrap">
-<div>
-<p class="eyebrow">Chi prepara il tuo Libretto</p>
-<h2 class="h2">Valentina Russo</h2>
-</div>
-<div>
-<div>
-<img alt="Valentina Russo, consulente Human Design e BG5" loading="lazy" src="img/eff7c78fd642.jpg">
-</div>
-<div>
-<p>Consulente Human Design &amp; BG5</p>
-<p>Valentina studia e applica il sistema Human Design da anni. Ogni Libretto lo prepara personalmente, dal calcolo della carta alla scrittura finale del documento sulla configurazione specifica di chi ordina.</p>
-<p>Ogni sezione nasce dalla carta che ha davanti, con i suoi centri attivi e la sua croce specifica. Niente copia-incolla da template generici.</p>
-<p>Prima di inviarlo lo rilegge. Se qualcosa non torna, riscrive.</p>
-</div>
-</div>
-</div>
+
+<section class="bp-section bp-section--white">
+  <div class="bp-container">
+    <div style="text-align:center">
+      <p class="bp-eyebrow" style="justify-content:center">Chi prepara il tuo Libretto</p>
+      <h2 class="bp-section-title" style="margin:0 auto">Valentina Russo</h2>
+    </div>
+    <div class="bp-bio__grid bp-reveal">
+      <div class="bp-bio__photo">
+        <img src="img/eff7c78fd642.jpg"
+             alt="Valentina Russo, consulente Human Design e BG5"
+             width="600" height="600" loading="lazy">
+      </div>
+      <div class="bp-bio__text">
+        <p class="bp-bio__credential">Consulente Human Design &amp; BG5</p>
+        <p>Valentina studia e applica il sistema Human Design da anni. Ogni Libretto lo prepara personalmente, dal calcolo della carta alla scrittura finale del documento sulla configurazione specifica di chi ordina.</p>
+        <p>Ogni sezione nasce dalla carta che ha davanti, con i suoi centri attivi e la sua croce specifica. Niente copia-incolla da template generici.</p>
+        <p>Prima di inviarlo lo rilegge. Se qualcosa non torna, riscrive.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section>
-<div class="wrap">
-<div>
-<p class="eyebrow">Come funziona</p>
-<h2 class="h2">Tre passi. Nessuna call, nessuna attesa.</h2>
-<p>Scegli la versione, paga, inserisci i dati di nascita. Il Libretto arriva via email entro 2&#8211;4 giorni lavorativi.</p>
-</div>
-<div>
-<img alt="Scrivania con mappa del tesoro e diario botanico" loading="lazy" src="img/1f6cd191135d.jpg">
-</div>
-<div>
-<div>
-<div>01</div>
-<div>
 
-</div>
-<h3>Scegli e paga</h3>
-<p>Clicca su Libretto Base o Avanzato e completa il pagamento in sicurezza via Stripe (carta o PayPal). Ci vogliono 2 minuti.</p>
-</div>
-<div>
-<div>02</div>
-<div>
-
-</div>
-<h3>Inserisci i tuoi dati</h3>
-<p>Dopo il pagamento ti chiediamo data e ora di nascita pi&#249; il luogo dove sei nata. Puoi anche raccontarci in che momento della tua vita ti trovi: aiuta Valentina a personalizzare meglio il documento.</p>
-</div>
-<div>
-<div>03</div>
-<div>
-
-</div>
-<h3>Ricevi il tuo Libretto</h3>
-<p>Valentina prepara il documento personalmente e lo revisiona prima di inviarlo. Arriva via email entro 2&#8211;4 giorni lavorativi.</p>
-</div>
-</div>
-<p>
-Trasparenza: il Libretto &#232; elaborato con il supporto di strumenti di intelligenza artificiale (Claude, Anthropic) sui tuoi dati di nascita, e revisionato personalmente da Valentina prima della consegna.
-</p>
-</div>
+<section class="bp-section bp-section--parchment">
+  <div class="bp-container">
+    <div style="text-align:center">
+      <p class="bp-eyebrow" style="justify-content:center">Come funziona</p>
+      <h2 class="bp-section-title" style="margin:0 auto .75rem">Tre passi. Nessuna call, nessuna attesa.</h2>
+      <p class="bp-section-sub" style="margin:0 auto">Scegli la versione, paga, inserisci i dati di nascita. Il Libretto arriva via email entro 2–4 giorni lavorativi.</p>
+    </div>
+    <div class="bp-section-img bp-reveal">
+      <img src="img/1f6cd191135d.jpg"
+           alt="Scrivania con mappa del tesoro e diario botanico"
+           width="1200" height="800" loading="lazy">
+    </div>
+    <div class="bp-steps__grid">
+      <div class="bp-step bp-reveal">
+        <div class="bp-step__num" aria-hidden="true">01</div>
+        <div class="bp-step__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+        </div>
+        <h3>Scegli e paga</h3>
+        <p>Clicca su Libretto Base o Avanzato e completa il pagamento in sicurezza via Stripe (carta o PayPal). Ci vogliono 2 minuti.</p>
+      </div>
+      <div class="bp-step bp-reveal">
+        <div class="bp-step__num" aria-hidden="true">02</div>
+        <div class="bp-step__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/>
+          </svg>
+        </div>
+        <h3>Inserisci i tuoi dati</h3>
+        <p>Dopo il pagamento ti chiediamo data e ora di nascita più il luogo dove sei nata. Puoi anche raccontarci in che momento della tua vita ti trovi: aiuta Valentina a personalizzare meglio il documento.</p>
+      </div>
+      <div class="bp-step bp-reveal">
+        <div class="bp-step__num" aria-hidden="true">03</div>
+        <div class="bp-step__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <h3>Ricevi il tuo Libretto</h3>
+        <p>Valentina prepara il documento personalmente e lo revisiona prima di inviarlo. Arriva via email entro 2–4 giorni lavorativi.</p>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:.82rem;color:rgba(58,53,50,.6);margin:2.5rem auto 0;max-width:680px;line-height:1.65;font-style:italic">
+      Trasparenza: il Libretto è elaborato con il supporto di strumenti di intelligenza artificiale (Claude, Anthropic) sui tuoi dati di nascita, e revisionato personalmente da Valentina prima della consegna.
+    </p>
+  </div>
 </section>
 
-<section class="sez-panna">
-<div class="wrap">
-<div>
-<p class="eyebrow">I prezzi</p>
-<h2 class="h2">Libretto Base o Avanzato?</h2>
-<p>Se non conosci ancora il Human Design, il Base &#232; sufficiente. L'Avanzato aggiunge tre capitoli su come comunichi e su come applicare il tuo design al lavoro.</p>
-<div>
-<img alt="Rotolo pergamena con nastro teal su scrivania antica" loading="lazy" src="img/26e0967d1266.jpg">
-</div>
-</div>
-<div class="art-grid">
 
-<div>
-<p>Libretto Base</p>
-<h3>Identit&#224; energetica</h3>
-<div>
-<span class="t-price">&#8364;90</span>
-</div>
-<p>4 capitoli &#183; ~35 pagine &#183; PDF</p>
-<p>Prezzo finale &#183; Regime forfettario, nessuna IVA</p>
-<ul>
-<li><span class="pillola">&#183;</span>Tipo, Strategia e Profilo energetico</li>
-<li><span class="pillola">&#183;</span>Autorit&#224; Interiore nei contesti reali</li>
-<li><span class="pillola">&#183;</span>Tutti i Centri (definiti e aperti)</li>
-<li><span class="pillola">&#183;</span>Canali e Porte attive, con la Croce di Incarnazione</li>
-<li><span class="pillola">&#183;</span>Variabile e Ambiente, con le pratiche di allineamento</li>
-</ul>
-<div>
-<a href="#">Ordina il Libretto Base &#183; &#8364;90</a>
-</div>
-</div>
+<section class="bp-section bp-section--parchment" id="prezzi">
+  <div class="bp-container">
+    <div style="text-align:center">
+      <p class="bp-eyebrow" style="justify-content:center">I prezzi</p>
+      <h2 class="bp-section-title" style="margin:0 auto .75rem">Libretto Base o Avanzato?</h2>
+      <p class="bp-section-sub" style="margin:0 auto">Se non conosci ancora il Human Design, il Base è sufficiente. L'Avanzato aggiunge tre capitoli su come comunichi e su come applicare il tuo design al lavoro.</p>
+      <div class="bp-section-img bp-reveal" style="margin-top:2.5rem">
+        <img src="img/26e0967d1266.jpg"
+             alt="Rotolo pergamena con nastro teal su scrivania antica"
+             width="1200" height="800" loading="lazy">
+      </div>
+    </div>
+    <div class="bp-pricing__grid bp-reveal">
 
-<div>
-<span>Il pi&#249; scelto</span>
-<p>Libretto Avanzato</p>
-<h3>Identit&#224; + Applicazione</h3>
-<div>
-<span class="t-price">&#8364;147</span>
-</div>
-<p>7 capitoli &#183; ~55 pagine &#183; PDF</p>
-<p>Prezzo finale &#183; Regime forfettario, nessuna IVA</p>
-<ul>
-<li><span class="pillola">&#183;</span><span>Tutto il Base (4 capitoli), pi&#249;:</span></li>
-<li><span class="pillola">+</span><span>Come comunichi: la tua voce</span></li>
-<li><span class="pillola">+</span><span>Lavoro e costruzione di offerte</span></li>
-<li><span class="pillola">+</span><span>Sintesi integrata e passi concreti</span></li>
-</ul>
-<div>
-<a href="#">Ordina il Libretto Avanzato &#183; &#8364;147</a>
-</div>
-</div>
+            <div class="bp-pricing-card bp-pricing-card--ess">
+        <p class="bp-pricing-card__title">Libretto Base</p>
+        <h3 class="bp-pricing-card__name">Identità energetica</h3>
+        <div style="margin: 1.5rem 0 .25rem">
+          <span class="bp-price">€90</span>
+        </div>
+        <p class="bp-price-label">4 capitoli · ~35 pagine · PDF</p>
+        <p style="font-size:.7rem;color:rgba(58,53,50,.55);text-align:center;margin:0 0 1rem">Prezzo finale · Regime forfettario, nessuna IVA</p>
+        <ul class="bp-feature-list">
+          <li><span class="bp-feature-check">·</span>Tipo, Strategia e Profilo energetico</li>
+          <li><span class="bp-feature-check">·</span>Autorità Interiore nei contesti reali</li>
+          <li><span class="bp-feature-check">·</span>Tutti i Centri (definiti e aperti)</li>
+          <li><span class="bp-feature-check">·</span>Canali e Porte attive, con la Croce di Incarnazione</li>
+          <li><span class="bp-feature-check">·</span>Variabile e Ambiente, con le pratiche di allineamento</li>
+        </ul>
+        <div class="bp-cta">
+          <a href="https://valentinarussobg5.com/libretto-dati/checkout.php?tier=base" class="bp-btn-outline-ess">Ordina il Libretto Base · €90</a>
+        </div>
+      </div>
 
-</div>
+            <div class="bp-pricing-card bp-pricing-card--comp">
+        <span class="bp-pricing-badge">Il più scelto</span>
+        <p class="bp-pricing-card__title">Libretto Avanzato</p>
+        <h3 class="bp-pricing-card__name">Identità + Applicazione</h3>
+        <div style="margin: 1.5rem 0 .25rem">
+          <span class="bp-price">€147</span>
+        </div>
+        <p class="bp-price-label">7 capitoli · ~55 pagine · PDF</p>
+        <p style="font-size:.7rem;color:rgba(245,236,240,.55);text-align:center;margin:0 0 1rem">Prezzo finale · Regime forfettario, nessuna IVA</p>
+        <ul class="bp-feature-list">
+          <li><span class="bp-feature-check" style="color:#0A98B1">·</span><span style="color:rgba(245,236,240,.85)">Tutto il Base (4 capitoli), più:</span></li>
+          <li><span class="bp-feature-check" style="color:#7A4F5E">+</span><span class="bp-feature-extra">Come comunichi: la tua voce</span></li>
+          <li><span class="bp-feature-check" style="color:#7A4F5E">+</span><span class="bp-feature-extra">Lavoro e costruzione di offerte</span></li>
+          <li><span class="bp-feature-check" style="color:#7A4F5E">+</span><span class="bp-feature-extra">Sintesi integrata e passi concreti</span></li>
+        </ul>
+        <div class="bp-cta">
+          <a href="https://valentinarussobg5.com/libretto-dati/checkout.php?tier=avanzato" class="bp-btn-primary" style="display:block;text-align:center">Ordina il Libretto Avanzato · €147</a>
+        </div>
+      </div>
 
-<div>
-<p>Non so niente di Human Design. Funziona lo stesso per me?</p>
-<p>S&#236;, anzi. Il Libretto &#232; scritto per chi non conosce il sistema: ogni concetto viene spiegato nel contesto della tua carta specifica. Non c'&#232; niente da studiare prima. Puoi usarlo come primo contatto con il Human Design.</p>
-</div>
+    </div>
 
-<p>
-Altre domande? <a href="#faq">Leggi le FAQ &#8594;</a>
-</p>
+        <div style="max-width:640px;margin:2.5rem auto 0;padding:1.5rem 2rem;background:var(--bp-white);border-radius:8px;border:1px solid var(--bp-soft-parchment)">
+      <p style="font-size:.9375rem;font-weight:700;color:var(--bp-navy);margin:0 0 .5rem">Non so niente di Human Design. Funziona lo stesso per me?</p>
+      <p style="font-size:.9rem;color:var(--bp-text);line-height:1.65;margin:0">Sì, anzi. Il Libretto è scritto per chi non conosce il sistema: ogni concetto viene spiegato nel contesto della tua carta specifica. Non c'è niente da studiare prima. Puoi usarlo come primo contatto con il Human Design.</p>
+    </div>
 
-<div>
-Vendita effettuata da <strong>Valentina Russo</strong> &#183; P.IVA 03831440049 &#183; [INDIRIZZO FISICO COMPLETO]<br>
-<a href="#">Condizioni di Vendita</a> &#183;
-<a href="#">Informativa Privacy</a> &#183;
-<a href="https://ec.europa.eu/consumers/odr">Risoluzione controversie ODR-UE</a><br>
-<span>Il Libretto &#232; un prodotto digitale personalizzato: ai sensi dell'art. 59 c.1 lett. o) D.Lgs. 206/2005, con l'avvio dell'elaborazione si rinuncia al diritto di recesso. Reclami: <a href="mailto:info@valentinarussobg5.com">info@valentinarussobg5.com</a></span>
-</div>
-</div>
+    <p class="bp-pricing__footer">
+      Altre domande? <a href="#faq">Leggi le FAQ →</a>
+    </p>
+
+        <div class="bp-precontract" style="max-width:780px;margin:2.5rem auto 0;padding:1.25rem 1.5rem;background:rgba(255,255,255,.55);border:1px solid var(--bp-soft-parchment);border-radius:6px;font-size:.78rem;color:rgba(58,53,50,.7);line-height:1.7;text-align:center">
+      Vendita effettuata da <strong>Valentina Russo</strong> · P.IVA 03831440049 · [INDIRIZZO FISICO COMPLETO]<br>
+      <a href="https://valentinarussobg5.com/terms" style="color:var(--bp-gold)">Condizioni di Vendita</a> ·
+      <a href="https://valentinarussobg5.com/privacy" style="color:var(--bp-gold)">Informativa Privacy</a> ·
+      <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener" style="color:var(--bp-gold)">Risoluzione controversie ODR-UE</a><br>
+      <span style="display:inline-block;margin-top:.5rem">Il Libretto è un prodotto digitale personalizzato: ai sensi dell'art. 59 c.1 lett. o) D.Lgs. 206/2005, con l'avvio dell'elaborazione si rinuncia al diritto di recesso. Reclami: <a href="mailto:info@valentinarussobg5.com" style="color:var(--bp-gold)">info@valentinarussobg5.com</a></span>
+    </div>
+  </div>
 </section>
 
-<section>
-<div class="wrap">
-<div>
-<p class="eyebrow">Inizia ora</p>
-<h2 class="h2">Scegli il tuo Libretto</h2>
-<p>
-Dopo il pagamento ti chiediamo i dati di nascita. Il documento arriva via email entro 2&#8211;4 giorni lavorativi, gi&#224; revisionato da Valentina.
-</p>
-<div>
-<a href="#">
-Libretto Avanzato &#183; <strong>&#8364;147</strong>
-</a>
-<a href="#">
-Libretto Base &#183; &#8364;90
-</a>
-</div>
-<p>
-Pagamento sicuro via Stripe (carta di credito o PayPal). Si paga una volta sola.
-</p>
-</div>
-</div>
+
+<section class="bp-section bp-section--amber" id="ordine">
+  <div class="bp-container">
+    <div style="text-align:center;max-width:660px;margin:0 auto">
+      <p class="bp-eyebrow" style="justify-content:center">Inizia ora</p>
+      <h2 class="bp-section-title" style="font-style:italic">Scegli il tuo Libretto</h2>
+      <p class="bp-section-sub" style="margin:0 auto 3rem">
+        Dopo il pagamento ti chiediamo i dati di nascita. Il documento arriva via email entro 2–4 giorni lavorativi, già revisionato da Valentina.
+      </p>
+      <div style="display:flex;gap:1.25rem;flex-wrap:wrap;justify-content:center;align-items:center">
+                <a href="https://valentinarussobg5.com/libretto-dati/checkout.php?tier=avanzato"
+           class="bp-btn-primary bp-btn-primary--lg">
+          Libretto Avanzato · <strong>€147</strong>
+        </a>
+        <a href="https://valentinarussobg5.com/libretto-dati/checkout.php?tier=base"
+           class="bp-btn-outline bp-btn-outline--lg">
+          Libretto Base · €90
+        </a>
+      </div>
+      <p style="font-size:.8125rem;color:var(--bp-text-muted);margin-top:1.5rem;line-height:1.6">
+        Pagamento sicuro via Stripe (carta di credito o PayPal). Si paga una volta sola.
+      </p>
+    </div>
+  </div>
 </section>
 
-<section class="sez-panna">
-<div class="wrap">
-<div>
-<p class="eyebrow">FAQ</p>
-<h2 class="h2">Domande frequenti</h2>
-</div>
-<div>
-<div>
-<button>
-Di cosa ho bisogno per ordinare?
-<span>+</span>
-</button>
-<div>
-<p>Solo i tuoi dati di nascita: data, ora e luogo. L'ora serve per calcolare la carta con precisione, ma se non la conosci esatta indica pure un'approssimazione nel campo note. Il documento viene elaborato e revisionato da Valentina personalmente prima di arrivare da te.</p>
-</div>
-</div>
-<div>
-<button>
-Quanto tempo ci vuole per riceverlo?
-<span>+</span>
-</button>
-<div>
-<p>2&#8211;4 giorni lavorativi dal momento in cui inserisci i tuoi dati. Ricevi una conferma via email subito dopo aver completato il modulo. Ogni Libretto passa dalla mano di Valentina prima di partire, dalla revisione di ogni capitolo fino all'invio finale.</p>
-</div>
-</div>
-<div>
-<button>
-In cosa &#232; diverso da una sessione live con Valentina?
-<span>+</span>
-</button>
-<div>
-<p>Sono due cose diverse, e ha senso prenderle come tali. Una sessione live con Valentina &#232; una conversazione calibrata su quello che stai vivendo adesso, con ascolto diretto e un percorso che si adatta in tempo reale a te. Il Libretto &#232; altro: un documento scritto e denso, da rileggere nel tempo, pensato per stare accanto a un percorso piuttosto che sostituirlo.</p>
-<p>Chi poi decide di lavorare con Valentina dal vivo, spesso trova nel Libretto il modo migliore per arrivarci: si presenta alla sessione con una mappa gi&#224; in mano, anzich&#233; partire da zero.</p>
-</div>
-</div>
-<div>
-<button>
-Qual &#232; la differenza reale tra Base e Avanzato?
-<span>+</span>
-</button>
-<div>
-<p>Il Base copre l'identit&#224; energetica completa: chi sei e come prendi le decisioni che ti appartengono, in 4 capitoli che ti danno un quadro solido. L'Avanzato aggiunge 3 capitoli di applicazione su come comunichi naturalmente e su come costruire offerte allineate al tuo design, pi&#249; una sintesi finale con i passi pratici. Se sei all'inizio, il Base &#232; pi&#249; che sufficiente. Se vuoi gi&#224; vedere come il tuo design si applica al lavoro, l'Avanzato &#232; la scelta pi&#249; completa.</p>
-</div>
-</div>
-<div>
-<button>
-Non conosco l'ora di nascita esatta. Posso ordinarlo lo stesso?
-<span>+</span>
-</button>
-<div>
-<p>S&#236;. Inserisci l'orario che conosci o una stima (es. "mattina presto", "verso le 3 del pomeriggio") nel campo del messaggio. Valentina valuter&#224; come procedere e ti contatter&#224; se servono chiarimenti. La maggior parte dei dati della carta rimane stabile anche con un'ora approssimativa.</p>
-</div>
-</div>
-</div>
-</div>
+
+<section class="bp-section bp-section--parchment" id="faq">
+  <div class="bp-container">
+    <div style="text-align:center">
+      <p class="bp-eyebrow" style="justify-content:center">FAQ</p>
+      <h2 class="bp-section-title" style="margin:0 auto">Domande frequenti</h2>
+    </div>
+    <div class="bp-faq-wrap">
+      <div class="bp-faq-item">
+        <button class="bp-faq-q" aria-expanded="false">
+          Di cosa ho bisogno per ordinare?
+          <span class="bp-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="bp-faq-a" role="region">
+          <p>Solo i tuoi dati di nascita: data, ora e luogo. L'ora serve per calcolare la carta con precisione, ma se non la conosci esatta indica pure un'approssimazione nel campo note. Il documento viene elaborato e revisionato da Valentina personalmente prima di arrivare da te.</p>
+        </div>
+      </div>
+      <div class="bp-faq-item">
+        <button class="bp-faq-q" aria-expanded="false">
+          Quanto tempo ci vuole per riceverlo?
+          <span class="bp-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="bp-faq-a" role="region">
+          <p>2–4 giorni lavorativi dal momento in cui inserisci i tuoi dati. Ricevi una conferma via email subito dopo aver completato il modulo. Ogni Libretto passa dalla mano di Valentina prima di partire, dalla revisione di ogni capitolo fino all'invio finale.</p>
+        </div>
+      </div>
+      <div class="bp-faq-item">
+        <button class="bp-faq-q" aria-expanded="false">
+          In cosa è diverso da una sessione live con Valentina?
+          <span class="bp-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="bp-faq-a" role="region">
+          <p>Sono due cose diverse, e ha senso prenderle come tali. Una sessione live con Valentina è una conversazione calibrata su quello che stai vivendo adesso, con ascolto diretto e un percorso che si adatta in tempo reale a te. Il Libretto è altro: un documento scritto e denso, da rileggere nel tempo, pensato per stare accanto a un percorso piuttosto che sostituirlo.</p>
+          <p>Chi poi decide di lavorare con Valentina dal vivo, spesso trova nel Libretto il modo migliore per arrivarci: si presenta alla sessione con una mappa già in mano, anziché partire da zero.</p>
+        </div>
+      </div>
+      <div class="bp-faq-item">
+        <button class="bp-faq-q" aria-expanded="false">
+          Qual è la differenza reale tra Base e Avanzato?
+          <span class="bp-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="bp-faq-a" role="region">
+          <p>Il Base copre l'identità energetica completa: chi sei e come prendi le decisioni che ti appartengono, in 4 capitoli che ti danno un quadro solido. L'Avanzato aggiunge 3 capitoli di applicazione su come comunichi naturalmente e su come costruire offerte allineate al tuo design, più una sintesi finale con i passi pratici. Se sei all'inizio, il Base è più che sufficiente. Se vuoi già vedere come il tuo design si applica al lavoro, l'Avanzato è la scelta più completa.</p>
+        </div>
+      </div>
+      <div class="bp-faq-item">
+        <button class="bp-faq-q" aria-expanded="false">
+          Non conosco l'ora di nascita esatta. Posso ordinarlo lo stesso?
+          <span class="bp-faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="bp-faq-a" role="region">
+          <p>Sì. Inserisci l'orario che conosci o una stima (es. "mattina presto", "verso le 3 del pomeriggio") nel campo del messaggio. Valentina valuterà come procedere e ti contatterà se servono chiarimenti. La maggior parte dei dati della carta rimane stabile anche con un'ora approssimativa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 </div>
+<script>
+// ── FAQ accordion ──────────────────────────────────────────────────────────
+document.querySelectorAll('.bp-faq-q').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = this.closest('.bp-faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.bp-faq-item').forEach(function(i) {
+      i.classList.remove('open');
+      i.querySelector('.bp-faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      this.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
 
-</body>
-</html>
-</div>
-<footer><div class="wrap"><div class="foot-cols"><div><a class="brand" href="index.html">Valentina Russo<em>Consulente BG5&reg;</em></a><p class="foot-cert"><a href="https://bg5businessinstitute.com/professionals?id=399d41b3-612b-48d1-88b9-7bc26ed71418">Analista Certificata BG5&reg; &mdash; Profilo Ufficiale</a></p></div><div><h4>Naviga</h4><a href="index.html">Home</a><a href="chi-sono.html">Chi Sono</a><a href="servizi.html">Servizi</a><a href="blog.html">Blog</a><a href="libretto-istruzioni.html">Libretto HD &#10022;</a><a href="aziende.html">Percorso Aziende</a><a href="#">Contatti</a><a href="#">Privacy</a><a href="#">Termini</a><a href="https://www.instagram.com/valentinarussobg5/">Instagram</a><a href="#">llms.txt</a></div><div><h4>Consulente BG5&reg; per citt&agrave;</h4><a href="#">Milano</a><a href="consulente-bg5-torino.html">Torino</a><a href="#">Roma</a><a href="#">Bologna</a><a href="#">Firenze</a><a href="#">Napoli</a><a href="#">Venezia</a><a href="#">Bari</a><a href="#">Palermo</a><a href="#">Verona</a><a href="#">Tutta Italia</a></div><div><h4>Risorse Ufficiali</h4><a href="https://bg5businessinstitute.com/">BG5&reg; Business Institute</a><a href="https://www.jovianarchive.com/">Human Design Official</a></div></div><p class="foot-legale">&copy; 2026 Valentina Russo &mdash; Consulente BG5&reg; | Human Design Analyst. Tutti i diritti riservati. P.IVA 03831440049</p></div></footer>
-</body>
-</html>
+// ── Scroll reveal fallback (per browser senza animation-timeline) ──────────
+if (!CSS.supports('animation-timeline', 'view()')) {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.bp-reveal').forEach(function(el) { observer.observe(el); });
+}
+
+// ── GA4 tracking su click CTA ordine ──────────────────────────────────────
+document.querySelectorAll('a[href*="checkout.php"]').forEach(function(a) {
+  a.addEventListener('click', function() {
+    var tier = this.href.includes('avanzato') ? 'avanzato' : 'base';
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'begin_checkout', { 'event_category': 'Libretto', 'event_label': tier });
+    }
+  });
+});
+
+// ── Floating particles ────────────────────────────────────────────────────
+(function() {
+  var hero = document.querySelector('.bp-hero');
+  if (!hero) return;
+  var container = document.createElement('div');
+  container.className = 'bp-particles';
+  container.setAttribute('aria-hidden','true');
+  hero.insertBefore(container, hero.firstChild);
+  for (var i = 0; i < 20; i++) {
+    var p = document.createElement('div');
+    p.className = 'bp-particle';
+    var size = 1.5 + Math.random() * 3.5;
+    var dur  = 9 + Math.random() * 14;
+    var delay = -(Math.random() * dur);
+    var drift = (Math.random() - 0.5) * 140;
+    p.style.cssText = 'width:'+size+'px;height:'+size+'px;left:'+(Math.random()*100)+'%;animation-duration:'+dur+'s;animation-delay:'+delay+'s;--drift:'+drift+'px;opacity:'+(0.4+Math.random()*0.6);
+    container.appendChild(p);
+  }
+})();
+
+// ── Mouse parallax hero (cover PDF 3D tilt) ────────────────────────────────
+(function() {
+  if (window.matchMedia('(max-width:900px)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  var hero  = document.querySelector('.bp-hero');
+  var cover = document.querySelector('.bp-hero__cover');
+  if (!hero || !cover) return;
+  var ticking = false, mx = 0, my = 0;
+  hero.addEventListener('mousemove', function(e) {
+    var r = hero.getBoundingClientRect();
+    mx = (e.clientX - r.left) / r.width  - 0.5;
+    my = (e.clientY - r.top)  / r.height - 0.5;
+    if (!ticking) {
+      requestAnimationFrame(function() {
+        cover.style.animation = 'none';
+        cover.style.transform =
+          'perspective(1600px) ' +
+          'rotateY('+(mx*5)+'deg) rotateX('+(-my*4)+'deg) ' +
+          'rotate('+(2 - mx*1.2)+'deg) ' +
+          'translate('+(mx*8)+'px,'+(my*6)+'px)';
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  hero.addEventListener('mouseleave', function() {
+    cover.style.transform = '';
+    cover.style.animation = '';
+  });
+})();
+
+// ── Scroll parallax sulle immagini di sezione ─────────────────────────────
+(function() {
+  if (window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  if (window.matchMedia('(max-width:900px)').matches) return; // disabilita su mobile/tablet
+  var imgs = document.querySelectorAll('.bp-section-img img, .bp-doc-mockup img');
+  function tick() {
+    imgs.forEach(function(img) {
+      var rect = img.closest('.bp-section-img, .bp-doc-mockup').getBoundingClientRect();
+      var center = rect.top + rect.height / 2 - window.innerHeight / 2;
+      img.style.transform = 'translateY('+(center * -0.07)+'px)';
+    });
+  }
+  window.addEventListener('scroll', tick, { passive: true });
+  tick();
+})();
+
+// ── 3D tilt su card pricing ───────────────────────────────────────────────
+(function() {
+  if (window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  document.querySelectorAll('.bp-pricing-card').forEach(function(card) {
+    card.style.transition = 'transform .12s ease, box-shadow .12s ease';
+    card.addEventListener('mousemove', function(e) {
+      var r = card.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width  - 0.5;
+      var y = (e.clientY - r.top)  / r.height - 0.5;
+      card.style.transform = 'perspective(900px) rotateY('+(x*11)+'deg) rotateX('+(-y*8)+'deg) translateZ(10px)';
+      card.style.boxShadow = '0 '+(28+y*20)+'px '+(64+Math.abs(x)*40)+'px rgba(26,35,50,'+(0.18+Math.abs(x)*0.08)+')';
+    });
+    card.addEventListener('mouseleave', function() {
+      card.style.transform = '';
+      card.style.boxShadow = '';
+    });
+  });
+})();
+
+// ── 3D tilt leggero su step cards ────────────────────────────────────────
+(function() {
+  if (window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  document.querySelectorAll('.bp-step').forEach(function(card) {
+    card.addEventListener('mousemove', function(e) {
+      var r = card.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width  - 0.5;
+      var y = (e.clientY - r.top)  / r.height - 0.5;
+      card.style.transform = 'perspective(600px) rotateY('+(x*7)+'deg) rotateX('+(-y*5)+'deg) translateY(-4px)';
+    });
+    card.addEventListener('mouseleave', function() {
+      card.style.transform = '';
+    });
+  });
+})();
+</script>
+
+    
+<footer><div class="wrap">
+  <div class="riga-1"><a class="brand" href="dir-2.html">Valentina Russo<em>Consulente BG5&reg;</em></a>
+    <nav class="piede-link"><a href="dir-2.html">Home</a><a href="chi-sono.html">Chi Sono</a><a href="servizi.html">Servizi</a><a href="blog.html">Blog</a><a href="contatti.html">Contatti</a><a href="#">Privacy</a><a href="#">Termini</a><a href="https://www.instagram.com/valentinarussobg5/">Instagram</a><a href="https://bg5businessinstitute.com/">BG5&reg; Business Institute</a><a href="https://www.jovianarchive.com/">Human Design Official</a></nav></div>
+  <p class="citta-riga"><span>Consulente BG5&reg; per citt&agrave;:</span> <a href="consulente-bg5-torino.html">Torino</a> &middot; <a href="#">Milano</a> &middot; <a href="#">Roma</a> &middot; <a href="#">Firenze</a> &middot; <a href="#">Bologna</a> &middot; <a href="#">Napoli</a> &middot; <a href="#">Venezia</a> &middot; <a href="#">Bari</a> &middot; <a href="#">Palermo</a> &middot; <a href="#">Verona</a> &middot; <a href="#">Tutta Italia</a></p>
+  <p class="legale">&copy; 2026 Valentina Russo &mdash; Consulente BG5&reg; | Human Design Analyst. Tutti i diritti riservati. P.IVA 03831440049 &middot; <a href="https://bg5businessinstitute.com/professionals?id=399d41b3-612b-48d1-88b9-7bc26ed71418">Analista Certificata BG5&reg; &mdash; Profilo Ufficiale</a></p>
+</div></footer>
+</body></html>
