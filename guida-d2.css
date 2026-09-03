@@ -30,7 +30,7 @@
 .rv-d2 .aeo-answer{color:var(--ink)}
 .rv-d2 .cta-row{margin-top:22px}
 .rv-d2 .hd-demo-carousel{position:relative;height:440px;max-width:340px;margin:0 auto}
-.rv-d2 .hd-demo-slide{position:absolute;inset:0;height:100%;width:100%;object-fit:contain;border-radius:14px;background:#fff;box-shadow:var(--ombra);opacity:0;transition:opacity 1.4s ease}
+.rv-d2 .hd-demo-slide{position:absolute;inset:0;height:100%;width:100%;object-fit:contain;background:transparent;box-shadow:none;border-radius:0;opacity:0;transition:opacity 1.4s ease;filter:drop-shadow(0 18px 24px rgba(122,79,94,.22))}
 .rv-d2 .hd-demo-slide.visibile{opacity:1}
 .rv-d2 .hd-type-label{text-align:center;font:600 13px Outfit,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muto);margin:14px 0 0}
 .rv-d2 .hd-type-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--dom);margin-right:8px;vertical-align:middle}
