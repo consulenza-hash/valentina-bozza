@@ -48,7 +48,7 @@
   }
   function aggiorna(){
     var n=0; carte.forEach(function(c){ var v=ok(c); c.hidden=!v; if(v) n++; });
-    conta.textContent = n===carte.length ? carte.length+' articoli, dal piu' recente' : n+' di '+carte.length+' articoli';
+    conta.textContent = n===carte.length ? carte.length+' articoli, dal pi&#249; recente' : n+' di '+carte.length+' articoli';
     vuoto.hidden = n>0;
   }
   chips.forEach(function(ch){ ch.addEventListener('click', function(){ tema=ch.getAttribute('data-tema'); chips.forEach(function(x){ var a=x===ch; x.classList.toggle('attivo',a); x.setAttribute('aria-pressed',a?'true':'false'); }); aggiorna(); }); });
