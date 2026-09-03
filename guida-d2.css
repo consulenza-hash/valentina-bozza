@@ -92,7 +92,7 @@
 .rv-d2 .faq-hd-item{background:var(--carta);border-radius:12px;padding:18px 22px;box-shadow:var(--ombra)}
 .rv-d2 .faq-hd-item h4{margin:0 0 8px;font-size:18px}
 .rv-d2 .faq-hd-item p{margin:0;font-size:15.5px}
-.rv-d2 .hd-cta{background:var(--dom-2);color:#fff;border-radius:20px;padding:48px 36px;text-align:center;margin:40px auto 0;max-width:820px;box-sizing:border-box}
+.rv-d2 .hd-cta{background:var(--dom-2);color:#fff;border-radius:20px;padding:48px 36px;text-align:center;margin:40px auto 80px;max-width:820px;box-sizing:border-box}
 .rv-d2 .hd-cta h2,.rv-d2 .hd-cta p{color:#fff;max-width:none}
 .rv-d2 .hd-cta a{margin:6px 6px 0}
 .rv-d2 .hd-cta a:not(.btn){display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border:1px solid rgba(255,255,255,.55);border-radius:8px;color:#fff;text-decoration:none;font-weight:600;font-size:15px}
