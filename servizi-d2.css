@@ -21,7 +21,7 @@
 .d2 .sv-4{grid-template-columns:repeat(4,1fr)}
 .d2 .sv-card{background:var(--carta);border-radius:14px;box-shadow:var(--ombra);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
 .d2 .sv-card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -18px rgba(58,53,50,.28)}
-.d2 .sv-card>img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.d2 .sv-card>img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
 .d2 .sv-corpo{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
 .d2 .sv-corpo h3{font-size:21px}
 .d2 .sv-corpo .desc{font-size:15px}

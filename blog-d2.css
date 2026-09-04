@@ -23,7 +23,7 @@
 .d2 .bl-card[hidden]{display:none}
 .d2 .bl-card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -18px rgba(58,53,50,.28)}
 .d2 .bl-img{display:block}
-.d2 .bl-img img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.d2 .bl-img img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
 .d2 .bl-corpo{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
 .d2 .bl-card h2{font-size:21px;line-height:1.3;margin:0}
 .d2 .bl-card h2 a{color:var(--ink);text-decoration:none}
