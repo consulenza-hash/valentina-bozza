@@ -30,9 +30,9 @@ body.torna p.solo-torna{display:block}
 /* pie' di pagina basso, in orizzontale */
 .d2 footer{padding:30px 0 22px}
 .d2 .riga-1{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.d2 .piede-link{display:flex;flex-wrap:wrap;gap:2px 4px}
-.d2 .piede-link a{min-height:44px;display:inline-flex;align-items:center;padding:0 10px;color:var(--muto);text-decoration:none;font-size:14px}
-.d2 .piede-link a:hover{color:var(--ink)}
+.d2 .piede-link{display:flex;flex-wrap:wrap;gap:2px 10px}
+.d2 .piede-link a{min-height:44px;display:inline-flex;align-items:center;padding:0 6px;color:var(--ink);text-decoration:none;font-size:15.5px;font-weight:500;border-bottom:2px solid transparent}
+.d2 .piede-link a:hover{color:var(--dom);border-bottom-color:var(--dom)}
 
 /* marchio con logo */
 .d2 .brand{display:inline-flex;align-items:center;gap:11px}
@@ -40,7 +40,9 @@ body.torna p.solo-torna{display:block}
 .d2 .brand>span{display:flex;flex-direction:column;line-height:1.05}
 .d2 footer .brand .logo{width:34px;height:34px}
 
-/* footer centrato: marchio sopra, poi i collegamenti */
+/* footer a tre livelli distinti: marchio e menu, poi le citta', poi la firma */
+.d2 footer{padding-top:44px}
+.d2 footer .riga-1{padding-bottom:4px}
 .d2 footer .riga-1{flex-direction:column;align-items:center;gap:18px;text-align:center}
 .d2 footer .brand{flex-direction:column;gap:8px}
 .d2 footer .brand .logo{width:56px;height:56px}
@@ -82,10 +84,10 @@ body.menu-aperto .apri-menu::after{transform:translateY(-7px) rotate(-45deg)}
 .salta-al-contenuto:focus{left:0}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,details:focus-visible{outline:3px solid var(--dom);outline-offset:3px;border-radius:4px}
 .d2.az a:focus-visible,.d2.az button:focus-visible,.d2.az input:focus-visible,.d2.az select:focus-visible,.d2.az textarea:focus-visible,.d2.az summary:focus-visible{outline-color:var(--dom)}
-.d2 .citta-riga{margin:14px auto 0;font-size:13.5px;color:var(--muto);max-width:none;line-height:2.2;text-align:center}
-.d2 .citta-riga span{font-weight:600}
+.d2 .citta-riga{margin:22px auto 0;padding-top:20px;border-top:1px solid var(--linea);font-size:13px;color:var(--muto);max-width:none;line-height:2.1;text-align:center}
+.d2 .citta-riga span{display:block;margin-bottom:2px;font:600 11px Outfit,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muto)}
 .d2 .citta-riga a{color:var(--muto);text-decoration:none;padding:6px 2px}
 .d2 .citta-riga a:hover{color:var(--ink)}
-.d2 .legale{margin:10px 0 0;padding-top:12px;border-top:1px solid var(--linea);font-size:12.5px;max-width:none;text-align:center}
+.d2 .legale{margin:18px 0 0;padding-top:16px;border-top:1px solid var(--linea);font-size:12px;line-height:1.7;color:var(--muto);opacity:.85;max-width:none;text-align:center}
 .d2 .legale a{color:var(--muto)}
 @media (max-width:900px){.d2 .partenza{grid-template-columns:1fr}.d2 .riga-1{flex-direction:column;align-items:flex-start}}
