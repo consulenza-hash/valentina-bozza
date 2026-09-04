@@ -76,6 +76,12 @@ body.menu-aperto .apri-menu::after{transform:translateY(-7px) rotate(-45deg)}
   .nav .pannello .btn-1{margin-top:14px;width:100%;justify-content:center;white-space:normal;text-align:center;min-height:50px}
   .piede-link a,.citta-riga a{min-height:38px;display:inline-flex;align-items:center}
 }
+
+/* accessibilita': salto al contenuto e messa a fuoco visibile da tastiera */
+.salta-al-contenuto{position:absolute;left:-9999px;top:0;z-index:100;background:var(--dom);color:#fff;padding:12px 18px;border-radius:0 0 8px 0;font:600 15px Outfit,sans-serif;text-decoration:none}
+.salta-al-contenuto:focus{left:0}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,details:focus-visible{outline:3px solid var(--dom);outline-offset:3px;border-radius:4px}
+.d2.az a:focus-visible,.d2.az button:focus-visible,.d2.az input:focus-visible,.d2.az select:focus-visible,.d2.az textarea:focus-visible,.d2.az summary:focus-visible{outline-color:var(--dom)}
 .d2 .citta-riga{margin:14px auto 0;font-size:13.5px;color:var(--muto);max-width:none;line-height:2.2;text-align:center}
 .d2 .citta-riga span{font-weight:600}
 .d2 .citta-riga a{color:var(--muto);text-decoration:none;padding:6px 2px}
