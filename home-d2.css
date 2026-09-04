@@ -3,10 +3,6 @@
 .d2 .nav .btn-1{white-space:nowrap}
 .d2 .fine .btn-2:hover{background:rgba(255,255,255,.14);border-color:#fff;color:#fff;transform:translateY(-2px)}
 /* stati prima visita / visita successiva */
-.solo-torna{display:none}
-body.torna .solo-nuovo{display:none}
-body.torna .solo-torna{display:flex}
-body.torna p.solo-torna{display:block}
 /* citazione: banda sottile, senza virgoletta in filigrana */
 .d2 .banda-cit{background:var(--carta);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);padding:26px 0}
 .d2 .banda-cit p{margin:0 auto;max-width:60ch;text-align:center;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:19px;line-height:1.5;color:var(--ink)}
