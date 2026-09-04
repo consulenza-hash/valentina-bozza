@@ -4,8 +4,12 @@
 .rv-d2 section{padding:88px 0}
 .rv-d2 .hd-prose-wrap,.rv-d2 .hd-wide-wrap,.rv-d2 .hd-hero-inner{max-width:var(--maxw);margin:0 auto;padding:0 28px}
 .rv-d2 .hd-prose-wrap{max-width:820px}
-.rv-d2 h2{margin:0 0 18px}.rv-d2 h3{margin:22px 0 8px;font-size:22px}
-.rv-d2 p{margin:0 0 16px;max-width:68ch}
+/* pesi rivisti: titoli piu' contenuti, testo di lettura piu' presente e piu' arieggiato */
+.rv-d2 h1{font-size:clamp(34px,3.9vw,50px);line-height:1.1;margin-bottom:22px}
+.rv-d2 h2{font-size:clamp(25px,2.5vw,32px);line-height:1.18;margin:0 0 22px}
+.rv-d2 h3{margin:26px 0 10px;font-size:21px}
+.rv-d2 p{margin:0 0 18px;max-width:66ch}
+.rv-d2 .hd-prose p,.rv-d2 section>p,.rv-d2 section>div:not([class])>p{font-size:18px;line-height:1.72}
 .rv-d2 .hd-prose p{color:var(--ink)}
 .rv-d2 .section-lead{font-size:19px;color:var(--muto);margin-bottom:8px}
 .rv-d2 a:not(.btn){color:var(--dom);text-decoration:underline;text-underline-offset:3px}
