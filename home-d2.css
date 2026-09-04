@@ -55,6 +55,27 @@ body.torna p.solo-torna{display:block}
 .su[hidden]{display:none}
 .d2.az .su{background:linear-gradient(180deg,#127F94,#0C4A56);box-shadow:0 10px 24px -8px rgba(12,74,86,.5),inset 0 1px 0 rgba(255,255,255,.25)}
 @media (max-width:560px){.su{right:14px;bottom:14px;width:42px;height:42px}}
+
+/* menu su telefono */
+.apri-menu{display:none;width:44px;height:44px;border:0;background:none;cursor:pointer;position:relative;flex:none}
+.apri-menu span,.apri-menu::before,.apri-menu::after{content:"";position:absolute;left:11px;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .2s}
+.apri-menu span{top:21px}.apri-menu::before{top:14px}.apri-menu::after{top:28px}
+body.menu-aperto .apri-menu span{opacity:0}
+body.menu-aperto .apri-menu::before{transform:translateY(7px) rotate(45deg)}
+body.menu-aperto .apri-menu::after{transform:translateY(-7px) rotate(-45deg)}
+.nav .pannello{display:flex;align-items:center;gap:22px;margin-left:auto}
+@media (max-width:900px){
+  .apri-menu{display:block;order:3}
+  .nav .wrap{gap:12px}
+  .nav .pannello{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;
+     margin:0;padding:8px 20px 20px;background:var(--carta);border-bottom:1px solid var(--linea);box-shadow:0 18px 30px -18px rgba(58,53,50,.28)}
+  body.menu-aperto .nav .pannello{display:flex}
+  .nav .menu{display:flex!important;flex-direction:column;gap:0;width:100%}
+  .nav .menu a{min-height:52px;padding:0 4px;font-size:17px;border-bottom:1px solid var(--linea);border-radius:0;width:100%}
+  .nav .menu li:last-child a{border-bottom:0}
+  .nav .pannello .btn-1{margin-top:14px;width:100%;justify-content:center;white-space:normal;text-align:center;min-height:50px}
+  .piede-link a,.citta-riga a{min-height:38px;display:inline-flex;align-items:center}
+}
 .d2 .citta-riga{margin:14px auto 0;font-size:13.5px;color:var(--muto);max-width:none;line-height:2.2;text-align:center}
 .d2 .citta-riga span{font-weight:600}
 .d2 .citta-riga a{color:var(--muto);text-decoration:none;padding:6px 2px}
