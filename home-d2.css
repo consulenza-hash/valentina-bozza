@@ -54,6 +54,21 @@
 .d2.az .su{background:linear-gradient(180deg,#127F94,#0C4A56);box-shadow:0 10px 24px -8px rgba(12,74,86,.5),inset 0 1px 0 rgba(255,255,255,.25)}
 @media (max-width:560px){.su{right:14px;bottom:14px;width:42px;height:42px}}
 
+/* invito fisso in basso: compare dopo il primo schermo, si ritira sul pie' di pagina */
+.cta-fissa{position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--carta);
+    border-top:1px solid var(--linea);box-shadow:0 -14px 34px -22px rgba(58,53,50,.5);
+    transform:translateY(120%);transition:transform .32s ease}
+.cta-fissa.vista{transform:none}
+.cta-fissa .wrap{display:flex;align-items:center;gap:20px;padding:12px 28px;min-height:64px}
+.cta-fissa p{margin:0;flex:1;color:var(--muto);font-size:15px;line-height:1.4}
+.cta-fissa .btn{flex:none;font-size:15px}
+.cta-chiudi{flex:none;width:34px;height:34px;border:0;border-radius:50%;background:transparent;cursor:pointer;
+    color:var(--muto);font-size:20px;line-height:1}
+.cta-chiudi:hover{background:var(--tint);color:var(--ink)}
+body.con-cta .su{bottom:88px}
+@media (max-width:720px){.cta-fissa p{display:none}.cta-fissa .wrap{padding:10px 16px;gap:10px}.cta-fissa .btn{flex:1;justify-content:center}}
+@media (prefers-reduced-motion:reduce){.cta-fissa{transition:none}}
+
 /* menu su telefono */
 .apri-menu{display:none;width:44px;height:44px;border:0;background:none;cursor:pointer;position:relative;flex:none}
 .apri-menu span,.apri-menu::before,.apri-menu::after{content:"";position:absolute;left:11px;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .2s}
